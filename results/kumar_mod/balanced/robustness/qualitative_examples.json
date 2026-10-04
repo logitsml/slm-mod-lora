@@ -1,0 +1,152 @@
+{
+  "analysis": "qualitative_nontoxic_removals_llm_misses_encoder_catches",
+ "redaction_note": "Third-party usernames, personal names, and comment permalinks redacted from quoted bodies ([user], [name], [permalink-removed]) per the paper's Reddit research-ethics protocol (Proferes et al.); scores, ids, and all other fields unchanged.",
+  "criteria": "label=removed; tox_toxigen<0.1 AND tox_snlp<0.1; encoder p_remove>0.6; LLM=keep; 80/20 test fold",
+  "n_candidates": 1288,
+  "examples": [
+    {
+      "subreddit": "spacex",
+      "idx": 462,
+      "comment": "Rocket McRockety Face",
+      "tox_toxigen": 0.0011,
+      "tox_snlp": 0.0062,
+      "encoder_p_remove": 0.984,
+      "llm_decision": "keep",
+      "llm_rating": 1.0,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "changemyview",
+      "idx": 283,
+      "comment": "Why do you hate lawyers!? /s",
+      "tox_toxigen": 0.0085,
+      "tox_snlp": 0.0039,
+      "encoder_p_remove": 0.981,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "personalfinance",
+      "idx": 438,
+      "comment": "Well now I feel attacked and persecuted.",
+      "tox_toxigen": 0.0018,
+      "tox_snlp": 0.0007,
+      "encoder_p_remove": 0.98,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 388,
+      "comment": "**Author:** [user] **Image Stats:** - Width: 2448, Height: 3264, Size: 246984, Pixel Count: 7990272 **Image History:** User | Date | Match% | Image | Title | Karma | Comments | Removed -----|-----------|-------|----------|-----|-----|-----|----- [user]",
+      "tox_toxigen": 0.0013,
+      "tox_snlp": 0.0001,
+      "encoder_p_remove": 0.98,
+      "llm_decision": "keep",
+      "llm_rating": 1.0,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "science",
+      "idx": 212,
+      "comment": "They're just skeptical about everything.",
+      "tox_toxigen": 0.0012,
+      "tox_snlp": 0.0,
+      "encoder_p_remove": 0.971,
+      "llm_decision": "keep",
+      "llm_rating": 1.0,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "DIY",
+      "idx": 23,
+      "comment": "Hey it's me, your girlfriend",
+      "tox_toxigen": 0.0008,
+      "tox_snlp": 0.0005,
+      "encoder_p_remove": 0.97,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "space",
+      "idx": 304,
+      "comment": "What a time to be alive.",
+      "tox_toxigen": 0.0007,
+      "tox_snlp": 0.0001,
+      "encoder_p_remove": 0.967,
+      "llm_decision": "keep",
+      "llm_rating": 1.0,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "CanadaPolitics",
+      "idx": 193,
+      "comment": "Not until you appreciate the irony",
+      "tox_toxigen": 0.0009,
+      "tox_snlp": 0.0001,
+      "encoder_p_remove": 0.965,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "TheSilphRoad",
+      "idx": 154,
+      "comment": "Lets wait till they've nail INGAME TRACKER.. maybe this century...",
+      "tox_toxigen": 0.001,
+      "tox_snlp": 0.0001,
+      "encoder_p_remove": 0.965,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "askscience",
+      "idx": 1,
+      "comment": "I would guess social reasons are partly to blame with the stance some have arguing against the hereditary topic. Many want to believe they can far exceed their family's intelligence via study and increased effort not realizing that they already are starting a few rungs down the ladder in comparison ",
+      "tox_toxigen": 0.0011,
+      "tox_snlp": 0.0,
+      "encoder_p_remove": 0.962,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "remove",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "pics",
+      "idx": 275,
+      "comment": "Happy \"we are the victims\".",
+      "tox_toxigen": 0.0594,
+      "tox_snlp": 0.0004,
+      "encoder_p_remove": 0.946,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "keep",
+      "moderator_label": "removed"
+    },
+    {
+      "subreddit": "worldnews",
+      "idx": 368,
+      "comment": "Ha, and a Russian troll was telling me what a big strategic win was the \"\"\"liberation\"\"\" of Palmyra just weeks ago. Synchronize your talking points.",
+      "tox_toxigen": 0.002,
+      "tox_snlp": 0.0702,
+      "encoder_p_remove": 0.944,
+      "llm_decision": "keep",
+      "llm_rating": NaN,
+      "slm_decision": "keep",
+      "moderator_label": "removed"
+    }
+  ]
+}

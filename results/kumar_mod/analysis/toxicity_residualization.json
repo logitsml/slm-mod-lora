@@ -1,0 +1,144 @@
+{
+  "analysis": "toxicity_residualization",
+  "toxicity_scorer": "Detoxify tox_toxicity (independent)",
+  "nontoxic_threshold": 0.1,
+  "design": "per-community: AUC(removed|score) raw vs after linearly removing toxicity (survival), and AUC on keeps + NON-toxic removals only (the 14,830-miss regime).",
+  "by_method": {
+    "llm_gemma": {
+      "bal_auc_raw": {
+        "median": 0.6651,
+        "ci95": [
+          0.6411,
+          0.6934
+        ],
+        "n_sub": 95
+      },
+      "bal_auc_resid_toxicity": {
+        "median": 0.6387,
+        "ci95": [
+          0.6135,
+          0.6603
+        ],
+        "n_sub": 95
+      },
+      "survival_frac_median": 0.8196,
+      "nontoxic_removal_auc": {
+        "median": 0.59,
+        "ci95": [
+          0.5736,
+          0.6027
+        ],
+        "n_sub": 95
+      }
+    },
+    "llm_llama": {
+      "bal_auc_raw": {
+        "median": 0.7051,
+        "ci95": [
+          0.682,
+          0.7314
+        ],
+        "n_sub": 95
+      },
+      "bal_auc_resid_toxicity": {
+        "median": 0.6569,
+        "ci95": [
+          0.6266,
+          0.6839
+        ],
+        "n_sub": 95
+      },
+      "survival_frac_median": 0.7954,
+      "nontoxic_removal_auc": {
+        "median": 0.6217,
+        "ci95": [
+          0.589,
+          0.6371
+        ],
+        "n_sub": 95
+      }
+    },
+    "llm_qwen": {
+      "bal_auc_raw": {
+        "median": 0.6761,
+        "ci95": [
+          0.6536,
+          0.7027
+        ],
+        "n_sub": 95
+      },
+      "bal_auc_resid_toxicity": {
+        "median": 0.6283,
+        "ci95": [
+          0.6152,
+          0.6532
+        ],
+        "n_sub": 95
+      },
+      "survival_frac_median": 0.7607,
+      "nontoxic_removal_auc": {
+        "median": 0.581,
+        "ci95": [
+          0.5677,
+          0.6095
+        ],
+        "n_sub": 95
+      }
+    },
+    "encoder_e5": {
+      "bal_auc_raw": {
+        "median": 0.8259,
+        "ci95": [
+          0.8023,
+          0.8346
+        ],
+        "n_sub": 94
+      },
+      "bal_auc_resid_toxicity": {
+        "median": 0.7843,
+        "ci95": [
+          0.7673,
+          0.7948
+        ],
+        "n_sub": 94
+      },
+      "survival_frac_median": 0.8851,
+      "nontoxic_removal_auc": {
+        "median": 0.7682,
+        "ci95": [
+          0.7545,
+          0.783
+        ],
+        "n_sub": 94
+      }
+    },
+    "slm_mod": {
+      "bal_auc_raw": {
+        "median": 0.8138,
+        "ci95": [
+          0.7897,
+          0.8279
+        ],
+        "n_sub": 95
+      },
+      "bal_auc_resid_toxicity": {
+        "median": 0.7628,
+        "ci95": [
+          0.7438,
+          0.779
+        ],
+        "n_sub": 95
+      },
+      "survival_frac_median": 0.8416,
+      "nontoxic_removal_auc": {
+        "median": 0.7322,
+        "ci95": [
+          0.7083,
+          0.7677
+        ],
+        "n_sub": 95
+      }
+    }
+  },
+  "interpretation": "Survival = fraction of a method's within-community discrimination that remains after toxicity is linearly removed (low = it was toxicity). Non-toxic-removal AUC = can it catch removals that are NOT toxic. Encoder: survival 0.8851, nontoxic-removal AUC 0.7682. LLMs: llm_gemma: survival 0.8196, nontoxic-removal AUC 0.59 | llm_llama: survival 0.7954, nontoxic-removal AUC 0.6217 | llm_qwen: survival 0.7607, nontoxic-removal AUC 0.581."
+}

@@ -1,0 +1,254 @@
+{
+  "analysis": "template_confound",
+  "decision_rule": "template account rejected if encoder-minus-LLM non-toxic-removal gap on the union-flag residue (cos 0.95) is positive with the clustered bootstrap CI excluding zero, per family",
+  "flags": {
+    "n_test_rows": 17508,
+    "frac_regex": 0.0079,
+    "frac_jaccard": 0.0017,
+    "cos_distribution": {
+      "p10": 0.8039,
+      "p25": 0.8167,
+      "p50": 0.8323,
+      "p75": 0.8519,
+      "p90": 0.8807,
+      "p95": 0.9097,
+      "p99": 0.9814
+    },
+    "frac_cos": {
+      "0.95": 0.0213,
+      "0.99": 0.0071
+    }
+  },
+  "full_fold_anchor": {
+    "encoder_e5": {
+      "bal_auc_median": 0.8259,
+      "nontox_auc_median": 0.7682,
+      "n_comm": 94
+    },
+    "slm_mod": {
+      "bal_auc_median": 0.8138,
+      "nontox_auc_median": 0.7322,
+      "n_comm": 95
+    },
+    "llm_gemma": {
+      "bal_auc_median": 0.7714,
+      "nontox_auc_median": 0.6917,
+      "n_comm": 95
+    },
+    "llm_llama": {
+      "bal_auc_median": 0.7725,
+      "nontox_auc_median": 0.6733,
+      "n_comm": 95
+    },
+    "llm_qwen": {
+      "bal_auc_median": 0.7491,
+      "nontox_auc_median": 0.656,
+      "n_comm": 95
+    }
+  },
+  "stratified": {
+    "0.95": {
+      "frac_flagged": 0.0246,
+      "arms": {
+        "encoder_e5": {
+          "residue": {
+            "bal_auc_median": 0.8231,
+            "nontox_auc_median": 0.7669,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.9437,
+            "nontox_auc_median": 0.95,
+            "n_comm_bal": 6,
+            "n_comm_nontox": 5
+          }
+        },
+        "slm_mod": {
+          "residue": {
+            "bal_auc_median": 0.8129,
+            "nontox_auc_median": 0.7374,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.8556,
+            "nontox_auc_median": 0.85,
+            "n_comm_bal": 6,
+            "n_comm_nontox": 5
+          }
+        },
+        "llm_gemma": {
+          "residue": {
+            "bal_auc_median": 0.774,
+            "nontox_auc_median": 0.691,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.5704,
+            "nontox_auc_median": 0.5338,
+            "n_comm_bal": 6,
+            "n_comm_nontox": 5
+          }
+        },
+        "llm_llama": {
+          "residue": {
+            "bal_auc_median": 0.7743,
+            "nontox_auc_median": 0.6759,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.5647,
+            "nontox_auc_median": 0.4866,
+            "n_comm_bal": 6,
+            "n_comm_nontox": 5
+          }
+        },
+        "llm_qwen": {
+          "residue": {
+            "bal_auc_median": 0.7506,
+            "nontox_auc_median": 0.6577,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.67,
+            "nontox_auc_median": 0.6607,
+            "n_comm_bal": 6,
+            "n_comm_nontox": 5
+          }
+        }
+      },
+      "paired_residue_nontox_gap": {
+        "llm_gemma": {
+          "n_comm": 94,
+          "gap_mean": 0.0743,
+          "ci95": [
+            0.0593,
+            0.0906
+          ]
+        },
+        "llm_llama": {
+          "n_comm": 94,
+          "gap_mean": 0.0836,
+          "ci95": [
+            0.0665,
+            0.1014
+          ]
+        },
+        "llm_qwen": {
+          "n_comm": 94,
+          "gap_mean": 0.1125,
+          "ci95": [
+            0.0953,
+            0.1299
+          ]
+        }
+      }
+    },
+    "0.99": {
+      "frac_flagged": 0.014,
+      "arms": {
+        "encoder_e5": {
+          "residue": {
+            "bal_auc_median": 0.8271,
+            "nontox_auc_median": 0.7669,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 1.0,
+            "nontox_auc_median": 1.0,
+            "n_comm_bal": 3,
+            "n_comm_nontox": 3
+          }
+        },
+        "slm_mod": {
+          "residue": {
+            "bal_auc_median": 0.8135,
+            "nontox_auc_median": 0.737,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.9259,
+            "nontox_auc_median": 0.9259,
+            "n_comm_bal": 3,
+            "n_comm_nontox": 3
+          }
+        },
+        "llm_gemma": {
+          "residue": {
+            "bal_auc_median": 0.7726,
+            "nontox_auc_median": 0.691,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.5556,
+            "nontox_auc_median": 0.5556,
+            "n_comm_bal": 3,
+            "n_comm_nontox": 3
+          }
+        },
+        "llm_llama": {
+          "residue": {
+            "bal_auc_median": 0.7753,
+            "nontox_auc_median": 0.6756,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.6037,
+            "nontox_auc_median": 0.6037,
+            "n_comm_bal": 3,
+            "n_comm_nontox": 3
+          }
+        },
+        "llm_qwen": {
+          "residue": {
+            "bal_auc_median": 0.7489,
+            "nontox_auc_median": 0.6573,
+            "n_comm_bal": 94,
+            "n_comm_nontox": 94
+          },
+          "flagged": {
+            "bal_auc_median": 0.7074,
+            "nontox_auc_median": 0.7074,
+            "n_comm_bal": 3,
+            "n_comm_nontox": 3
+          }
+        }
+      },
+      "paired_residue_nontox_gap": {
+        "llm_gemma": {
+          "n_comm": 94,
+          "gap_mean": 0.0758,
+          "ci95": [
+            0.0605,
+            0.0921
+          ]
+        },
+        "llm_llama": {
+          "n_comm": 94,
+          "gap_mean": 0.085,
+          "ci95": [
+            0.0679,
+            0.1029
+          ]
+        },
+        "llm_qwen": {
+          "n_comm": 94,
+          "gap_mean": 0.1133,
+          "ci95": [
+            0.0965,
+            0.1305
+          ]
+        }
+      }
+    }
+  },
+  "anchor_check": "PASS (all arms within 0.002 of published medians)"
+}

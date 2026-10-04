@@ -1,0 +1,408 @@
+{
+  "analysis": "kumar_balanced",
+  "kumar_gpt35_anchor": {
+    "accuracy": 0.637,
+    "precision": 0.83,
+    "recall": 0.398
+  },
+  "llm": {
+    "gemma": {
+      "n_subs": 95,
+      "accuracy": {
+        "median": 0.6771058315334774,
+        "ci95": [
+          0.6560283687943262,
+          0.6905781584582441
+        ]
+      },
+      "precision": {
+        "median": 0.7839643652561247,
+        "ci95": [
+          0.7621776504297995,
+          0.7959770114942529
+        ]
+      },
+      "recall": {
+        "median": 0.5671342685370742,
+        "ci95": [
+          0.5417515274949084,
+          0.6052631578947368
+        ]
+      },
+      "f1": {
+        "median": 0.6513872135102532,
+        "ci95": [
+          0.6333333333333333,
+          0.6790697674418605
+        ]
+      },
+      "mcc": {
+        "median": 0.3738167504923862,
+        "ci95": [
+          0.3549000004231912,
+          0.41627513126564625
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.6841025056947608,
+        "ci95": [
+          0.6649280047017337,
+          0.6976602060415575
+        ]
+      },
+      "judgment_auc_parity": {
+        "median": 0.6666434821921501,
+        "ci95": [
+          0.6488615214739224,
+          0.6877414666166541
+        ]
+      },
+      "binary_auc": {
+        "median": 0.6841025056947608,
+        "ci95": [
+          0.6649280047017339,
+          0.6976602060415575
+        ]
+      },
+      "rating_auc_present_only": {
+        "median": 0.6842567737838304,
+        "ci95": [
+          0.6527974350827532,
+          0.7018294972807122
+        ]
+      },
+      "mean_rating_coverage": 0.540029393602175,
+      "mean_parse_rate": 0.999756435008529,
+      "qual_precision_gt_recall": true,
+      "n_subs_below_chance_acc": 2,
+      "frac_subs_below_chance": 0.021052631578947368
+    },
+    "llama": {
+      "n_subs": 95,
+      "accuracy": {
+        "median": 0.6666666666666666,
+        "ci95": [
+          0.6498881431767338,
+          0.6874328678839957
+        ]
+      },
+      "precision": {
+        "median": 0.7735849056603774,
+        "ci95": [
+          0.7507788161993769,
+          0.7871621621621622
+        ]
+      },
+      "recall": {
+        "median": 0.5511022044088176,
+        "ci95": [
+          0.5,
+          0.602880658436214
+        ]
+      },
+      "f1": {
+        "median": 0.6511024643320363,
+        "ci95": [
+          0.6208701535402628,
+          0.6696935300794551
+        ]
+      },
+      "mcc": {
+        "median": 0.36458573829798396,
+        "ci95": [
+          0.3311192056959045,
+          0.39141614994878354
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.6721748400852878,
+        "ci95": [
+          0.6585091799815725,
+          0.6916329284750338
+        ]
+      },
+      "judgment_auc_parity": {
+        "median": 0.6877186147186147,
+        "ci95": [
+          0.6737608604626819,
+          0.7087865409855626
+        ]
+      },
+      "binary_auc": {
+        "median": 0.6721748400852878,
+        "ci95": [
+          0.6585091799815727,
+          0.6916329284750339
+        ]
+      },
+      "rating_auc_present_only": {
+        "median": 0.6930448226835246,
+        "ci95": [
+          0.6737817994762438,
+          0.7103362472744892
+        ]
+      },
+      "mean_rating_coverage": 0.9681064104589149,
+      "mean_parse_rate": 0.9999017012709248,
+      "qual_precision_gt_recall": true,
+      "n_subs_below_chance_acc": 2,
+      "frac_subs_below_chance": 0.021052631578947368
+    },
+    "qwen": {
+      "n_subs": 95,
+      "accuracy": {
+        "median": 0.6680942184154176,
+        "ci95": [
+          0.6429341963322546,
+          0.6903131573388227
+        ]
+      },
+      "precision": {
+        "median": 0.7577519379844961,
+        "ci95": [
+          0.7447368421052631,
+          0.7723577235772358
+        ]
+      },
+      "recall": {
+        "median": 0.5894308943089431,
+        "ci95": [
+          0.5535714285714286,
+          0.6184738955823293
+        ]
+      },
+      "f1": {
+        "median": 0.6600594648166501,
+        "ci95": [
+          0.6355685131195336,
+          0.6757990867579908
+        ]
+      },
+      "mcc": {
+        "median": 0.3535519255867194,
+        "ci95": [
+          0.31852219721109537,
+          0.3933044636998013
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.6763547079312511,
+        "ci95": [
+          0.6539525506376594,
+          0.692458287289049
+        ]
+      },
+      "judgment_auc_parity": {
+        "median": 0.6776099368548418,
+        "ci95": [
+          0.660762331838565,
+          0.7003518661803176
+        ]
+      },
+      "binary_auc": {
+        "median": 0.6763547079312512,
+        "ci95": [
+          0.6539525506376594,
+          0.692458287289049
+        ]
+      },
+      "rating_auc_present_only": {
+        "median": 0.6884558201065325,
+        "ci95": [
+          0.6657120528648306,
+          0.7107788330405082
+        ]
+      },
+      "mean_rating_coverage": 0.8662593036474043,
+      "mean_parse_rate": 0.9924436284465511,
+      "qual_precision_gt_recall": true,
+      "n_subs_below_chance_acc": 3,
+      "frac_subs_below_chance": 0.031578947368421054
+    }
+  },
+  "encoder": {
+    "e5": {
+      "n_subs": 94,
+      "auc": {
+        "median": 0.8216187919566651,
+        "ci95": [
+          0.7981069042316259,
+          0.8311046377213669
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.7392069615021584,
+        "ci95": [
+          0.7281135902636917,
+          0.7586465991584593
+        ]
+      }
+    },
+    "minilm": {
+      "n_subs": 94,
+      "auc": {
+        "median": 0.7832430219428359,
+        "ci95": [
+          0.7557801789241316,
+          0.7935400329358591
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.7042230952796693,
+        "ci95": [
+          0.6940344898039028,
+          0.7183891314895682
+        ]
+      }
+    },
+    "gte": {
+      "n_subs": 94,
+      "auc": {
+        "median": 0.8084242585621535,
+        "ci95": [
+          0.794268638031731,
+          0.8205609179949005
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.7319891309455193,
+        "ci95": [
+          0.7173935249139055,
+          0.7427633726626114
+        ]
+      }
+    },
+    "tfidf": {
+      "n_subs": 94,
+      "auc": {
+        "median": 0.7070804952279884,
+        "ci95": [
+          0.6952517245519267,
+          0.7232919576256356
+        ]
+      },
+      "balanced_acc": {
+        "median": 0.644471527514951,
+        "ci95": [
+          0.6298272508657226,
+          0.6567895556110939
+        ]
+      }
+    }
+  },
+  "head_to_head": {
+    "e5_vs_gemma": {
+      "n_shared_subs": 94,
+      "metric": "encoder 5-fold-CV AUC (full CSV) minus LLM AUC (full balanced corpus)",
+      "mean_rating_coverage": 0.540029393602175,
+      "vs_judgment_auc_parity": {
+        "median_delta": 0.13289119625253482,
+        "ci95": [
+          0.11921263243809255,
+          0.14544510050959958
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "vs_binary_auc_robustness": {
+        "median_delta": 0.11330825636120123,
+        "ci95": [
+          0.09976359956732606,
+          0.1366791559850129
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "PROTOCOL_NOTE": "DIAGNOSTIC ONLY -- encoder and LLM are on different row sets / eval protocols; not a like-for-like comparison. The authoritative row-matched same-split head-to-head is fairness_compare.json."
+    },
+    "e5_vs_llama": {
+      "n_shared_subs": 94,
+      "metric": "encoder 5-fold-CV AUC (full CSV) minus LLM AUC (full balanced corpus)",
+      "mean_rating_coverage": 0.9681064104589149,
+      "vs_judgment_auc_parity": {
+        "median_delta": 0.10365087574316073,
+        "ci95": [
+          0.09229132025274345,
+          0.12299078218194848
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "vs_binary_auc_robustness": {
+        "median_delta": 0.12418040632374172,
+        "ci95": [
+          0.11260871079229384,
+          0.14118606685434665
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "PROTOCOL_NOTE": "DIAGNOSTIC ONLY -- encoder and LLM are on different row sets / eval protocols; not a like-for-like comparison. The authoritative row-matched same-split head-to-head is fairness_compare.json."
+    },
+    "e5_vs_qwen": {
+      "n_shared_subs": 94,
+      "metric": "encoder 5-fold-CV AUC (full CSV) minus LLM AUC (full balanced corpus)",
+      "mean_rating_coverage": 0.8662593036474043,
+      "vs_judgment_auc_parity": {
+        "median_delta": 0.12586047451689603,
+        "ci95": [
+          0.11373133892602194,
+          0.14170120139156062
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "vs_binary_auc_robustness": {
+        "median_delta": 0.12991430574453888,
+        "ci95": [
+          0.11757126296600529,
+          0.13916288624918427
+        ],
+        "encoder_wins_frac": 1.0
+      },
+      "PROTOCOL_NOTE": "DIAGNOSTIC ONLY -- encoder and LLM are on different row sets / eval protocols; not a like-for-like comparison. The authoritative row-matched same-split head-to-head is fairness_compare.json."
+    }
+  },
+  "rating_missingness_diagnostic": {
+    "gemma": {
+      "rating_nan_frac": 0.4588137161922826,
+      "p_nan_given_decision1": 0.5836848689378291,
+      "p_nan_given_decision0": 0.3780483215414722,
+      "p_nan_given_truth1": 0.5184010699801536,
+      "p_nan_given_truth0": 0.391705740871213,
+      "corr_nan_decision": 0.20153576741481988,
+      "corr_nan_truth": 0.1269031875729706,
+      "pos_frac_all_parsed": 0.5296799478958374,
+      "pos_frac_rating_present": 0.47135950003167026,
+      "mnar_flag": true
+    },
+    "llama": {
+      "rating_nan_frac": 0.03157810554216317,
+      "p_nan_given_decision1": 0.0284812012155157,
+      "p_nan_given_decision0": 0.03350443822619202,
+      "p_nan_given_truth1": 0.030198446937014668,
+      "p_nan_given_truth0": 0.03313172532730938,
+      "corr_nan_decision": -0.013967034481723593,
+      "corr_nan_truth": -0.00837207003928508,
+      "pos_frac_all_parsed": 0.5296530292817238,
+      "pos_frac_rating_present": 0.5304075974753731,
+      "mnar_flag": false
+    },
+    "qwen": {
+      "rating_nan_frac": 0.13305630057670392,
+      "p_nan_given_decision1": 0.17,
+      "p_nan_given_decision0": 0.10895326498392711,
+      "p_nan_given_truth1": 0.14205088130589563,
+      "p_nan_given_truth0": 0.12290160519544173,
+      "corr_nan_decision": 0.08786034263311539,
+      "corr_nan_truth": 0.02813913496615866,
+      "pos_frac_all_parsed": 0.5302913448367157,
+      "pos_frac_rating_present": 0.5247895477600446,
+      "mnar_flag": false
+    }
+  },
+  "faithfulness_check": {
+    "gemma_acc_full95": 0.6771058315334774,
+    "kumar_gpt35_acc_same_corpus": 0.637,
+    "delta_vs_kumar": 0.0401,
+    "within_10pp_of_kumar": true,
+    "qual_signature_ok": true,
+    "faithful": true,
+    "note": "Reference = Kumar's published 95-sub GPT-3.5 median (0.637) on THIS released corpus. gemma (a different, newer model) is compared within a +-10pp gate, with Kumar's precision>>recall signature required. A small POSITIVE delta is expected and fine."
+  }
+}

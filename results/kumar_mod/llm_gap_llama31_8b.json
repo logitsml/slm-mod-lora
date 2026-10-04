@@ -1,0 +1,10 @@
+{
+  "tag": "llama31_8b",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "n": 17508,
+  "n_subs": 95,
+  "argmax_ok": 1.0,
+  "bal_auc_logitgap_median": 0.7725,
+  "pr_auc_logitgap_median": 0.7998,
+  "note": "within-community ROC-AUC of the yes/no logit gap predicting the moderator label; test fold"
+}

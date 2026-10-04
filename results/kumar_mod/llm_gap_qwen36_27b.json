@@ -1,0 +1,12 @@
+{
+  "tag": "qwen36_27b",
+  "model": "Qwen/Qwen3.6-27B",
+  "scoring": "vLLM yes/no logprob-gap (== HF logit-gap)",
+  "n": 17508,
+  "n_subs": 95,
+  "n_missing_yesno_in_top20": 0,
+  "argmax_ok": 1.0,
+  "bal_auc_logitgap_median": 0.7812,
+  "pr_auc_logitgap_median": 0.8115,
+  "note": "FULL test fold (no subsample); vLLM logprob gap on the SAME _build_prompt + same tokenization (add_special_tokens=False, left-trunc MAX_LEN) fed as token ids (single BOS); qwen3_5 hybrid arch cannot load via HF here (causal_conv1d CUDA12 vs torch CUDA13)."
+}

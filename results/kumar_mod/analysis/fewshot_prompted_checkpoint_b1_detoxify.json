@@ -1,0 +1,48 @@
+{
+  "analysis": "detoxify_B1_for_fewshot_prompted_checkpoints_macro_columns",
+  "definition": "per-community macro AUC columns; decision is yes/no logit gap > 0; Detoxify tox_toxicity; 2000 community bootstrap reps for TC CI",
+  "rows": [
+    {
+      "model": "google/gemma-3-12b-it",
+      "tag": "fewshot_gemma3_12b",
+      "n_rows": 17408,
+      "n_comm": 94,
+      "auc_tox_to_model_macro": 0.7321,
+      "auc_tox_to_moderator_macro": 0.665,
+      "TC_behav_macro": 0.0672,
+      "TC_behav_macro_ci95": [
+        0.0572,
+        0.077
+      ],
+      "frac_comm_gt0": 0.926
+    },
+    {
+      "model": "meta-llama/Llama-3.1-8B-Instruct",
+      "tag": "fewshot_llama31_8b",
+      "n_rows": 17408,
+      "n_comm": 94,
+      "auc_tox_to_model_macro": 0.7168,
+      "auc_tox_to_moderator_macro": 0.665,
+      "TC_behav_macro": 0.0519,
+      "TC_behav_macro_ci95": [
+        0.0409,
+        0.0634
+      ],
+      "frac_comm_gt0": 0.851
+    },
+    {
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "tag": "fewshot_qwen25_7b",
+      "n_rows": 17408,
+      "n_comm": 94,
+      "auc_tox_to_model_macro": 0.753,
+      "auc_tox_to_moderator_macro": 0.665,
+      "TC_behav_macro": 0.088,
+      "TC_behav_macro_ci95": [
+        0.0754,
+        0.1015
+      ],
+      "frac_comm_gt0": 0.936
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "analysis": "sae_feature_sufficiency_toxicity",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "65k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "n": 1500,
+  "n_subs": 95,
+  "pool": "model-kept (gap<0) AND bottom-quartile toxicity",
+  "clamp": "tox features up to p95 (dose p90/p95/p99)",
+  "induction_rate": {
+    "tox_p95": 0.2946666666666667,
+    "community_p95": 0.0006666666666666666,
+    "random_p95": 0.0017333333333333333
+  },
+  "mean_delta_gap_toward_remove": {
+    "tox_p95": 12.892583333333333,
+    "community_p95": -2.4516666666666667,
+    "random_p95": 1.2035500000000001
+  },
+  "dose_response_induction": {
+    "p90": 0.24333333333333335,
+    "p95": 0.2946666666666667,
+    "p99": 0.5873333333333334
+  },
+  "dissociation_ci95": {
+    "tox_minus_random": {
+      "point": 0.2929,
+      "ci95": [
+        0.2494,
+        0.3424
+      ]
+    },
+    "tox_minus_community": {
+      "point": 0.294,
+      "ci95": [
+        0.2505,
+        0.3426
+      ]
+    }
+  },
+  "off_distribution_guard": {
+    "added_contrib_norm_frac_mean": 0.0586,
+    "note": "matched-p95 random/community controls give same perturbation magnitude"
+  },
+  "interpretation": "Sufficiency: clamping toxicity features UP on confidently-kept benign comments induces removal far more than matched random/community clamps (same magnitude) -> the toxicity pathway is sufficient, and removal is not a generic distribution-shift artifact. Monotone dose-response (p90<p95<p99) is the causal signature."
+}

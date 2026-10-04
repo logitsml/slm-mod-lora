@@ -1,0 +1,715 @@
+{
+ "analysis": "qualitative_nontoxic_removals_bothkept",
+ "criteria": {
+  "label": "removed by community",
+  "llm": "Gemma-3-12B-it parsed keep",
+  "slm": "SLM-Mod emitted keep",
+  "display_filter": "ToxiGen < 0.1 AND s-nlp < 0.1",
+  "encoder_p_min": 0.6,
+  "min_chars": 15
+ },
+ "n_bothkept_nontoxic_removals": 1532,
+ "n_moderation_notices_bothkept": 12,
+ "moderation_notices": [
+  {
+   "subreddit": "changemyview",
+   "idx": 251,
+   "p_enc": 0.788,
+   "body": "Sorry [user], your comment has been removed:\n\n> Comment Rule 1\\. \"Direct responses to a CMV post must challenge at least one aspect of OP’s current view (however minor), unless they are asking a clarifying question. Arguments in favor of the view OP is willing to change must be restricted to rep"
+  },
+  {
+   "subreddit": "philosophy",
+   "idx": 417,
+   "p_enc": 0.763,
+   "body": "Hi there, your comment has been removed due to our second commenting rule:\n\n>Opinions are not valuable here, arguments are! Comments that solely express musings, opinions, beliefs, or assertions without argument may be removed.\n"
+  },
+  {
+   "subreddit": "changemyview",
+   "idx": 208,
+   "p_enc": 0.746,
+   "body": "Sorry [user], your submission has been removed: \n\n> Submission Rule B\\. \"You must personally hold the view and be open to it changing. A post cannot be neutral, on behalf of others, playing devil's advocate, or 'soapboxing'.\" [See the wiki page for more information.](http://www.reddit.com/r/ch"
+  },
+  {
+   "subreddit": "funny",
+   "idx": 382,
+   "p_enc": 0.703,
+   "body": "Hi [user], your [post]([permalink-removed]) breaks [the rules](https://www.reddit.com/r/funny/wiki/rules) of /r/funny and has been removed for the following reason(s):\n\n* No SMS or Social Media Content (including Reddit). [Read mo"
+  },
+  {
+   "subreddit": "science",
+   "idx": 85,
+   "p_enc": 0.697,
+   "body": "Hi [user], your submission has been removed for the following reason(s)\n \nYour submission has been removed because flair has not been assigned. \n \n*This removal was automatic. If you feel this was done in error, or would like further clarification, please add flair to the post and then [message t"
+  },
+  {
+   "subreddit": "science",
+   "idx": 448,
+   "p_enc": 0.68,
+   "body": "Hi [user], your submission has been removed for the following reason \n\nIt is a repost of an already submitted and popular story.\n\n[permalink-removed] removal was automatic, if you feel this was done in error, or would like further clarification, please don't hesitate to [message the mods"
+  },
+  {
+   "subreddit": "science",
+   "idx": 64,
+   "p_enc": 0.665,
+   "body": "Hi [user], your submission has been removed for the following reason(s)\n \nYour submission has been removed because flair has not been assigned. \n \n*This removal was automatic. If you feel this was done in error, or would like further clarification, please add flair to the post and then [message"
+  },
+  {
+   "subreddit": "pcmasterrace",
+   "idx": 98,
+   "p_enc": 0.649,
+   "body": "Thank you, [user], for your submission. Unfortunately, your submission has been removed for the following reason:\n\n* **Breach of Rule #6**, namely:\n\n    6.1 - Content that is unrelated, especially unoriginal, or low-effort (including simple website/software bugs, steam reviews, internet "
+  },
+  {
+   "subreddit": "science",
+   "idx": 484,
+   "p_enc": 0.577,
+   "body": "Hi [user], your submission has been removed for the following reason(s)\n \nYour submission has been removed because flair has not been assigned. \n \n*This removal was automatic. If you feel this was done in error, or would like further clarification, please add flair to the post and then [messa"
+  },
+  {
+   "subreddit": "legaladvice",
+   "idx": 385,
+   "p_enc": 0.457,
+   "body": "*Your post has been removed for the following reason(s):*\n\nYour post has been removed for being a duplicate of another post.  Please do not re-post unless specifically directed to.\n\nYour post does not appear to contain a legal question - or if it does, it's unclear what it is.  Please edit your post"
+  },
+  {
+   "subreddit": "legaladvice",
+   "idx": 404,
+   "p_enc": 0.423,
+   "body": "*Your post has been removed for the following reason(s):*\n\nYour post does not appear to contain a legal question - or if it does, it's unclear what it is.  Please edit your post to ask a clear legal question or questions.  Message the moderators after your edit for review.\n\n\n\n*If you feel this was i"
+  },
+  {
+   "subreddit": "DIY",
+   "idx": 60,
+   "p_enc": 0.306,
+   "body": "Thanks for posting to /r/DIY!\n\nYour submission has been removed because the description text for your photos needs a bit more detail.\n\n**Please read this entire message before you reply, and before you contact the Moderators about your post.**\n\nPhoto descriptions must detail important aspects of you"
+  }
+ ],
+ "n_candidates": 385,
+ "top_per_subreddit": [
+  {
+   "subreddit": "worldnews",
+   "idx": 368,
+   "p_enc": 0.944,
+   "tox_toxigen": 0.002,
+   "tox_snlp": 0.0702,
+   "body": "Ha, and a Russian troll was telling me what a big strategic win was the \"\"\"liberation\"\"\" of Palmyra just weeks ago. Synchronize your talking points. "
+  },
+  {
+   "subreddit": "leagueoflegends",
+   "idx": 475,
+   "p_enc": 0.934,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0,
+   "body": "A Youtuber named Redmercy recently did a video saying that riot intends to add something that indicates whether you mainly are a solo player, duo/group player, or completely a dynamic and team player. I don't think riot wants to separate queues. They announced recently solo q is definitely not comin"
+  },
+  {
+   "subreddit": "hillaryclinton",
+   "idx": 345,
+   "p_enc": 0.924,
+   "tox_toxigen": 0.0009,
+   "tox_snlp": 0.0,
+   "body": "Do you not think her record serving her country as SoS is relevant to electing her as the President of the United States? "
+  },
+  {
+   "subreddit": "LateStageCapitalism",
+   "idx": 429,
+   "p_enc": 0.919,
+   "tox_toxigen": 0.0018,
+   "tox_snlp": 0.0002,
+   "body": "Are you deleting and banning people for disagreeing with you?"
+  },
+  {
+   "subreddit": "DIY",
+   "idx": 193,
+   "p_enc": 0.913,
+   "tox_toxigen": 0.0009,
+   "tox_snlp": 0.0002,
+   "body": "Somehow I first read the title as dim sum. 🤔"
+  },
+  {
+   "subreddit": "science",
+   "idx": 485,
+   "p_enc": 0.901,
+   "tox_toxigen": 0.0066,
+   "tox_snlp": 0.0,
+   "body": "> 19 out of 20 retailers evaluated in this study did not sell cannabis to individuals who failed to identify themselves as being 21 years or older.\n\nExpect to see ads that scream \"5% of dispensaries sell to children!!!\"\n"
+  },
+  {
+   "subreddit": "jailbreak",
+   "idx": 40,
+   "p_enc": 0.898,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0,
+   "body": "RemindMe! 7 days"
+  },
+  {
+   "subreddit": "LifeProTips",
+   "idx": 274,
+   "p_enc": 0.898,
+   "tox_toxigen": 0.0028,
+   "tox_snlp": 0.0008,
+   "body": "also don't sext angry"
+  },
+  {
+   "subreddit": "gaming",
+   "idx": 369,
+   "p_enc": 0.89,
+   "tox_toxigen": 0.0009,
+   "tox_snlp": 0.0001,
+   "body": "LMFAO!!! Good one"
+  },
+  {
+   "subreddit": "MMA",
+   "idx": 98,
+   "p_enc": 0.875,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0,
+   "body": "Is it technically illegal to use a VPN to watch content you've paid for? "
+  },
+  {
+   "subreddit": "pics",
+   "idx": 275,
+   "p_enc": 0.875,
+   "tox_toxigen": 0.0594,
+   "tox_snlp": 0.0004,
+   "body": "Happy \"we are the victims\"."
+  },
+  {
+   "subreddit": "nba",
+   "idx": 397,
+   "p_enc": 0.874,
+   "tox_toxigen": 0.0026,
+   "tox_snlp": 0.0091,
+   "body": "Donald Trump is a better option than Crooked Hillary"
+  },
+  {
+   "subreddit": "IAmA",
+   "idx": 237,
+   "p_enc": 0.872,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0006,
+   "body": "u/[user]\n\nThere I was browsing reddit and [user], the most badass warrior on Burning Legion, is doing an AMA. I knew you were famous but I had no idea you were Reddit Famous.\n\nthis is [name], btw\n:P"
+  },
+  {
+   "subreddit": "atheism",
+   "idx": 347,
+   "p_enc": 0.866,
+   "tox_toxigen": 0.0087,
+   "tox_snlp": 0.0001,
+   "body": "No, wearing the shirt to a polling center at a religious institution and then posting about it on r/atheism makes him an attention seeker."
+  },
+  {
+   "subreddit": "hearthstone",
+   "idx": 246,
+   "p_enc": 0.865,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0001,
+   "body": "Dennis meta Turn 1 1/1, do nothing. OpieOP"
+  },
+  {
+   "subreddit": "conspiracy",
+   "idx": 111,
+   "p_enc": 0.861,
+   "tox_toxigen": 0.0023,
+   "tox_snlp": 0.0001,
+   "body": "Welcome to /r/conspiracy!"
+  },
+  {
+   "subreddit": "books",
+   "idx": 119,
+   "p_enc": 0.861,
+   "tox_toxigen": 0.0013,
+   "tox_snlp": 0.0185,
+   "body": "It's like they have know idea what a meme is and have discovered this new tribe of \"Tumblers\" and there culture of \"dank memes\""
+  },
+  {
+   "subreddit": "tifu",
+   "idx": 367,
+   "p_enc": 0.851,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0,
+   "body": "!remind me 2 weeks"
+  },
+  {
+   "subreddit": "PurplePillDebate",
+   "idx": 52,
+   "p_enc": 0.847,
+   "tox_toxigen": 0.0036,
+   "tox_snlp": 0.0035,
+   "body": ">Introspection is a lost art.\n\nOh good lord the irony. I think I may die. "
+  },
+  {
+   "subreddit": "nfl",
+   "idx": 76,
+   "p_enc": 0.847,
+   "tox_toxigen": 0.0012,
+   "tox_snlp": 0.001,
+   "body": "LETS PLAY HAHHAHAHAHAHHAHAHAHA \n\nhttp://imgur.com/hrMN4rJ\n"
+  },
+  {
+   "subreddit": "GetMotivated",
+   "idx": 262,
+   "p_enc": 0.846,
+   "tox_toxigen": 0.0026,
+   "tox_snlp": 0.0005,
+   "body": "that's it, time to unsub from this"
+  },
+  {
+   "subreddit": "india",
+   "idx": 448,
+   "p_enc": 0.839,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0001,
+   "body": "We did it Reddit!"
+  },
+  {
+   "subreddit": "hiphopheads",
+   "idx": 400,
+   "p_enc": 0.832,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0002,
+   "body": "r/hhh mods are on a constant power trip"
+  },
+  {
+   "subreddit": "Games",
+   "idx": 389,
+   "p_enc": 0.832,
+   "tox_toxigen": 0.0006,
+   "tox_snlp": 0.0,
+   "body": "RDR never came out for PC despite being such an amazing selling game."
+  },
+  {
+   "subreddit": "anime",
+   "idx": 85,
+   "p_enc": 0.826,
+   "tox_toxigen": 0.006,
+   "tox_snlp": 0.0007,
+   "body": "Again, consider putting in Tomoya's shoes, he is losing Ushio due the same sickness as Nagisa and blames the city for it, he might already want to end this already considering sooner or later he will lose her, also that instead of finding shelter for himself he stayed outside and let himself die."
+  },
+  {
+   "subreddit": "EnoughTrumpSpam",
+   "idx": 356,
+   "p_enc": 0.823,
+   "tox_toxigen": 0.0016,
+   "tox_snlp": 0.0001,
+   "body": "You're using one small minority of a larger population to stereotype the entire community. I thought this sub was against that behavior. "
+  },
+  {
+   "subreddit": "technology",
+   "idx": 234,
+   "p_enc": 0.82,
+   "tox_toxigen": 0.0013,
+   "tox_snlp": 0.0,
+   "body": "So did Bernie Sanders"
+  },
+  {
+   "subreddit": "UpliftingNews",
+   "idx": 297,
+   "p_enc": 0.82,
+   "tox_toxigen": 0.0125,
+   "tox_snlp": 0.0,
+   "body": "Rejoice!! We're putting our street-pooping days behind us!!"
+  },
+  {
+   "subreddit": "personalfinance",
+   "idx": 72,
+   "p_enc": 0.818,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0,
+   "body": "how much 4g data? can you tether to your computer? aka use your phones internet as primary internet?"
+  },
+  {
+   "subreddit": "philosophy",
+   "idx": 67,
+   "p_enc": 0.818,
+   "tox_toxigen": 0.0006,
+   "tox_snlp": 0.0001,
+   "body": "While I agree that a life of anger is unhealthy and destructive, I think anger is important for acknowledging injustice in our systems and to point out what needs to change in our own environments and ways of life."
+  },
+  {
+   "subreddit": "PoliticalDiscussion",
+   "idx": 60,
+   "p_enc": 0.801,
+   "tox_toxigen": 0.0021,
+   "tox_snlp": 0.0002,
+   "body": "Because I didn't make anything up. You're so disconnected from reality that you don't realize that pointing out things that have never happened isn't the same thing as making up things wholesale. "
+  },
+  {
+   "subreddit": "ShitRedditSays",
+   "idx": 287,
+   "p_enc": 0.798,
+   "tox_toxigen": 0.0264,
+   "tox_snlp": 0.0095,
+   "body": "as a a muslim, this is hilarious."
+  },
+  {
+   "subreddit": "CanadaPolitics",
+   "idx": 13,
+   "p_enc": 0.797,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0,
+   "body": "Does any other politician use \"friends\" as often when addressing supporters? Comes across as forced from a PM that was never considered warm and friendly. "
+  },
+  {
+   "subreddit": "changemyview",
+   "idx": 251,
+   "p_enc": 0.788,
+   "tox_toxigen": 0.0026,
+   "tox_snlp": 0.0,
+   "body": "Sorry [user], your comment has been removed:\n\n> Comment Rule 1\\. \"Direct responses to a CMV post must challenge at least one aspect of OP’s current view (however minor), unless they are asking a clarifying question. Arguments in favor of the view OP is willing to change must be restricted to rep"
+  },
+  {
+   "subreddit": "pokemon",
+   "idx": 107,
+   "p_enc": 0.787,
+   "tox_toxigen": 0.0179,
+   "tox_snlp": 0.0112,
+   "body": "TBH, from reading your responses to other's comments it seems that you don't want to hear anything about people who don't mind/care about this being a thing. So far a few people said what they had to and gave their reasoning for their opinion. You, in turn, have tried to shut them down. It's fine if"
+  },
+  {
+   "subreddit": "CFB",
+   "idx": 242,
+   "p_enc": 0.784,
+   "tox_toxigen": 0.0021,
+   "tox_snlp": 0.0001,
+   "body": "I've seen multiple cases of this happening. Until we develop a vaccine for Kentuckyitis, no child is safe."
+  },
+  {
+   "subreddit": "television",
+   "idx": 233,
+   "p_enc": 0.78,
+   "tox_toxigen": 0.0006,
+   "tox_snlp": 0.0007,
+   "body": "You are special and unique flower.  \n\nMake sure you tell everyone.  "
+  },
+  {
+   "subreddit": "askscience",
+   "idx": 296,
+   "p_enc": 0.778,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0,
+   "body": "I was thinking similarly that perhaps it is a visual process. It may be that they are creating a model of the individual objects as a whole. If there were to be a different number of objects than what was imprinted, that whole no longer fits the model and is therefore rejected in favor of the collec"
+  },
+  {
+   "subreddit": "TheSilphRoad",
+   "idx": 164,
+   "p_enc": 0.769,
+   "tox_toxigen": 0.0006,
+   "tox_snlp": 0.0,
+   "body": "So I need to create a ptc account to use this app?"
+  },
+  {
+   "subreddit": "2007scape",
+   "idx": 495,
+   "p_enc": 0.767,
+   "tox_toxigen": 0.0072,
+   "tox_snlp": 0.0001,
+   "body": "Showing her true colors"
+  },
+  {
+   "subreddit": "pokemontrades",
+   "idx": 208,
+   "p_enc": 0.766,
+   "tox_toxigen": 0.0012,
+   "tox_snlp": 0.0,
+   "body": "are you looking for comp shinies for it? "
+  },
+  {
+   "subreddit": "history",
+   "idx": 281,
+   "p_enc": 0.766,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0001,
+   "body": "Is the Led Zeppelin song named after Churchill's \"Black Dog\"?"
+  },
+  {
+   "subreddit": "depression",
+   "idx": 226,
+   "p_enc": 0.756,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0001,
+   "body": "No. Clay is the artist. Look at his other stuff. Great art. Funny. Sad. Beautiful."
+  },
+  {
+   "subreddit": "DestinyTheGame",
+   "idx": 374,
+   "p_enc": 0.756,
+   "tox_toxigen": 0.0061,
+   "tox_snlp": 0.0,
+   "body": "You know what isn't necessary? Reading the same stuff everytime, just because, and I quote: \"people dont feel like searching \"yellow flashing box in destiny\"\nYou could say \"then don't reply and move on\", but it's just littering a forum with repeat posts at some point. ^_^"
+  },
+  {
+   "subreddit": "news",
+   "idx": 264,
+   "p_enc": 0.755,
+   "tox_toxigen": 0.0282,
+   "tox_snlp": 0.0005,
+   "body": "He's already talked about cracking down on porn and signed a pledge in August to do so.\n\nhttp://nypost.com/2016/08/01/trump-vows-to-crack-down-on-internet-porn/\n\nHe may personally have liberal beliefs, but he's a shill for the republican party. "
+  },
+  {
+   "subreddit": "BlackPeopleTwitter",
+   "idx": 228,
+   "p_enc": 0.747,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0,
+   "body": "Is MLK Month going to happen in America."
+  },
+  {
+   "subreddit": "food",
+   "idx": 65,
+   "p_enc": 0.742,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0001,
+   "body": "Last post was removed because \"Cheese-stuffed Burger\" wasn't \"descriptive\" enough. Hope it is fixed this time!"
+  },
+  {
+   "subreddit": "fantasyfootball",
+   "idx": 22,
+   "p_enc": 0.736,
+   "tox_toxigen": 0.0027,
+   "tox_snlp": 0.0003,
+   "body": "what do i do with randall cobb? im lost on this guy"
+  },
+  {
+   "subreddit": "asoiaf",
+   "idx": 152,
+   "p_enc": 0.735,
+   "tox_toxigen": 0.0011,
+   "tox_snlp": 0.0,
+   "body": "!RemindMe 120 minutes"
+  },
+  {
+   "subreddit": "wow",
+   "idx": 109,
+   "p_enc": 0.734,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0,
+   "body": "Can't tell if serious..."
+  },
+  {
+   "subreddit": "nottheonion",
+   "idx": 8,
+   "p_enc": 0.724,
+   "tox_toxigen": 0.0127,
+   "tox_snlp": 0.0061,
+   "body": "Makes lol she's butthurt joke.\n\nGets downvoted cause not funny.\n\nMakes butthurt edit.\n\nHere's your award."
+  },
+  {
+   "subreddit": "spacex",
+   "idx": 349,
+   "p_enc": 0.722,
+   "tox_toxigen": 0.0038,
+   "tox_snlp": 0.0073,
+   "body": "Am I the only one that doesn't really care for that book? Started reading it when I was a kid but it all was just too silly and I dropped it. Then trying to watch the movie a few years back didn't help. Though I guess I'm more of a hard scifi kinda guy."
+  },
+  {
+   "subreddit": "Overwatch",
+   "idx": 94,
+   "p_enc": 0.722,
+   "tox_toxigen": 0.0014,
+   "tox_snlp": 0.0125,
+   "body": "Idk dude unless this is a shared account this is really sad."
+  },
+  {
+   "subreddit": "GlobalOffensive",
+   "idx": 124,
+   "p_enc": 0.72,
+   "tox_toxigen": 0.0559,
+   "tox_snlp": 0.0488,
+   "body": "Ah, the weekly reddit sponsor witch hunt. So refreshing.  Last week gambling,  this week Grey market advertising, next week adult beverage makers. We aren't all white knights we play a game about killing people. Don't take it too seriously."
+  },
+  {
+   "subreddit": "Showerthoughts",
+   "idx": 175,
+   "p_enc": 0.719,
+   "tox_toxigen": 0.0026,
+   "tox_snlp": 0.0006,
+   "body": "or BLASTS.\nBernie sanders BLASTS trump on 3 am tweet.\n"
+  },
+  {
+   "subreddit": "pokemongo",
+   "idx": 91,
+   "p_enc": 0.719,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0001,
+   "body": "never been on twitch before, but now im intrigued"
+  },
+  {
+   "subreddit": "AskTrumpSupporters",
+   "idx": 297,
+   "p_enc": 0.713,
+   "tox_toxigen": 0.0037,
+   "tox_snlp": 0.0,
+   "body": "1)  His whole campaign was about keeping us safe?\n\nNo, it wasn't.  It was about nationalism, patriotism, infrastructure building, immigration, healthcare, and yes about taking care of business abroad.\n\n2)  Pence is highly qualified and is an active vice-president.  This will be unlike any presidency"
+  },
+  {
+   "subreddit": "politics",
+   "idx": 78,
+   "p_enc": 0.711,
+   "tox_toxigen": 0.0038,
+   "tox_snlp": 0.0226,
+   "body": "No, he pointed out the absurdity of the other poster's argument and the inherent cognitive dissonance. "
+  },
+  {
+   "subreddit": "sex",
+   "idx": 42,
+   "p_enc": 0.709,
+   "tox_toxigen": 0.0006,
+   "tox_snlp": 0.0,
+   "body": "Doctors/therapists observing patterns among their patients isn't a valid means of drawing a hypothesis? That's the meaning of science. "
+  },
+  {
+   "subreddit": "funny",
+   "idx": 382,
+   "p_enc": 0.703,
+   "tox_toxigen": 0.001,
+   "tox_snlp": 0.0,
+   "body": "Hi [user], your [post]([permalink-removed]) breaks [the rules](https://www.reddit.com/r/funny/wiki/rules) of /r/funny and has been removed for the following reason(s):\n\n* No SMS or Social Media Content (including Reddit). [Read mo"
+  },
+  {
+   "subreddit": "Futurology",
+   "idx": 43,
+   "p_enc": 0.69,
+   "tox_toxigen": 0.0022,
+   "tox_snlp": 0.0001,
+   "body": "Oh my god.... it all makes sense. Stephen Hawking is actually [Kal-El](https://www.youtube.com/watch?v=QXBEepEoLWw)"
+  },
+  {
+   "subreddit": "space",
+   "idx": 89,
+   "p_enc": 0.69,
+   "tox_toxigen": 0.0011,
+   "tox_snlp": 0.0,
+   "body": "I thought we were supposed to leave Europa alone?"
+  },
+  {
+   "subreddit": "canada",
+   "idx": 401,
+   "p_enc": 0.689,
+   "tox_toxigen": 0.0041,
+   "tox_snlp": 0.0001,
+   "body": "You consider \"right wing\" to be a smear? There are plenty of decent people who are right wing, its just a political stance I disagree with."
+  },
+  {
+   "subreddit": "socialism",
+   "idx": 144,
+   "p_enc": 0.688,
+   "tox_toxigen": 0.0527,
+   "tox_snlp": 0.0024,
+   "body": "This is just sad. You bring up race and gender, and are so eager to deny your support to those who do not match your criteria. Meanwhile, socialism is not about sex or race, and never was. You have Marx flair, so let me quote from Marx:\n\n> The Communists are distinguished from the other working-clas"
+  },
+  {
+   "subreddit": "SubredditDrama",
+   "idx": 381,
+   "p_enc": 0.686,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0001,
+   "body": "I think she's using reddit as a way to work on handling hecklers.  Maybe she hopes it's a type of stand up that can get her further than her current material."
+  },
+  {
+   "subreddit": "aww",
+   "idx": 368,
+   "p_enc": 0.675,
+   "tox_toxigen": 0.001,
+   "tox_snlp": 0.0,
+   "body": "This is the exact preaching I was talking about. "
+  },
+  {
+   "subreddit": "pcmasterrace",
+   "idx": 51,
+   "p_enc": 0.67,
+   "tox_toxigen": 0.0013,
+   "tox_snlp": 0.0,
+   "body": "You misspelled \"peasant\" in the title."
+  },
+  {
+   "subreddit": "AskReddit",
+   "idx": 41,
+   "p_enc": 0.669,
+   "tox_toxigen": 0.0174,
+   "tox_snlp": 0.0002,
+   "body": "**/r/oldladiesbakingpies is pretty weird. Hilarious, but weird.\nLike how does someone come up the the idea for this?**"
+  },
+  {
+   "subreddit": "syriancivilwar",
+   "idx": 225,
+   "p_enc": 0.664,
+   "tox_toxigen": 0.0017,
+   "tox_snlp": 0.0001,
+   "body": "What is Aleppo?"
+  },
+  {
+   "subreddit": "europe",
+   "idx": 441,
+   "p_enc": 0.645,
+   "tox_toxigen": 0.0043,
+   "tox_snlp": 0.0001,
+   "body": ">Humanity as a whole migrated out of Africa\n\nHumanity ultimately came from single celled organisms in the ocean. But we evolved. And we evolved since coming out of Africa too.\n\n>Many south Americans can also trace back their heritage to European countries, are they welcome?\n\nLike the Pope, who is ge"
+  },
+  {
+   "subreddit": "videos",
+   "idx": 212,
+   "p_enc": 0.644,
+   "tox_toxigen": 0.0009,
+   "tox_snlp": 0.0003,
+   "body": "aloha snackbar it is hello"
+  },
+  {
+   "subreddit": "OutOfTheLoop",
+   "idx": 332,
+   "p_enc": 0.644,
+   "tox_toxigen": 0.0017,
+   "tox_snlp": 0.0,
+   "body": "He didn't even apologize."
+  },
+  {
+   "subreddit": "dataisbeautiful",
+   "idx": 113,
+   "p_enc": 0.639,
+   "tox_toxigen": 0.001,
+   "tox_snlp": 0.0,
+   "body": "You should do regressions with poverty and racial proportions as predictors for violent crime. Then you should be able to show that race does not improve the prediction of violence once poverty is in the model."
+  },
+  {
+   "subreddit": "legaladvice",
+   "idx": 493,
+   "p_enc": 0.627,
+   "tox_toxigen": 0.0013,
+   "tox_snlp": 0.0,
+   "body": "Is that what I did?"
+  },
+  {
+   "subreddit": "gifs",
+   "idx": 106,
+   "p_enc": 0.626,
+   "tox_toxigen": 0.0007,
+   "tox_snlp": 0.0001,
+   "body": "Minnesota suburb.  Bought a house since I got sick of high association dues in a townhouse and we had a kid, so we wanted a yard.  Takes a bit to mow, but I enjoy doing that and putzing around.\n\nhttp://i.imgur.com/cFynTh4.jpg"
+  },
+  {
+   "subreddit": "AskHistorians",
+   "idx": 372,
+   "p_enc": 0.623,
+   "tox_toxigen": 0.0009,
+   "tox_snlp": 0.0,
+   "body": "Follow up question. Would the tax collector come to you or would you be obligated to make a trip to the tax man once a year?"
+  },
+  {
+   "subreddit": "relationships",
+   "idx": 233,
+   "p_enc": 0.621,
+   "tox_toxigen": 0.0016,
+   "tox_snlp": 0.0001,
+   "body": "I'm gonna have to ask you to calm down. "
+  },
+  {
+   "subreddit": "Android",
+   "idx": 48,
+   "p_enc": 0.62,
+   "tox_toxigen": 0.0008,
+   "tox_snlp": 0.0,
+   "body": "Find the short peer, take the long stroll. "
+  }
+ ],
+ "redaction_note": "Third-party usernames, personal names, and comment permalinks redacted from quoted bodies ([user], [name], [permalink-removed]) per the paper's Reddit research-ethics protocol (Proferes et al.); scores, ids, and all other fields unchanged."
+}

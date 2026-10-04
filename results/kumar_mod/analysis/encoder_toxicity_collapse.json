@@ -1,0 +1,31 @@
+{
+  "analysis": "encoder_toxicity_collapse",
+  "metric": "AUC(toxicity_score -> removal decision), per community, macro-averaged",
+  "n_subs": {
+    "encoder": 94,
+    "llm": 77,
+    "human": 94
+  },
+  "n_shared_subs": 77,
+  "AUC_tox_to_decision": {
+    "human": 0.6613,
+    "encoder": 0.6978,
+    "llm_gemma": 0.7481
+  },
+  "contrast_llm_minus_encoder": {
+    "point": 0.0522,
+    "ci95_subreddit_bootstrap": [
+      0.0377,
+      0.0668
+    ]
+  },
+  "contrast_encoder_minus_human": {
+    "point": 0.0331,
+    "ci95_subreddit_bootstrap": [
+      0.0264,
+      0.04
+    ]
+  },
+  "sanity_encoder_self_auc_decision_to_label": 0.8147,
+  "interpretation": "If AUC(tox->encoder) approx AUC(tox->human) << AUC(tox->LLM), the encoder's removals are no more toxicity-driven than a human moderator's, while the prompted LLM's are markedly more -- i.e. the encoder tracks community norms (it is NOT toxicity-collapsed) whereas the LLM is. Pair with non-toxic-removal AUC (encoder 0.77 vs LLM 0.58-0.62)."
+}

@@ -1,0 +1,362 @@
+{
+  "analysis": "crossmodel_invariance_C3",
+  "tag": "qwen",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "layers": [
+    19,
+    23,
+    27
+  ],
+  "k_dict": 131072,
+  "k_active": 128,
+  "n_select": 8000,
+  "seed": 11,
+  "featset_reproduces_published": {
+    "19": true,
+    "23": true,
+    "27": true
+  },
+  "tox_features_recomputed": {
+    "19": [
+      33322,
+      8208,
+      78540,
+      34797,
+      61972,
+      129457,
+      22522,
+      70032,
+      54568,
+      89702
+    ],
+    "23": [
+      48469,
+      129806,
+      2361,
+      115219,
+      65779,
+      108718,
+      17348,
+      25510,
+      76168,
+      84054
+    ],
+    "27": [
+      74871,
+      91726,
+      93396,
+      76230,
+      114344,
+      38212,
+      121762,
+      69075,
+      101137,
+      119198
+    ]
+  },
+  "C3_consistency": {
+    "19": {
+      "n_elig_subs": 88,
+      "K10": {
+        "median_jaccard": 0.538,
+        "null_median_jaccard_mean": 0.053,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.429,
+          0.538
+        ],
+        "universal_set_size": 9,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          8208,
+          33322,
+          34797,
+          55960,
+          56208,
+          70032,
+          78218,
+          89702,
+          104436
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.538,
+        "null_median_jaccard_mean": 0.054,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.481,
+          0.538
+        ],
+        "universal_set_size": 17,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          6112,
+          8208,
+          21984,
+          33322,
+          34797,
+          55682,
+          55960,
+          56208,
+          58026,
+          60661,
+          70032,
+          78218,
+          89702,
+          92939,
+          93994,
+          104436,
+          128369
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.538,
+        "null_median_jaccard_mean": 0.091,
+        "null_median_jaccard_p95": 0.096,
+        "boot_ci95": [
+          0.509,
+          0.569
+        ],
+        "universal_set_size": 31,
+        "universal_set_tox_frac": 0.968,
+        "universal_set": [
+          6112,
+          8208,
+          17366,
+          21984,
+          22522,
+          32102,
+          33322,
+          34797,
+          54568,
+          55682,
+          55960,
+          56208,
+          58026,
+          60661,
+          61972,
+          70032,
+          78218,
+          78540,
+          89702,
+          89898,
+          92939,
+          93994,
+          102315,
+          102990,
+          104436,
+          104913,
+          105161,
+          121768,
+          128369,
+          129457
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.496
+    },
+    "23": {
+      "n_elig_subs": 88,
+      "K10": {
+        "median_jaccard": 0.818,
+        "null_median_jaccard_mean": 0.053,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.818,
+          0.818
+        ],
+        "universal_set_size": 9,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          6585,
+          25510,
+          40069,
+          40305,
+          44236,
+          84054,
+          108243,
+          108718,
+          129806
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.667,
+        "null_median_jaccard_mean": 0.081,
+        "null_median_jaccard_p95": 0.081,
+        "boot_ci95": [
+          0.667,
+          0.667
+        ],
+        "universal_set_size": 19,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          413,
+          2361,
+          6585,
+          12072,
+          17348,
+          25510,
+          40069,
+          40305,
+          44236,
+          45020,
+          55649,
+          65779,
+          68543,
+          84054,
+          102749,
+          108243,
+          108718,
+          117087,
+          129806
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.569,
+        "null_median_jaccard_mean": 0.109,
+        "null_median_jaccard_p95": 0.111,
+        "boot_ci95": [
+          0.569,
+          0.6
+        ],
+        "universal_set_size": 36,
+        "universal_set_tox_frac": 0.917,
+        "universal_set": [
+          413,
+          2361,
+          6585,
+          6850,
+          12072,
+          17348,
+          25510,
+          40069,
+          40305,
+          41614,
+          42273,
+          44236,
+          45020,
+          48469,
+          55649,
+          58023,
+          65779,
+          68543,
+          76168,
+          79846,
+          84054,
+          94498,
+          102749,
+          105958,
+          108243,
+          108718,
+          109618,
+          109922,
+          111451,
+          115219
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.688
+    },
+    "27": {
+      "n_elig_subs": 88,
+      "K10": {
+        "median_jaccard": 0.667,
+        "null_median_jaccard_mean": 0.055,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.667,
+          0.667
+        ],
+        "universal_set_size": 10,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          5735,
+          21484,
+          38212,
+          51122,
+          74871,
+          76230,
+          91726,
+          109838,
+          119198,
+          126834
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.739,
+        "null_median_jaccard_mean": 0.092,
+        "null_median_jaccard_p95": 0.111,
+        "boot_ci95": [
+          0.739,
+          0.818
+        ],
+        "universal_set_size": 20,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          5735,
+          21484,
+          38212,
+          46013,
+          51122,
+          55271,
+          69075,
+          69477,
+          74871,
+          76230,
+          91726,
+          93396,
+          101137,
+          105551,
+          109838,
+          114344,
+          119198,
+          121762,
+          122556,
+          126834
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.633,
+        "null_median_jaccard_mean": 0.149,
+        "null_median_jaccard_p95": 0.159,
+        "boot_ci95": [
+          0.6,
+          0.667
+        ],
+        "universal_set_size": 39,
+        "universal_set_tox_frac": 0.795,
+        "universal_set": [
+          5735,
+          20191,
+          21484,
+          34365,
+          38212,
+          46013,
+          47340,
+          47778,
+          51122,
+          55271,
+          56982,
+          69075,
+          69477,
+          74324,
+          74871,
+          76230,
+          83084,
+          84204,
+          89653,
+          91726,
+          93396,
+          99276,
+          101137,
+          101821,
+          105377,
+          105551,
+          106317,
+          109838,
+          110311,
+          113074
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.724
+    }
+  }
+}

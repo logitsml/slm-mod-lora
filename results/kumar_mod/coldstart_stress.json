@@ -1,0 +1,463 @@
+{
+  "analysis": "coldstart_conditioning_stress_test",
+  "n_communities": 95,
+  "epochs": 100,
+  "global_head": {
+    "median": 0.7596,
+    "ci": [
+      0.7417,
+      0.7883
+    ]
+  },
+  "rank_reg_sweep": {
+    "rk1_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7665,
+        "ci": [
+          0.7414,
+          0.7845
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0025,
+        "ci": [
+          -0.0059,
+          0.0007
+        ],
+        "frac_positive": 0.432
+      }
+    },
+    "rk1_wd0.001": {
+      "bal_auc": {
+        "median": 0.7532,
+        "ci": [
+          0.7265,
+          0.7666
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0118,
+        "ci": [
+          -0.0192,
+          -0.0044
+        ],
+        "frac_positive": 0.253
+      }
+    },
+    "rk1_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7237,
+          0.7512
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0338,
+          -0.0177
+        ],
+        "frac_positive": 0.2
+      }
+    },
+    "rk4_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7606,
+        "ci": [
+          0.7364,
+          0.7889
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0006,
+        "ci": [
+          -0.0076,
+          0.0041
+        ],
+        "frac_positive": 0.484
+      }
+    },
+    "rk4_wd0.001": {
+      "bal_auc": {
+        "median": 0.7554,
+        "ci": [
+          0.7265,
+          0.77
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.01,
+        "ci": [
+          -0.0166,
+          -0.0045
+        ],
+        "frac_positive": 0.274
+      }
+    },
+    "rk4_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7235,
+          0.7535
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0338,
+          -0.0171
+        ],
+        "frac_positive": 0.2
+      }
+    },
+    "rk8_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7585,
+        "ci": [
+          0.7387,
+          0.7809
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0026,
+        "ci": [
+          -0.0106,
+          0.0033
+        ],
+        "frac_positive": 0.463
+      }
+    },
+    "rk8_wd0.001": {
+      "bal_auc": {
+        "median": 0.7553,
+        "ci": [
+          0.7282,
+          0.772
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0096,
+        "ci": [
+          -0.0149,
+          -0.0042
+        ],
+        "frac_positive": 0.284
+      }
+    },
+    "rk8_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7237,
+          0.7512
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0338,
+          -0.0171
+        ],
+        "frac_positive": 0.2
+      }
+    },
+    "rk16_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7525,
+        "ci": [
+          0.7321,
+          0.775
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0022,
+        "ci": [
+          -0.0162,
+          0.0057
+        ],
+        "frac_positive": 0.474
+      }
+    },
+    "rk16_wd0.001": {
+      "bal_auc": {
+        "median": 0.7553,
+        "ci": [
+          0.7288,
+          0.7775
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0088,
+        "ci": [
+          -0.0171,
+          -0.0043
+        ],
+        "frac_positive": 0.316
+      }
+    },
+    "rk16_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7237,
+          0.7535
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0338,
+          -0.0177
+        ],
+        "frac_positive": 0.2
+      }
+    },
+    "rk32_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7513,
+        "ci": [
+          0.7298,
+          0.7672
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0099,
+        "ci": [
+          -0.0177,
+          0.0033
+        ],
+        "frac_positive": 0.421
+      }
+    },
+    "rk32_wd0.001": {
+      "bal_auc": {
+        "median": 0.7547,
+        "ci": [
+          0.729,
+          0.7779
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0092,
+        "ci": [
+          -0.0169,
+          -0.0049
+        ],
+        "frac_positive": 0.326
+      }
+    },
+    "rk32_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7235,
+          0.7512
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0338,
+          -0.0177
+        ],
+        "frac_positive": 0.2
+      }
+    },
+    "rk64_wd0.0001": {
+      "bal_auc": {
+        "median": 0.7431,
+        "ci": [
+          0.7227,
+          0.7595
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0133,
+        "ci": [
+          -0.0212,
+          -0.0067
+        ],
+        "frac_positive": 0.358
+      }
+    },
+    "rk64_wd0.001": {
+      "bal_auc": {
+        "median": 0.7551,
+        "ci": [
+          0.7305,
+          0.7781
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0092,
+        "ci": [
+          -0.0172,
+          -0.0047
+        ],
+        "frac_positive": 0.326
+      }
+    },
+    "rk64_wd0.01": {
+      "bal_auc": {
+        "median": 0.7373,
+        "ci": [
+          0.7237,
+          0.7535
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0236,
+        "ci": [
+          -0.0344,
+          -0.0171
+        ],
+        "frac_positive": 0.2
+      }
+    }
+  },
+  "best_sweep_config": {
+    "config": "rk1_wd0.0001",
+    "bal_auc": 0.7665,
+    "delta_vs_global": {
+      "median_delta": -0.0025,
+      "ci": [
+        -0.0059,
+        0.0007
+      ],
+      "frac_positive": 0.432
+    }
+  },
+  "text_variants": {
+    "name": {
+      "bal_auc": {
+        "median": 0.7526,
+        "ci": [
+          0.728,
+          0.7717
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0106,
+        "ci": [
+          -0.0176,
+          -0.0051
+        ],
+        "frac_positive": 0.274
+      }
+    },
+    "description": {
+      "bal_auc": {
+        "median": 0.7568,
+        "ci": [
+          0.7291,
+          0.7777
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0092,
+        "ci": [
+          -0.0126,
+          -0.0048
+        ],
+        "frac_positive": 0.305
+      }
+    },
+    "rules": {
+      "bal_auc": {
+        "median": 0.7563,
+        "ci": [
+          0.726,
+          0.7689
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0111,
+        "ci": [
+          -0.0176,
+          -0.005
+        ],
+        "frac_positive": 0.295
+      }
+    },
+    "rules_desc": {
+      "bal_auc": {
+        "median": 0.7553,
+        "ci": [
+          0.7288,
+          0.7765
+        ]
+      },
+      "delta_vs_global": {
+        "median_delta": -0.0088,
+        "ci": [
+          -0.0166,
+          -0.0046
+        ],
+        "frac_positive": 0.316
+      }
+    }
+  },
+  "wrong_rules_Kdraws": {
+    "K": 20,
+    "right": {
+      "median": 0.7553,
+      "ci": [
+        0.7294,
+        0.7742
+      ]
+    },
+    "wrong_mean": {
+      "median": 0.7497,
+      "ci": [
+        0.726,
+        0.7639
+      ]
+    },
+    "right_minus_wrong": {
+      "median": 0.0026,
+      "ci": [
+        0.0015,
+        0.0055
+      ]
+    }
+  },
+  "positive_control_proto_direct": {
+    "bal_auc": {
+      "median": 0.7932,
+      "ci": [
+        0.7746,
+        0.8046
+      ]
+    },
+    "delta_vs_global": {
+      "median_delta": 0.0264,
+      "ci": [
+        0.0053,
+        0.0355
+      ],
+      "frac_positive": 0.674
+    },
+    "note": "ARCHITECTURE-FREE: AUC of X @ (mean train removed - mean train kept). If >> global, per-community signal IS expressible as a community vector (so any conditioning failure is the architecture, not the absence of signal)."
+  },
+  "positive_control_labelproto_bilinear": {
+    "bal_auc": {
+      "median": 0.7633,
+      "ci": [
+        0.7408,
+        0.7872
+      ]
+    },
+    "delta_vs_global": {
+      "median_delta": -0.0027,
+      "ci": [
+        -0.0088,
+        0.0043
+      ],
+      "frac_positive": 0.432
+    },
+    "note": "bilinear (rank 64) conditioned on the label prototype; should BEAT global if the bilinear architecture can use a community vector"
+  },
+  "verdict_logic": "If every rank/reg/text config has delta_vs_global <= 0 AND right_minus_wrong ~ 0 AND positive_control delta_vs_global >> 0, then conditioning on PUBLIC RULES is genuinely inert (the architecture works; rules just carry no transferable signal)."
+}

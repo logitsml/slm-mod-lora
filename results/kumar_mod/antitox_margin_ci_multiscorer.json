@@ -1,0 +1,136 @@
+{
+  "analysis": "antitox_margin_ci_multiscorer",
+  "protocol": "identical to antitox_margin_ci.py --scorer detoxify; (family, cond) fixed at the shipped Detoxify-selected strongest conditions; scorer swapped to s-nlp and ToxiGen",
+  "seed": 11,
+  "by_scorer": {
+    "tox_snlp": {
+      "gemma:p4": {
+        "paired_mean": 0.0472,
+        "ci95": [
+          0.0196,
+          0.0749
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.6421,
+        "excludes_zero": true
+      },
+      "llama:p4": {
+        "paired_mean": 0.0432,
+        "ci95": [
+          0.0193,
+          0.0686
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.6316,
+        "excludes_zero": true
+      },
+      "qwen:p3": {
+        "paired_mean": 0.1457,
+        "ci95": [
+          0.1166,
+          0.1745
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.9053,
+        "excludes_zero": true
+      },
+      "qwen:p4": {
+        "paired_mean": 0.1491,
+        "ci95": [
+          0.1217,
+          0.178
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.8737,
+        "excludes_zero": true
+      },
+      "gemma4_26b_a4b:p4": {
+        "paired_mean": 0.0571,
+        "ci95": [
+          0.0303,
+          0.0849
+        ],
+        "n_subs": 94,
+        "frac_positive": 0.6915,
+        "excludes_zero": true
+      },
+      "dgemma26b:p4": {
+        "paired_mean": 0.0268,
+        "ci95": [
+          0.0025,
+          0.0534
+        ],
+        "n_subs": 93,
+        "frac_positive": 0.6344,
+        "excludes_zero": true
+      }
+    },
+    "tox_toxigen": {
+      "gemma:p4": {
+        "paired_mean": 0.0277,
+        "ci95": [
+          0.0012,
+          0.0532
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.6,
+        "excludes_zero": true
+      },
+      "llama:p4": {
+        "paired_mean": 0.0339,
+        "ci95": [
+          0.01,
+          0.0594
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.6,
+        "excludes_zero": true
+      },
+      "qwen:p3": {
+        "paired_mean": 0.1357,
+        "ci95": [
+          0.1102,
+          0.1634
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.8526,
+        "excludes_zero": true
+      },
+      "qwen:p4": {
+        "paired_mean": 0.1311,
+        "ci95": [
+          0.1071,
+          0.158
+        ],
+        "n_subs": 95,
+        "frac_positive": 0.8632,
+        "excludes_zero": true
+      },
+      "gemma4_26b_a4b:p4": {
+        "paired_mean": 0.044,
+        "ci95": [
+          0.014,
+          0.0727
+        ],
+        "n_subs": 94,
+        "frac_positive": 0.6383,
+        "excludes_zero": true
+      },
+      "dgemma26b:p4": {
+        "paired_mean": 0.0248,
+        "ci95": [
+          0.0003,
+          0.0512
+        ],
+        "n_subs": 93,
+        "frac_positive": 0.5806,
+        "excludes_zero": true
+      }
+    }
+  },
+  "summary": {
+    "cells": 12,
+    "positive_excluding_zero": 12
+  },
+  "note": "paired per-sub margin AUC(scorer->yhat|cond) - AUC(scorer->mod|baseline rows) over shared subs, at the Detoxify-selected (family, cond) pairs; community-clustered percentile bootstrap 2000 reps rng(SEED+2), SEED=11; source md5s: {\"antitox_dgemma26b.parquet\": \"f700a68cbd21f5e4d06403eac6766c49\", \"antitox_gemma.parquet\": \"5e57b9d0eddac25929b4d29067d27401\", \"antitox_gemma4_26b_a4b.parquet\": \"ec609bcc0226858cbd2b319bf9a35876\", \"antitox_llama.parquet\": \"58a80441780b032e825f8ffdb59443fa\", \"antitox_margin_ci.json\": \"33da8f7d9e7faa4567e01b23103a7468\", \"antitox_qwen.parquet\": \"fa9bdacfc69eb9d3021984fafedfb888\", \"kumar_balanced_multitox.parquet\": \"8dbe86d34f501240f6b61b7ec5115734\"}"
+}

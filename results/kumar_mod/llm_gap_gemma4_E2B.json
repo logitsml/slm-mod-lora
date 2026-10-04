@@ -1,0 +1,12 @@
+{
+  "tag": "gemma4_E2B",
+  "model": "google/gemma-4-E2B-it",
+  "scoring": "vLLM yes/no logprob-gap (== HF logit-gap)",
+  "n": 17508,
+  "n_subs": 95,
+  "n_missing_yesno_in_top20": 0,
+  "argmax_ok": 0.9999,
+  "bal_auc_logitgap_median": 0.74,
+  "pr_auc_logitgap_median": 0.7635,
+  "note": "FULL test fold (no subsample); vLLM logprob gap on the SAME _build_prompt + same tokenization (add_special_tokens=False, left-trunc MAX_LEN) fed as token ids (single BOS)."
+}

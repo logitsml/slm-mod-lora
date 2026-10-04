@@ -1,0 +1,30 @@
+{
+  "analysis": "recency_cov_verify",
+  "routine": "identical to gap_primary_recompute.per_comm (base 3 families)",
+  "by_model": {
+    "gemma4_12b": {
+      "bal_auc": 0.7642,
+      "pr_auc": 0.7947,
+      "non_tox_auc": 0.6906,
+      "n_comm": 95,
+      "cert@0.95": 9.6,
+      "cert@0.90": 17.0
+    },
+    "qwen36_27b": {
+      "bal_auc": 0.7812,
+      "pr_auc": 0.8115,
+      "non_tox_auc": 0.7047,
+      "n_comm": 95,
+      "cert@0.95": 12.8,
+      "cert@0.90": 21.3
+    },
+    "llama70b": {
+      "bal_auc": 0.7893,
+      "pr_auc": 0.8161,
+      "non_tox_auc": 0.718,
+      "n_comm": 95,
+      "cert@0.95": 9.6,
+      "cert@0.90": 16.0
+    }
+  }
+}

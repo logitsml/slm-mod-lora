@@ -1,0 +1,18 @@
+{
+  "tag": "gemma3_12b",
+  "model": "google/gemma-3-12b-it",
+  "mode": "fewshot_retrieved_gap",
+  "k": 4,
+  "k_pos": 2,
+  "k_neg": 2,
+  "n": 17408,
+  "n_comm": 94,
+  "argmax_ok": 1.0,
+  "n_truncated_over_maxlen": 0,
+  "bal_auc_logitgap_median": 0.7743,
+  "pr_auc_logitgap_median": 0.8071,
+  "nontox_auc_canonical_median": 0.706,
+  "cert@0.95": 9.6,
+  "cert@0.90": 16.0,
+  "note": "retrieved few-shot (kNN train exemplars by e5 cosine, balanced, interleaved), scored by the yes/no logit gap; leakage-free (exemplars train, scored comments test)"
+}

@@ -1,0 +1,96 @@
+{
+  "analysis": "distinctiveness_homogenization",
+  "n_comm": 94,
+  "x_axis": "AUC(Detoxify -> recorded removal) per community (low = distinctive)",
+  "outcome": "per-community BAL-AUC(method -> recorded removal)",
+  "slopes": {
+    "encoder_e5": {
+      "slope": 0.3543,
+      "intercept": 0.581,
+      "pearson_r": 0.4513,
+      "slope_ci95": [
+        0.1436,
+        0.5848
+      ]
+    },
+    "slm_mod": {
+      "slope": 0.4635,
+      "intercept": 0.491,
+      "pearson_r": 0.4203,
+      "slope_ci95": [
+        0.2162,
+        0.7396
+      ]
+    },
+    "llm_gemma": {
+      "slope": 0.7544,
+      "intercept": 0.2656,
+      "pearson_r": 0.7319,
+      "slope_ci95": [
+        0.5789,
+        0.9527
+      ]
+    },
+    "llm_llama": {
+      "slope": 0.6207,
+      "intercept": 0.3459,
+      "pearson_r": 0.5664,
+      "slope_ci95": [
+        0.3781,
+        0.8665
+      ]
+    },
+    "llm_qwen": {
+      "slope": 0.6522,
+      "intercept": 0.31,
+      "pearson_r": 0.6138,
+      "slope_ci95": [
+        0.4121,
+        0.9106
+      ]
+    },
+    "llm_mean": {
+      "slope": 0.6758,
+      "intercept": 0.3072,
+      "pearson_r": 0.655,
+      "slope_ci95": [
+        0.4568,
+        0.9071
+      ]
+    }
+  },
+  "contrasts": {
+    "llm_gemma_minus_encoder": {
+      "slope_diff": 0.4001,
+      "ci95": [
+        0.2618,
+        0.528
+      ],
+      "excludes_zero": true
+    },
+    "llm_llama_minus_encoder": {
+      "slope_diff": 0.2664,
+      "ci95": [
+        0.1111,
+        0.4419
+      ],
+      "excludes_zero": true
+    },
+    "llm_qwen_minus_encoder": {
+      "slope_diff": 0.2979,
+      "ci95": [
+        0.1248,
+        0.4758
+      ],
+      "excludes_zero": true
+    },
+    "llm_mean_minus_encoder": {
+      "slope_diff": 0.3215,
+      "ci95": [
+        0.17,
+        0.4754
+      ],
+      "excludes_zero": true
+    }
+  }
+}

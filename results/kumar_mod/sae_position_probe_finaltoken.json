@@ -1,0 +1,30 @@
+{
+  "analysis": "sae_necessity_final_token_only",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "16k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "n": 2000,
+  "n_subs": 95,
+  "pool": "model-removed (gap_rules>0), same seed-11 sample as sae_position_probe",
+  "flip_rate": {
+    "all": 1.0,
+    "final_token": 0.556
+  },
+  "flip_ci95": {
+    "all": [
+      1.0,
+      1.0
+    ],
+    "final_token": [
+      0.5175,
+      0.5962
+    ]
+  },
+  "paper_claim": "final decision token alone flips 56% of removals",
+  "anchor": "all-position arm must reproduce 1.0 (sae_position_probe.json)"
+}

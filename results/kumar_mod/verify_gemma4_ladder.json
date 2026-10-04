@@ -1,0 +1,30 @@
+{
+  "analysis": "verify_gemma4_ladder",
+  "routine": "identical to gap_primary_recompute.per_comm",
+  "by_model": {
+    "gemma4_E2B": {
+      "bal_auc": 0.74,
+      "pr_auc": 0.7635,
+      "non_tox_auc": 0.6504,
+      "n_comm": 95,
+      "cert@0.95": 4.3,
+      "cert@0.90": 6.4
+    },
+    "gemma4_E4B": {
+      "bal_auc": 0.7487,
+      "pr_auc": 0.7881,
+      "non_tox_auc": 0.677,
+      "n_comm": 95,
+      "cert@0.95": 10.6,
+      "cert@0.90": 12.8
+    },
+    "gemma4_31B": {
+      "bal_auc": 0.7884,
+      "pr_auc": 0.8134,
+      "non_tox_auc": 0.7126,
+      "n_comm": 95,
+      "cert@0.95": 5.3,
+      "cert@0.90": 11.7
+    }
+  }
+}

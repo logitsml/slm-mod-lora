@@ -1,0 +1,250 @@
+{
+  "generated_utc": "2026-07-21T18:11:31.758899+00:00",
+  "figure1_methods_comparison_sha256": "2607bf99db9beda6647095a398e49028eaf776bead6e9157f0fa62f257e519ee",
+  "provenance_note": "Cost inputs use the measured throughput_bench.json price points; _INDEPENDENT_tc_rederive.json re-derives the headline TC numbers from the shipped decision tables as a built-in consistency check.",
+  "canonical_assertions": {
+    "CANONICAL_NUMBERS": true
+  },
+  "palette_assertions": {
+    "gemma": "#2F65A7",
+    "llama": "#A5A508",
+    "qwen": "#702082",
+    "toxicity": "#9A3324",
+    "encoder": "#00274C",
+    "coldstart": "#597638",
+    "slm_mod": "#75988D",
+    "llm_aggregate": "#FFCB05"
+  },
+  "outputs": [
+    "figures/fig_tc_test.pdf",
+    "figures/fig_tc_test.png",
+    "figures/fig_rule_interventions.pdf",
+    "figures/fig_rule_interventions.png",
+    "figures/fig_sae_dissociation.pdf",
+    "figures/fig_sae_dissociation.png",
+    "figures/fig_nontoxic_removals.pdf",
+    "figures/fig_nontoxic_removals.png",
+    "figures/fig_coverage.pdf",
+    "figures/fig_coverage.png",
+    "figures/fig_where_encoded.pdf",
+    "figures/fig_where_encoded.png",
+    "figures/fig_over_removal.pdf",
+    "figures/fig_over_removal.png",
+    "figures/fig_distinctiveness.pdf",
+    "figures/fig_distinctiveness.png"
+  ],
+  "source_events": [
+    {
+      "file": "results/kumar_mod/PAPER_NUMBERS.json",
+      "field": "CANONICAL_NUMBERS",
+      "sha256": "46daa2e715b486e4291a01ca23ffe84c18428f64dcf45833eed3dd114d0eb342"
+    },
+    {
+      "file": "results/kumar_mod/_INDEPENDENT_tc_rederive.json",
+      "field": "percommunity_toxigen and by_family.by_scorer",
+      "sha256": "1d5aae53dad45556db98143f0062d6908dc3633e62eb592e0dbdea9bf8e66de3"
+    },
+    {
+      "file": "results/kumar_mod/analysis/toxicity_across_conditions.json",
+      "field": "by_family condition toxicity AUC/removal_rate",
+      "sha256": "e612c8f93bf150a6fdbaa2ecbd1830debd4d4a679fe0dfecfc12d85d9ff2faf1"
+    },
+    {
+      "file": "results/kumar_mod/b3_decision_flip.json",
+      "field": "by_family do_rules/do_prompt flip_to_keep_rate",
+      "sha256": "d20eb7cd1673ab8a65fa565009c66de0d4f2b46f335248a77d8fec157be7a51b"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_dosedense.json",
+      "field": "flip_rate and dissociation_ci95",
+      "sha256": "9a869d6d6f6da05f839b662dbabe7db6477e9319467774631d5d2a6d6b8ca56d"
+    },
+    {
+      "file": "results/kumar_mod/sae_sufficiency.json",
+      "field": "induction_rate and dose_response_induction",
+      "sha256": "4a08444f3a2b9ac1ac830858808cd7e8ab52ec5ebd4ebac8046a71984f942da9"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_toxicity_65k.json",
+      "field": "flip_rate",
+      "sha256": "77be98b02c271083c669872b7ce9de33d82acd368df94fee02eab81df3762a7c"
+    },
+    {
+      "file": "results/kumar_mod/sae/invariance_w16k.json",
+      "field": "C3_consistency",
+      "sha256": "6574276c6e9863761301417e29cd906417964ceb24ad18ffc5d2782ab6a6f87d"
+    },
+    {
+      "file": "results/kumar_mod/sae_controls_extra.json",
+      "field": "heldout_on_disjoint_B, flip_rate controls, position_localization",
+      "sha256": "8b8d6272f532f63a56c3df5e6d8093587fda55ec9ce543cda0cf08410d123b56"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_dosedense.json",
+      "field": "dose_response_flip",
+      "sha256": "9a869d6d6f6da05f839b662dbabe7db6477e9319467774631d5d2a6d6b8ca56d"
+    },
+    {
+      "file": "results/kumar_mod/sae_position_probe.json",
+      "field": "flip_rate by position",
+      "sha256": "eebb55c654c42dc8a21d1665c4f1d20757174ab697518807aed244c356b196b5"
+    },
+    {
+      "file": "results/kumar_mod/analysis/toxicity_residualization.json",
+      "field": "by_method.nontoxic_removal_auc",
+      "sha256": "bb1149c0885bb4b43553411b208ff5f3d0d318963f0c1cac603fca28f2c3e9de"
+    },
+    {
+      "file": "results/kumar_mod/llm_gap_primary_metrics.json",
+      "field": "by_model non_tox_auc",
+      "sha256": "42154f9e92db90b303c601fd0849fdbf97a8330f11f52b7b97c11ee16f05995e"
+    },
+    {
+      "file": "results/kumar_mod/balanced/robustness/nontoxic_auc_theta_sweep.json",
+      "field": "theta_grid and by_method",
+      "sha256": "898a260ce99f58a369b47372bd9630d9f8b9f176b18c987fe73bc7f469fd5a30"
+    },
+    {
+      "file": "results/kumar_mod/analysis/triage_value.json",
+      "field": "f_needed_joint_precision_and_recall_HEADLINE",
+      "sha256": "0d1aca5fe7f842e72a6e6118f0b1e1ef27fae67d808acbd17c94f995e60098ee"
+    },
+    {
+      "file": "results/kumar_mod/llm_gap_primary_metrics.json",
+      "field": "by_model triage gap_llm_f_escalate",
+      "sha256": "42154f9e92db90b303c601fd0849fdbf97a8330f11f52b7b97c11ee16f05995e"
+    },
+    {
+      "file": "results/kumar_mod/sae/dla_w16k.json",
+      "field": "K50 share_tox by layer",
+      "sha256": "a996a750381bb8ca41d4af95c0c778ff6f25e0dead3eb82ba94686d317ab492f"
+    },
+    {
+      "file": "results/kumar_mod/decision_axis_invariance.json",
+      "field": "by_layer cross_over_ceiling_ratio",
+      "sha256": "e5077f6b72a9ec62b063afa50a62f93506eb7ec381538551d5b52d16510472cb"
+    },
+    {
+      "file": "results/kumar_mod/analysis/over_removal.json",
+      "field": "by_tox_def Detoxify>=0.5 selectivity ratios",
+      "sha256": "f53db66d0ed1427ce0f656b4d9335a27e0aa6b20b910dcfe0e8fae95b2da25e5"
+    },
+    {
+      "file": "results/kumar_mod/analysis/distinctiveness.json",
+      "field": "per-method slopes and contrasts",
+      "sha256": "1a5046cabaabd3f00df5fb64117a6fb277e07f78b1fc64a4efe1952e89592a33"
+    },
+    {
+      "file": "results/kumar_mod/analysis/distinctiveness_points.parquet",
+      "field": "per-community distinctiveness x and BAL-AUC y",
+      "sha256": "577768449f3a6ad7cf95679a1125d564e3cf75088ec5de98d4848f1e971706cc"
+    }
+  ],
+  "sources": [
+    {
+      "file": "results/kumar_mod/PAPER_NUMBERS.json",
+      "field": "CANONICAL_NUMBERS",
+      "sha256": "46daa2e715b486e4291a01ca23ffe84c18428f64dcf45833eed3dd114d0eb342"
+    },
+    {
+      "file": "results/kumar_mod/_INDEPENDENT_tc_rederive.json",
+      "field": "percommunity_toxigen and by_family.by_scorer",
+      "sha256": "1d5aae53dad45556db98143f0062d6908dc3633e62eb592e0dbdea9bf8e66de3"
+    },
+    {
+      "file": "results/kumar_mod/analysis/toxicity_across_conditions.json",
+      "field": "by_family condition toxicity AUC/removal_rate",
+      "sha256": "e612c8f93bf150a6fdbaa2ecbd1830debd4d4a679fe0dfecfc12d85d9ff2faf1"
+    },
+    {
+      "file": "results/kumar_mod/b3_decision_flip.json",
+      "field": "by_family do_rules/do_prompt flip_to_keep_rate",
+      "sha256": "d20eb7cd1673ab8a65fa565009c66de0d4f2b46f335248a77d8fec157be7a51b"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_dosedense.json",
+      "field": "flip_rate and dissociation_ci95",
+      "sha256": "9a869d6d6f6da05f839b662dbabe7db6477e9319467774631d5d2a6d6b8ca56d"
+    },
+    {
+      "file": "results/kumar_mod/sae_sufficiency.json",
+      "field": "induction_rate and dose_response_induction",
+      "sha256": "4a08444f3a2b9ac1ac830858808cd7e8ab52ec5ebd4ebac8046a71984f942da9"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_toxicity_65k.json",
+      "field": "flip_rate",
+      "sha256": "77be98b02c271083c669872b7ce9de33d82acd368df94fee02eab81df3762a7c"
+    },
+    {
+      "file": "results/kumar_mod/sae/invariance_w16k.json",
+      "field": "C3_consistency",
+      "sha256": "6574276c6e9863761301417e29cd906417964ceb24ad18ffc5d2782ab6a6f87d"
+    },
+    {
+      "file": "results/kumar_mod/sae_controls_extra.json",
+      "field": "heldout_on_disjoint_B, flip_rate controls, position_localization",
+      "sha256": "8b8d6272f532f63a56c3df5e6d8093587fda55ec9ce543cda0cf08410d123b56"
+    },
+    {
+      "file": "results/kumar_mod/sae_causal_dosedense.json",
+      "field": "dose_response_flip",
+      "sha256": "9a869d6d6f6da05f839b662dbabe7db6477e9319467774631d5d2a6d6b8ca56d"
+    },
+    {
+      "file": "results/kumar_mod/sae_position_probe.json",
+      "field": "flip_rate by position",
+      "sha256": "eebb55c654c42dc8a21d1665c4f1d20757174ab697518807aed244c356b196b5"
+    },
+    {
+      "file": "results/kumar_mod/analysis/toxicity_residualization.json",
+      "field": "by_method.nontoxic_removal_auc",
+      "sha256": "bb1149c0885bb4b43553411b208ff5f3d0d318963f0c1cac603fca28f2c3e9de"
+    },
+    {
+      "file": "results/kumar_mod/llm_gap_primary_metrics.json",
+      "field": "by_model non_tox_auc",
+      "sha256": "42154f9e92db90b303c601fd0849fdbf97a8330f11f52b7b97c11ee16f05995e"
+    },
+    {
+      "file": "results/kumar_mod/balanced/robustness/nontoxic_auc_theta_sweep.json",
+      "field": "theta_grid and by_method",
+      "sha256": "898a260ce99f58a369b47372bd9630d9f8b9f176b18c987fe73bc7f469fd5a30"
+    },
+    {
+      "file": "results/kumar_mod/analysis/triage_value.json",
+      "field": "f_needed_joint_precision_and_recall_HEADLINE",
+      "sha256": "0d1aca5fe7f842e72a6e6118f0b1e1ef27fae67d808acbd17c94f995e60098ee"
+    },
+    {
+      "file": "results/kumar_mod/llm_gap_primary_metrics.json",
+      "field": "by_model triage gap_llm_f_escalate",
+      "sha256": "42154f9e92db90b303c601fd0849fdbf97a8330f11f52b7b97c11ee16f05995e"
+    },
+    {
+      "file": "results/kumar_mod/sae/dla_w16k.json",
+      "field": "K50 share_tox by layer",
+      "sha256": "a996a750381bb8ca41d4af95c0c778ff6f25e0dead3eb82ba94686d317ab492f"
+    },
+    {
+      "file": "results/kumar_mod/decision_axis_invariance.json",
+      "field": "by_layer cross_over_ceiling_ratio",
+      "sha256": "e5077f6b72a9ec62b063afa50a62f93506eb7ec381538551d5b52d16510472cb"
+    },
+    {
+      "file": "results/kumar_mod/analysis/over_removal.json",
+      "field": "by_tox_def Detoxify>=0.5 selectivity ratios",
+      "sha256": "f53db66d0ed1427ce0f656b4d9335a27e0aa6b20b910dcfe0e8fae95b2da25e5"
+    },
+    {
+      "file": "results/kumar_mod/analysis/distinctiveness.json",
+      "field": "per-method slopes and contrasts",
+      "sha256": "1a5046cabaabd3f00df5fb64117a6fb277e07f78b1fc64a4efe1952e89592a33"
+    },
+    {
+      "file": "results/kumar_mod/analysis/distinctiveness_points.parquet",
+      "field": "per-community distinctiveness x and BAL-AUC y",
+      "sha256": "577768449f3a6ad7cf95679a1125d564e3cf75088ec5de98d4848f1e971706cc"
+    }
+  ]
+}

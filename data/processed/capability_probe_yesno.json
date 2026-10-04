@@ -1,0 +1,1220 @@
+{
+  "name": "capability_probe_yesno",
+  "purpose": "Balanced factual yes/no probe for the SAE capability-preservation control. Tests whether toxicity-feature ablation degrades general factual competence. Contains ZERO toxicity or moderation content by construction.",
+  "n": 200,
+  "n_yes": 100,
+  "n_no": 100,
+  "n_mid_difficulty": 47,
+  "categories": {
+    "geography": 50,
+    "arithmetic_parity": 50,
+    "science": 50,
+    "everyday": 50
+  },
+  "answer_field": "answer",
+  "prompt_template": "apply_chat_template user turn: 'Answer the following question. Return a JSON object with one field \"answer\" that is either \"yes\" or \"no\". Question: <q>' then append '{\"answer\": \"' so the next token is the model's yes/no decision.",
+  "freeform_template": "apply_chat_template user turn 'Answer yes or no: <q>.' then append 'Answer:'",
+  "seed_note": "authored fixed order; probe bootstrap resamples questions with numpy seed 12.",
+  "questions": [
+    {
+      "category": "geography",
+      "question": "Is Paris the capital of France?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Tokyo located in Japan?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Nile a river in Africa?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Australia both a country and a continent?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Mount Everest the tallest mountain above sea level on Earth?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Canada in North America?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Amazon River in South America?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Rome the capital of Italy?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Sahara Desert in Africa?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Russia the largest country by land area?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Greenland an island?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Pacific the largest ocean?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Buenos Aires the capital of Argentina?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Great Barrier Reef located off the coast of Australia?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Madrid the capital of Spain?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Alaska part of the United States?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Himalayas mountain range in Asia?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Does the equator pass through Ecuador?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Istanbul a city that spans two continents?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Lake Baikal located in Russia?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Mount Kilimanjaro in Tanzania?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Danube a river in Europe?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Iceland located in the Northern Hemisphere?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Mediterranean Sea connected to the Atlantic Ocean?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Egypt located on the African continent?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Africa a country?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Atlantic Ocean larger than the Pacific Ocean?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Mount Everest located in South America?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Brazil in Europe?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Sahara Desert located in Asia?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Canada south of Mexico?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Tokyo the capital of China?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Nile located in Australia?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Spain an island nation?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Does the equator pass through Canada?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Mount Fuji located in Germany?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Amazon River in Africa?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Iceland part of the continent of Africa?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Russia smaller than Vatican City?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Berlin the capital of France?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Greenland a part of South America?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Sydney the capital of Australia?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is the capital of the United States New York City?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Antarctica the smallest continent?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Rome the capital of Greece?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Los Angeles the capital of California?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is Turkey located entirely in Africa?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Dead Sea a freshwater lake?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "geography",
+      "question": "Is the Pacific Ocean a lake?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "geography",
+      "question": "Is Japan located on the continent of South America?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 4 an even number?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 7 an odd number?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is the sum of 2 and 3 equal to 5?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 10 greater than 6?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 100 divisible by 4?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 9 a multiple of 3?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 12 an even number?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is the product of 3 and 4 equal to 12?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 15 divisible by 5?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 8 greater than 5?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 21 divisible by 7?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 1000 greater than 999?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 6 divisible by both 2 and 3?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is half of 50 equal to 25?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 11 an odd number?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 3 squared equal to 9?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 20 an even number?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 5 times 5 equal to 25?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 0 an even number?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 17 a prime number?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 2 the only even prime number?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is the sum of two odd numbers always even?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 144 a perfect square?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 81 divisible by 9?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 13 a prime number?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 5 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 6 an odd number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 2 plus 2 equal to 5?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 7 greater than 10?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 9 divisible by 2?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 15 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 8 an odd number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is the product of 2 and 3 equal to 7?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 3 greater than 8?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 25 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is the sum of 4 and 4 equal to 9?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 100 an odd number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 7 divisible by 3?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 50 greater than 100?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 10 divisible by 3?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 9 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 4 times 4 equal to 15?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 21 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 33 divisible by 2?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 2 greater than 7?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 17 an even number?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 14 divisible by 5?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 1 a prime number?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 12 a prime number?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "arithmetic_parity",
+      "question": "Is 6 squared equal to 30?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is water composed of hydrogen and oxygen?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does the Earth orbit the Sun?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Sun a star?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do humans have a heart?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is oxygen necessary for human breathing?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does ice float on water?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do plants produce oxygen through photosynthesis?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the speed of light faster than the speed of sound?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is DNA found in human cells?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does the Moon orbit the Earth?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is gravity a force that pulls objects toward Earth?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Are humans mammals?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the heart part of the circulatory system?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does sound travel through air?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do bees help pollinate flowers?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is blood red in humans?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do fish breathe using gills?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Earth roughly spherical?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is photosynthesis a process used by plants?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the chemical symbol for gold Au?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is water at 100 degrees Celsius at sea level boiling?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is carbon dioxide a gas at room temperature?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is the freezing point of water 0 degrees Celsius at sea level?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Can electricity flow through copper?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Are there eight planets in the Solar System?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is the Sun a planet?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is water made only of carbon?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Can humans breathe underwater without equipment?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is sound faster than light?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Are humans cold-blooded?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Moon larger than the Sun?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does the human body have three lungs?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is glass a metal?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Earth flat?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Can plants grow without any water?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do humans have gills for breathing?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Sun colder than the Earth?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Are all metals liquid at room temperature?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is gold a type of gas?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Do fish have feathers?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is the Solar System centered on the Earth?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Is DNA a type of rock?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "science",
+      "question": "Does the Earth orbit the Moon?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is the chemical symbol for oxygen H?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Do plants require darkness to perform photosynthesis?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is the boiling point of water 0 degrees Celsius at sea level?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Do spiders have six legs?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is helium heavier than iron?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is ice denser than liquid water?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "science",
+      "question": "Is carbon dioxide the gas humans primarily inhale to survive?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a week have seven days?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Are there 60 minutes in an hour?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do most cars have four wheels?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a triangle a shape with three sides?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a year have twelve months?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is milk a liquid?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do people typically sleep at night?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a bicycle a mode of transportation?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a dozen equal twelve?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a ripe banana typically yellow?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do clocks tell time?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a keyboard used for typing?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a square a shape with four equal sides?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do birds have wings?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is coffee typically served hot?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is an hour longer than a minute?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do refrigerators keep food cold?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is Monday a day of the week?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a book something you can read?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do humans typically have ten fingers?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a whale larger than a mouse?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is winter typically colder than summer?",
+      "answer": "yes",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Does February have 28 days in a common year?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Are there 100 centimeters in a meter?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a standard six-sided die have six faces?",
+      "answer": "yes",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a week have ten days?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do most cars have ten wheels?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a triangle a shape with four sides?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a year have twenty months?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a rock a liquid?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a shoe a type of food?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a dozen equal twenty?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is grass typically purple?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do clocks measure weight?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a spoon used for typing?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do fish have wings for flying in the sky?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is ice cream typically served boiling hot?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a minute longer than an hour?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do ovens keep food cold?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is Funday a day of the week?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a chair something you typically eat?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do humans typically have twenty fingers?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a mouse larger than an elephant?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Is summer typically colder than winter?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Do people typically sleep standing on one foot?",
+      "answer": "no",
+      "difficulty": "easy"
+    },
+    {
+      "category": "everyday",
+      "question": "Are there 100 minutes in an hour?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a minute have 100 seconds?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Is a circle a shape with corners?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Are there 10 centimeters in a meter?",
+      "answer": "no",
+      "difficulty": "mid"
+    },
+    {
+      "category": "everyday",
+      "question": "Does a standard die have twelve faces?",
+      "answer": "no",
+      "difficulty": "mid"
+    }
+  ]
+}

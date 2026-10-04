@@ -1,0 +1,128 @@
+{
+    "analysis": "sae_capability_preservation_control",
+    "model": "google/gemma-3-12b-it",
+    "sae": "google/gemma-scope-2-12b-it",
+    "width": "16k",
+    "layers": [
+        24,
+        31,
+        41
+    ],
+    "seed": 11,
+    "smoke": false,
+    "acceptance_criteria": {
+        "ppl_tox_within_pct": 5.0,
+        "ppl_materiality_margin_pct": 1.0,
+        "ppl_not_worse_than": [
+            "decmatch",
+            "random"
+        ],
+        "probe_acc_drop_soft_pp": 2.0,
+        "probe_acc_drop_hard_pp": 5.0,
+        "probe_acc_drop_ci_must_contain_zero": true,
+        "probe_flip_max": 0.05,
+        "note": "Declared in-file before metrics. TOX ablation preserves capability iff: PPL pct_change(TOX) within +/-5% AND not materially worse (>1pp) than the decmatch/random controls; probe accuracy drop (base-tox) <= 2pp with bootstrap CI95 containing 0 (hard ceiling 5pp); probe flip rate <= 0.05. These are SCIENTIFIC gates -- they may fail without a nonzero exit."
+    },
+    "provenance": {
+        "featsets_dir": "results/kumar_mod/sae",
+        "K_tox_per_layer": {
+            "L24": 10,
+            "L31": 10,
+            "L41": 10
+        },
+        "probe_file": "data/processed/capability_probe_yesno.json",
+        "probe_sha256": "f6a566628ef4207e56491dbbb7ef8d52ed6675b84c6c05de41f8e238d0b4879b",
+        "probe_n": 200,
+        "probe_n_yes": 100,
+        "probe_n_no": 100,
+        "wikitext_path": "data/processed/wikitext103_test_1k.parquet",
+        "wikitext_sha256_observed": "066890d1fbbcce0097e34721760125d8507b618014c7077c6b07a382e05919fb",
+        "yes_id": 4443,
+        "no_id": 1904
+    },
+    "perplexity": {
+        "n_paragraphs_used": 1000,
+        "corpus_ppl": {
+            "clean": 20.3535,
+            "tox": 20.265,
+            "decmatch": 21.4155,
+            "comm": 20.275,
+            "random": 20.3555
+        },
+        "pct_change_vs_clean": {
+            "tox": -0.4349,
+            "decmatch": 5.2177,
+            "comm": -0.3856,
+            "random": 0.01
+        },
+        "tox_fire_rate_per_1k_tokens": {
+            "L24": 435.917,
+            "L31": 452.107,
+            "L41": 71.348,
+            "total_all_layers": 959.372
+        },
+        "note": "token-weighted corpus PPL = exp(sum NLL / sum tokens)"
+    },
+    "probe": {
+        "locus_gate": {
+            "base_argmax_in_yesno_frac": 1.0,
+            "threshold": 0.95,
+            "pass": true
+        },
+        "metrics": {
+            "base": {
+                "accuracy": 0.985
+            },
+            "tox": {
+                "accuracy": 0.5,
+                "flip_vs_base": 0.505,
+                "mean_abs_delta_gap": 20.2731
+            },
+            "tox_dectok": {
+                "accuracy": 0.5,
+                "flip_vs_base": 0.505,
+                "mean_abs_delta_gap": 18.775
+            },
+            "decmatch": {
+                "accuracy": 0.985,
+                "flip_vs_base": 0.0,
+                "mean_abs_delta_gap": 7.6819
+            },
+            "comm": {
+                "accuracy": 0.985,
+                "flip_vs_base": 0.0,
+                "mean_abs_delta_gap": 0.7812
+            },
+            "random_x3": {
+                "accuracy": 0.985,
+                "flip_vs_base": 0.0,
+                "mean_abs_delta_gap": 0.2913
+            },
+            "freeform_base": {
+                "accuracy": 0.99
+            },
+            "freeform_tox": {
+                "accuracy": 0.5,
+                "flip_vs_freeform_base": 0.51,
+                "mean_abs_delta_gap_vs_freeform_base": 20.9812
+            }
+        },
+        "bootstrap_ci95": {
+            "acc_base_minus_acc_tox": {
+                "point": 0.485,
+                "ci95": [
+                    0.4149,
+                    0.555
+                ]
+            },
+            "flip_tox_minus_flip_random": {
+                "point": 0.505,
+                "ci95": [
+                    0.435,
+                    0.575
+                ]
+            }
+        }
+    },
+    "interpretation": "Capability is preserved iff the toxicity ablation that flips moderation decisions leaves both general perplexity (+/-5%, no worse than decmatch/random) and unrelated factual yes/no accuracy (<=2pp drop, CI containing 0) intact, with probe flip <=0.05. TOX at matched positions vs the decmatch / community / random controls isolates whether any degradation is toxicity-feature specific or a generic residual-perturbation effect; the decision-token-only and free-form arms answer the 'saturation' and 'JSON-scaffold artifact' objections respectively. A genuine capability hit is reported as a real result, not suppressed."
+}

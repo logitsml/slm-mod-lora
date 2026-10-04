@@ -1,0 +1,121 @@
+{
+  "analysis": "llm_logitgap_primary_metrics",
+  "fams": [
+    "gemma3_12b",
+    "llama31_8b",
+    "qwen25_7b"
+  ],
+  "prec_target": 0.9,
+  "rec_target": 0.9,
+  "rating_reference": {
+    "gemma3_12b": 0.665,
+    "llama31_8b": 0.705,
+    "qwen25_7b": 0.676,
+    "mean": 0.682
+  },
+  "by_model": {
+    "gemma3_12b": {
+      "bal_auc": {
+        "median": 0.7714,
+        "n": 95,
+        "ci": [
+          0.7497,
+          0.7947
+        ]
+      },
+      "pr_auc": {
+        "median": 0.7985,
+        "n": 95,
+        "ci": [
+          0.7824,
+          0.8183
+        ]
+      },
+      "non_tox_auc": {
+        "median": 0.6917,
+        "n": 95,
+        "ci": [
+          0.6682,
+          0.7103
+        ]
+      },
+      "n_comm": 95,
+      "cert@0.95": 8.5,
+      "cert@0.90": 13.8,
+      "triage": {
+        "n_shared": 17408,
+        "gap_llm_f_escalate": 0.6391,
+        "encoder_f_escalate_same_rows": 0.4081
+      }
+    },
+    "llama31_8b": {
+      "bal_auc": {
+        "median": 0.7725,
+        "n": 95,
+        "ci": [
+          0.7453,
+          0.7839
+        ]
+      },
+      "pr_auc": {
+        "median": 0.7998,
+        "n": 95,
+        "ci": [
+          0.7816,
+          0.8116
+        ]
+      },
+      "non_tox_auc": {
+        "median": 0.6733,
+        "n": 95,
+        "ci": [
+          0.6591,
+          0.6953
+        ]
+      },
+      "n_comm": 95,
+      "cert@0.95": 12.8,
+      "cert@0.90": 11.7,
+      "triage": {
+        "n_shared": 17408,
+        "gap_llm_f_escalate": 0.6364,
+        "encoder_f_escalate_same_rows": 0.4081
+      }
+    },
+    "qwen25_7b": {
+      "bal_auc": {
+        "median": 0.7491,
+        "n": 95,
+        "ci": [
+          0.7226,
+          0.7697
+        ]
+      },
+      "pr_auc": {
+        "median": 0.7801,
+        "n": 95,
+        "ci": [
+          0.7569,
+          0.796
+        ]
+      },
+      "non_tox_auc": {
+        "median": 0.656,
+        "n": 95,
+        "ci": [
+          0.625,
+          0.673
+        ]
+      },
+      "n_comm": 95,
+      "cert@0.95": 6.4,
+      "cert@0.90": 17.0,
+      "triage": {
+        "n_shared": 17408,
+        "gap_llm_f_escalate": 0.6471,
+        "encoder_f_escalate_same_rows": 0.4081
+      }
+    }
+  },
+  "gap_bal_auc_mean": 0.7643
+}

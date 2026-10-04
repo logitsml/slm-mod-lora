@@ -1,0 +1,10 @@
+{
+  "tag": "gemma4_12b",
+  "model": "google/gemma-4-12B-it",
+  "n": 17508,
+  "n_subs": 95,
+  "argmax_ok": 0.9688,
+  "bal_auc_logitgap_median": 0.7642,
+  "pr_auc_logitgap_median": 0.7947,
+  "note": "FULL test fold (no subsample); yes/no logit gap; lean single-card load (logits identical to the device_map load used for the other 3 families)"
+}

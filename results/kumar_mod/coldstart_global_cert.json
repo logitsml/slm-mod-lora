@@ -1,0 +1,11 @@
+{
+  "analysis": "coldstart_global_head_cert",
+  "n_comm": 95,
+  "bal_auc_median": 0.7596,
+  "pr_auc_median": 0.7879,
+  "nontox_auc_median": 0.6855,
+  "cert@0.95": 12.8,
+  "cert@0.90": 9.6,
+  "expect_bal_0.760_pr_0.788_nontox_0.686": "verify these reproduce before trusting cert",
+  "note": "global LOCO head (C=1.0) per-comment scores -> canonical cert_heldout; same recipe as coldstart_conditional_encoder"
+}

@@ -1,0 +1,10 @@
+{
+  "tag": "qwen25_7b",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "n": 17508,
+  "n_subs": 95,
+  "argmax_ok": 1.0,
+  "bal_auc_logitgap_median": 0.7491,
+  "pr_auc_logitgap_median": 0.7801,
+  "note": "within-community ROC-AUC of the yes/no logit gap predicting the moderator label; test fold"
+}

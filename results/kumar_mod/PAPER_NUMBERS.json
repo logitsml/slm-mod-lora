@@ -1,0 +1,178 @@
+{
+ "CANONICAL_NUMBERS": true,
+ "generated": "2026-07-12T20:55:00-07:00",
+ "provenance": {
+  "rule": "QUOTE the fields named *_heldout / *_PAPER; in-sample cert fields are diagnostic only.",
+  "scoring": {
+   "llm_zeroshot_*": "rating-scored medians (secondary analysis); the paper's primary LLM BAL-AUC/PR-AUC are next-token yes/no logit-gap scored and live in llm_gap_primary_metrics.json (gap_primary_recompute.py)",
+   "encoder_e5 / slm_mod / tfidf": "scored by their native continuous outputs"
+  }
+ },
+ "head_to_head_fairness_compare": {
+  "encoder_e5": {
+   "bal_auc_median": 0.8259249889789726,
+   "pr_auc_median": 0.8334569576180408,
+   "cert95_heldout_PAPER": 0.1383,
+   "cert90_heldout_PAPER": 0.2021,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.8723,
+   "cost": {
+    "measured_ms_per_comment": 0.52,
+    "train": "logistic head, CPU-seconds/sub",
+    "vram_gb": 1.4,
+    "note": "measured e5 encoder forward pass on matched L40S stack"
+   }
+  },
+  "slm_mod": {
+   "bal_auc_median": 0.813844971453667,
+   "pr_auc_median": 0.8310234212209366,
+   "cert95_heldout_PAPER": 0.1596,
+   "cert90_heldout_PAPER": 0.2979,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.7789,
+   "cost": {
+    "measured_ms_per_comment": 63.8,
+    "train": "bf16 LoRA fine-tune ~5-15 GPU-min/sub x 95 subs",
+    "vram_gb": 13.0,
+    "note": "measured Llama-3.1-8B forward pass; excludes fine-tuning cost"
+   }
+  },
+  "llm_zeroshot_gemma": {
+   "bal_auc_median": 0.6650726617811451,
+   "pr_auc_median": 0.6795517050375248,
+   "cert95_heldout_PAPER": 0.0106,
+   "cert90_heldout_PAPER": 0.0638,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.0421,
+   "cost": {
+    "measured_ms_per_comment": 132.3,
+    "train": "none",
+    "vram_gb": 13.0,
+    "note": "measured Gemma-3-12B forward pass"
+   }
+  },
+  "llm_zeroshot_llama": {
+   "bal_auc_median": 0.7050555555555555,
+   "pr_auc_median": 0.6941393074253486,
+   "cert95_heldout_PAPER": 0.0213,
+   "cert90_heldout_PAPER": 0.0957,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.0526,
+   "cost": {
+    "measured_ms_per_comment": 63.8,
+    "train": "none",
+    "vram_gb": 13.0,
+    "note": "measured Llama-3.1-8B forward pass"
+   }
+  },
+  "llm_zeroshot_qwen": {
+   "bal_auc_median": 0.6760555234239444,
+   "pr_auc_median": 0.6706361692973893,
+   "cert95_heldout_PAPER": 0.0426,
+   "cert90_heldout_PAPER": 0.0957,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.1263,
+   "cost": {
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "tfidf": {
+   "bal_auc_median": 0.7211227764514684,
+   "pr_auc_median": 0.7396545897654765,
+   "cert95_heldout_PAPER": 0.0851,
+   "cert90_heldout_PAPER": 0.0957,
+   "cert95_in_sample_DO_NOT_QUOTE": 0.6064,
+   "cost": {
+    "train": "CPU-seconds/sub",
+    "vram_gb": 0.0,
+    "note": "no matched L40S price point computed"
+   }
+  }
+ },
+ "toxicity_collapse_nontoxic_removal_auc": {
+  "encoder_e5": 0.7682,
+  "slm_mod": 0.7322,
+  "llm_gemma": 0.59,
+  "llm_llama": 0.6217,
+  "llm_qwen": 0.581
+ },
+ "mechinterp_keeper": {
+  "headline": "BEHAVIORAL (cross-family): toxicity predicts MODEL decisions better than HUMAN removals",
+  "TC_behav_macro_would_moderate_by_family": {
+   "gemma": 0.0867,
+   "llama": 0.0785,
+   "qwen": 0.114
+  },
+  "TC_rep_model_cos_deconf_by_layer": {
+   "12": 0.4619,
+   "24": 0.4468,
+   "31": 0.4368,
+   "41": 0.4073
+  },
+  "source": "results/kumar_mod/analysis/tc_deepdive.json (model-DECISION direction)"
+ },
+ "sae_causal": {
+  "_source": "results/kumar_mod/{sae_causal_dosedense,sae_sufficiency}.json, sae/{invariance,dla}_w16k.json, analysis/{encoder_toxicity_collapse,encoder_head_geometry,toxicity_residualization}.json",
+  "model": "gemma-3-12b-it",
+  "sae": "gemma-scope-2-12b-it resid_post 16k l0_medium L24/31/41",
+  "necessity_flip_to_keep": {
+   "tox": 1.0,
+   "decision_matched_nontox": 0.158,
+   "community": 0.093,
+   "random": 0.0017,
+   "tox_minus_decmatch_ci95": [
+    0.824,
+    0.86
+   ],
+   "within_label_strata_tox": {
+    "human_keep": 1.0,
+    "human_remove": 1.0
+   },
+   "dose_alpha": {
+    "0.5": 0.208,
+    "1.0": 1.0
+   },
+   "reaggr_L24_31_41_vs_L24_31": [
+    1.0,
+    0.248
+   ]
+  },
+  "sufficiency_induce_removal": {
+   "tox_p95": 0.356,
+   "p99": 0.625,
+   "community": 0.0,
+   "random": 0.002,
+   "tox_minus_random_ci95": [
+    0.304,
+    0.406
+   ]
+  },
+  "invariance_cross_community_jaccard": {
+   "L31": 0.6,
+   "shuffle_null": 0.08,
+   "universal_set_tox_frac": 0.95
+  },
+  "dla_toxicity_share_readout": {
+   "L31": 0.97,
+   "L41": 0.995,
+   "community": 0.0,
+   "lens_cert_L41": 0.983
+  },
+  "encoder_contrast": {
+   "auc_tox_to_decision": {
+    "human": 0.66,
+    "encoder": 0.7,
+    "llm_gemma": 0.75
+   },
+   "llm_minus_encoder_ci95": [
+    0.038,
+    0.067
+   ],
+   "head_cross_community_cos": 0.2,
+   "head_toxicity_alignment_cos": 0.33,
+   "nontoxic_removal_auc": {
+    "encoder_e5": 0.768,
+    "slm_mod": 0.732,
+    "llm_gemma": 0.59
+   }
+  },
+  "claim_ceiling": "A (causal toxicity reliance)=PROOF, gemma-only; B (community-invariance)=convergent; encoder=behavioral+geometry"
+ }
+}

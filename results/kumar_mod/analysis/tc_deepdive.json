@@ -1,0 +1,377 @@
+{
+  "analysis": "tc_deepdive",
+  "n_decisiontok": 28351,
+  "B_null": 10000,
+  "n_cpu": 18,
+  "representational_layer_sweep": {
+    "12": {
+      "model": {
+        "cos_conf": 0.6337,
+        "cos_deconf": 0.4619,
+        "p_exceed_deconf": 0.0012,
+        "null_abs_mean": 0.1243,
+        "within_class_tox_sd": 0.323,
+        "between_class_tox_sep": 0.3147,
+        "base_rate_pos": 0.35
+      },
+      "human": {
+        "cos_conf": 0.3858,
+        "cos_deconf": 0.2921,
+        "p_exceed_deconf": 0.2203,
+        "null_abs_mean": 0.1879,
+        "within_class_tox_sd": 0.3238,
+        "between_class_tox_sep": 0.1759,
+        "base_rate_pos": 0.503
+      },
+      "cos_model_dir_vs_human_dir": 0.8658,
+      "rr_ratio_model_over_human_withinSD": 0.998,
+      "sep_ratio_model_over_human": 1.789
+    },
+    "24": {
+      "model": {
+        "cos_conf": 0.865,
+        "cos_deconf": 0.4468,
+        "p_exceed_deconf": 0.0351,
+        "null_abs_mean": 0.1784,
+        "within_class_tox_sd": 0.323,
+        "between_class_tox_sep": 0.3147,
+        "base_rate_pos": 0.35
+      },
+      "human": {
+        "cos_conf": 0.9081,
+        "cos_deconf": 0.8692,
+        "p_exceed_deconf": 0.0003,
+        "null_abs_mean": 0.3222,
+        "within_class_tox_sd": 0.3238,
+        "between_class_tox_sep": 0.1759,
+        "base_rate_pos": 0.503
+      },
+      "cos_model_dir_vs_human_dir": 0.9721,
+      "rr_ratio_model_over_human_withinSD": 0.998,
+      "sep_ratio_model_over_human": 1.789
+    },
+    "31": {
+      "model": {
+        "cos_conf": 0.9389,
+        "cos_deconf": 0.4368,
+        "p_exceed_deconf": 0.083,
+        "null_abs_mean": 0.2074,
+        "within_class_tox_sd": 0.323,
+        "between_class_tox_sep": 0.3147,
+        "base_rate_pos": 0.35
+      },
+      "human": {
+        "cos_conf": 0.9656,
+        "cos_deconf": 0.9498,
+        "p_exceed_deconf": 0.0003,
+        "null_abs_mean": 0.4554,
+        "within_class_tox_sd": 0.3238,
+        "between_class_tox_sep": 0.1759,
+        "base_rate_pos": 0.503
+      },
+      "cos_model_dir_vs_human_dir": 0.9844,
+      "rr_ratio_model_over_human_withinSD": 0.998,
+      "sep_ratio_model_over_human": 1.789
+    },
+    "41": {
+      "model": {
+        "cos_conf": 0.9442,
+        "cos_deconf": 0.4073,
+        "p_exceed_deconf": 0.0852,
+        "null_abs_mean": 0.1944,
+        "within_class_tox_sd": 0.323,
+        "between_class_tox_sep": 0.3147,
+        "base_rate_pos": 0.35
+      },
+      "human": {
+        "cos_conf": 0.9766,
+        "cos_deconf": 0.9685,
+        "p_exceed_deconf": 0.0003,
+        "null_abs_mean": 0.4778,
+        "within_class_tox_sd": 0.3238,
+        "between_class_tox_sep": 0.1759,
+        "base_rate_pos": 0.503
+      },
+      "cos_model_dir_vs_human_dir": 0.9822,
+      "rr_ratio_model_over_human_withinSD": 0.998,
+      "sep_ratio_model_over_human": 1.789
+    }
+  },
+  "behavioral_by_family": {
+    "gemma": {
+      "n": 87538,
+      "refusal_rate_wm": 0.0002,
+      "refusal_rate_rt": 0.4589,
+      "model_remove_rate_wm": 0.3927,
+      "model_remove_rate_rt": 0.1236,
+      "human_remove_rate": 0.5297,
+      "by_scorer": {
+        "detoxify": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7466,
+            "auc_tox_to_human": 0.6514,
+            "TC_behav_pooled": 0.0953,
+            "TC_behav_macro": 0.0867,
+            "TC_behav_macro_ci95": [
+              0.0744,
+              0.0983
+            ],
+            "frac_comm_gt0": 0.947,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7923,
+            "auc_tox_to_human": 0.6486,
+            "TC_behav_pooled": 0.1437,
+            "TC_behav_macro": 0.143,
+            "TC_behav_macro_ci95": [
+              0.125,
+              0.1606
+            ],
+            "frac_comm_gt0": 0.926,
+            "n_comm": 94
+          }
+        },
+        "s-nlp": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7438,
+            "auc_tox_to_human": 0.6461,
+            "TC_behav_pooled": 0.0976,
+            "TC_behav_macro": 0.0952,
+            "TC_behav_macro_ci95": [
+              0.0829,
+              0.1069
+            ],
+            "frac_comm_gt0": 0.947,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7877,
+            "auc_tox_to_human": 0.6375,
+            "TC_behav_pooled": 0.1502,
+            "TC_behav_macro": 0.1499,
+            "TC_behav_macro_ci95": [
+              0.1314,
+              0.1677
+            ],
+            "frac_comm_gt0": 0.957,
+            "n_comm": 94
+          }
+        },
+        "toxigen": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7121,
+            "auc_tox_to_human": 0.6295,
+            "TC_behav_pooled": 0.0826,
+            "TC_behav_macro": 0.0785,
+            "TC_behav_macro_ci95": [
+              0.065,
+              0.0915
+            ],
+            "frac_comm_gt0": 0.895,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7574,
+            "auc_tox_to_human": 0.6196,
+            "TC_behav_pooled": 0.1378,
+            "TC_behav_macro": 0.1377,
+            "TC_behav_macro_ci95": [
+              0.1186,
+              0.1567
+            ],
+            "frac_comm_gt0": 0.904,
+            "n_comm": 94
+          }
+        }
+      }
+    },
+    "llama": {
+      "n": 87538,
+      "refusal_rate_wm": 0.0001,
+      "refusal_rate_rt": 0.0317,
+      "model_remove_rate_wm": 0.3834,
+      "model_remove_rate_rt": 0.3818,
+      "human_remove_rate": 0.5297,
+      "by_scorer": {
+        "detoxify": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7373,
+            "auc_tox_to_human": 0.6513,
+            "TC_behav_pooled": 0.086,
+            "TC_behav_macro": 0.0785,
+            "TC_behav_macro_ci95": [
+              0.0654,
+              0.0909
+            ],
+            "frac_comm_gt0": 0.958,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7363,
+            "auc_tox_to_human": 0.6505,
+            "TC_behav_pooled": 0.0858,
+            "TC_behav_macro": 0.0813,
+            "TC_behav_macro_ci95": [
+              0.0695,
+              0.0933
+            ],
+            "frac_comm_gt0": 0.926,
+            "n_comm": 94
+          }
+        },
+        "s-nlp": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.734,
+            "auc_tox_to_human": 0.6461,
+            "TC_behav_pooled": 0.0879,
+            "TC_behav_macro": 0.087,
+            "TC_behav_macro_ci95": [
+              0.0746,
+              0.0994
+            ],
+            "frac_comm_gt0": 0.958,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7348,
+            "auc_tox_to_human": 0.6464,
+            "TC_behav_pooled": 0.0884,
+            "TC_behav_macro": 0.0867,
+            "TC_behav_macro_ci95": [
+              0.0747,
+              0.0994
+            ],
+            "frac_comm_gt0": 0.957,
+            "n_comm": 94
+          }
+        },
+        "toxigen": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7116,
+            "auc_tox_to_human": 0.6294,
+            "TC_behav_pooled": 0.0822,
+            "TC_behav_macro": 0.0782,
+            "TC_behav_macro_ci95": [
+              0.0646,
+              0.0922
+            ],
+            "frac_comm_gt0": 0.905,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.7135,
+            "auc_tox_to_human": 0.629,
+            "TC_behav_pooled": 0.0845,
+            "TC_behav_macro": 0.0833,
+            "TC_behav_macro_ci95": [
+              0.0699,
+              0.0964
+            ],
+            "frac_comm_gt0": 0.904,
+            "n_comm": 94
+          }
+        }
+      }
+    },
+    "qwen": {
+      "n": 87538,
+      "refusal_rate_wm": 0.0076,
+      "refusal_rate_rt": 0.1396,
+      "model_remove_rate_wm": 0.3918,
+      "model_remove_rate_rt": 0.1772,
+      "human_remove_rate": 0.5297,
+      "by_scorer": {
+        "detoxify": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7809,
+            "auc_tox_to_human": 0.6519,
+            "TC_behav_pooled": 0.129,
+            "TC_behav_macro": 0.114,
+            "TC_behav_macro_ci95": [
+              0.0996,
+              0.1269
+            ],
+            "frac_comm_gt0": 0.958,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.8217,
+            "auc_tox_to_human": 0.6547,
+            "TC_behav_pooled": 0.167,
+            "TC_behav_macro": 0.1444,
+            "TC_behav_macro_ci95": [
+              0.1271,
+              0.1605
+            ],
+            "frac_comm_gt0": 0.968,
+            "n_comm": 94
+          }
+        },
+        "s-nlp": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7808,
+            "auc_tox_to_human": 0.6467,
+            "TC_behav_pooled": 0.1341,
+            "TC_behav_macro": 0.1238,
+            "TC_behav_macro_ci95": [
+              0.1095,
+              0.1372
+            ],
+            "frac_comm_gt0": 0.958,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.8269,
+            "auc_tox_to_human": 0.6494,
+            "TC_behav_pooled": 0.1775,
+            "TC_behav_macro": 0.1583,
+            "TC_behav_macro_ci95": [
+              0.1432,
+              0.1737
+            ],
+            "frac_comm_gt0": 0.989,
+            "n_comm": 94
+          }
+        },
+        "toxigen": {
+          "cov": 1.0,
+          "would_moderate": {
+            "auc_tox_to_model": 0.7623,
+            "auc_tox_to_human": 0.6301,
+            "TC_behav_pooled": 0.1322,
+            "TC_behav_macro": 0.121,
+            "TC_behav_macro_ci95": [
+              0.1073,
+              0.1337
+            ],
+            "frac_comm_gt0": 0.968,
+            "n_comm": 95
+          },
+          "rating_gt3": {
+            "auc_tox_to_model": 0.8094,
+            "auc_tox_to_human": 0.6333,
+            "TC_behav_pooled": 0.1761,
+            "TC_behav_macro": 0.1596,
+            "TC_behav_macro_ci95": [
+              0.1445,
+              0.1745
+            ],
+            "frac_comm_gt0": 0.979,
+            "n_comm": 94
+          }
+        }
+      }
+    }
+  },
+  "reading": "(1) If model deconf cos stays low + ns across ALL layers while human stays ~0.97, the representational collapse claim does not survive. (2) BUT if model within_class_tox_sd << human and between_class_tox_sep >= human (rr_ratio<1, sep_ratio>=1), the low model deconf cos is a hard-threshold/range-restriction artifact and collapse is behaviorally SUPPORTED. (3) Behavioral TC_behav>0 with CI excluding 0 on >=2 families/scorers is the range-restriction-free confirmation. Decide framing on the CONJUNCTION.",
+  "behavioral_protocol_note": "would_moderate coerced as float>0.5; refusals (nan) excluded per-row; per-community contrast on the SAME decided items for model and human."
+}

@@ -1,0 +1,70 @@
+{
+  "ladder_fill": {
+    "fewshot_gemma3_12b": {
+      "bal": 0.7743,
+      "pr": 0.8071,
+      "nontox": 0.706,
+      "n_comm": 94,
+      "cov95": 9.6,
+      "cov90": 16.0
+    },
+    "fewshot_llama31_8b": {
+      "bal": 0.7599,
+      "pr": 0.7926,
+      "nontox": 0.6872,
+      "n_comm": 94,
+      "cov95": 9.6,
+      "cov90": 12.8
+    },
+    "fewshot_qwen25_7b": {
+      "bal": 0.7483,
+      "pr": 0.7797,
+      "nontox": 0.6701,
+      "n_comm": 94,
+      "cov95": 7.4,
+      "cov90": 16.0
+    },
+    "qwen36_27b": {
+      "bal": 0.7812,
+      "pr": 0.8115,
+      "nontox": 0.7047,
+      "n_comm": 95,
+      "cov95": 12.8,
+      "cov90": 21.3
+    },
+    "llama70b": {
+      "bal": 0.7893,
+      "pr": 0.8161,
+      "nontox": 0.718,
+      "n_comm": 95,
+      "cov95": 9.6,
+      "cov90": 16.0
+    }
+  },
+  "t9_gapsign_pair": {
+    "gemma4_26b_a4b": {
+      "n": 17508,
+      "pooled_acc": 68.57,
+      "pooled_ba": 69.23,
+      "median_comm_ba": 68.65,
+      "prec": 76.84,
+      "recall": 58.26,
+      "remove_rate": 40.18,
+      "cov95": 16.0,
+      "cov90": 17.0,
+      "nontox": 0.703
+    },
+    "dgemma26b": {
+      "n": 17508,
+      "pooled_acc": 68.79,
+      "pooled_ba": 69.25,
+      "median_comm_ba": 68.36,
+      "prec": 75.02,
+      "recall": 61.64,
+      "remove_rate": 43.55,
+      "cov95": 9.6,
+      "cov90": 14.9,
+      "nontox": 0.698
+    }
+  }
+}

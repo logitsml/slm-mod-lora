@@ -1,0 +1,103 @@
+{
+  "analysis": "template_confound_examples",
+ "redaction_note": "Third-party usernames and profile permalinks redacted from quoted excerpts ([user]) per the paper's Reddit research-ethics protocol (Proferes et al.); scores, ids, and all other fields unchanged.",
+  "selection": "unflagged residue, recorded removal, Detoxify < 0.1, encoder ranks high, Gemma logit gap keeps",
+  "examples": [
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 388,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 2448, Height: 3264, Size: 246984, Pixel Count: 7990272\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | Kar",
+      "tox": 0.0011,
+      "encoder_score": 0.9798,
+      "gemma_gap": -7.25
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 23,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 300, Height: 300, Size: 18284, Pixel Count: 90000\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | Ka",
+      "tox": 0.0017,
+      "encoder_score": 0.9745,
+      "gemma_gap": -10.0
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 414,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 2400, Height: 3706, Size: 634709, Pixel Count: 8894400\n\n**Image History:**\n\nUser | Date | Match% | Image | Title",
+      "tox": 0.0013,
+      "encoder_score": 0.9743,
+      "gemma_gap": -7.75
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 222,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 700, Height: 700, Size: 140350, Pixel Count: 490000\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | ",
+      "tox": 0.0027,
+      "encoder_score": 0.9741,
+      "gemma_gap": -9.75
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 237,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 800, Height: 600, Size: 869969, Pixel Count: 480000\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | Karm",
+      "tox": 0.0014,
+      "encoder_score": 0.9736,
+      "gemma_gap": -7.25
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 40,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 1152, Height: 1536, Size: 391774, Pixel Count: 1769472\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | Karma | Comment",
+      "tox": 0.0012,
+      "encoder_score": 0.9735,
+      "gemma_gap": -3.75
+    },
+    {
+      "subreddit": "photoshopbattles",
+      "idx": 419,
+      "body_excerpt": "**Author:** [user]\n\n**Image Stats:**\n\n - Width: 1595, Height: 2408, Size: 859776, Pixel Count: 3840760\n\n**Image History:**\n\nUser | Date | Match% | Image | Title | Karma | Comment",
+      "tox": 0.0008,
+      "encoder_score": 0.9723,
+      "gemma_gap": -10.0
+    },
+    {
+      "subreddit": "science",
+      "idx": 212,
+      "body_excerpt": "They're just skeptical about everything.",
+      "tox": 0.0006,
+      "encoder_score": 0.9712,
+      "gemma_gap": -11.25
+    },
+    {
+      "subreddit": "DIY",
+      "idx": 23,
+      "body_excerpt": "Hey it's me, your girlfriend",
+      "tox": 0.0221,
+      "encoder_score": 0.9701,
+      "gemma_gap": -9.25
+    },
+    {
+      "subreddit": "space",
+      "idx": 387,
+      "body_excerpt": "Hilarious!",
+      "tox": 0.015,
+      "encoder_score": 0.9698,
+      "gemma_gap": -6.75
+    },
+    {
+      "subreddit": "churning",
+      "idx": 103,
+      "body_excerpt": "> https://applynow.chase.com/FlexAppWeb/renderApp.do?PID=CFFD2&SPID=FFWX&CELL=6RLJ&MSC=1525688622\n\nThis returns:\n\nOffer Unavailable\n\nThe information you requested is no longer available.\n",
+      "tox": 0.0008,
+      "encoder_score": 0.9685,
+      "gemma_gap": -6.5
+    },
+    {
+      "subreddit": "leagueoflegends",
+      "idx": 13,
+      "body_excerpt": "> Edit: I was talking about free time. If you want to complain that you don't consider any of your leisure time free then don't play video games plain and simple \n\nOooooh spooky semantic edit oooooo",
+      "tox": 0.0158,
+      "encoder_score": 0.9682,
+      "gemma_gap": -13.25
+    }
+  ]
+}

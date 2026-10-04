@@ -1,0 +1,22 @@
+{
+  "analysis": "encoder_head_geometry",
+  "n_heads": 94,
+  "space": "global-StandardScaler e5 embedding space; per-community unit logistic heads",
+  "cross_head_abscos": {
+    "mean": 0.203,
+    "median": 0.203,
+    "after_removing_toxicity_component": 0.117,
+    "random_reference": 0.031
+  },
+  "head_toxicity_alignment_abscos": {
+    "detoxify_mean": 0.328,
+    "detoxify_median": 0.337,
+    "toxigen_mean": 0.278
+  },
+  "global_pooled_head_toxicity_alignment_abscos": 0.199,
+  "auc_toxicity_only_vs_full_head": {
+    "toxicity_only_mean": 0.675,
+    "full_head_mean": 0.922
+  },
+  "interpretation": "LOW cross_head_abscos => the encoder runs COMMUNITY-SPECIFIC rulers (not one universal axis). If it drops further after removing the toxicity component, the shared part WAS toxicity and the remainder is community-specific. head_toxicity_alignment shows each head is only PARTLY toxicity-aligned; toxicity-only AUC << full-head AUC shows the heads read substantial NON-toxicity (norm) signal. Mirror of the LLM's single toxicity ruler."
+}

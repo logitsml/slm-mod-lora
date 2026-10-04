@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+# data/ holds non-redistributable inputs and heavy intermediates, except the
+# authored capability probe, which ships (read by sae_capability_control.py)
+data/*
+!data/processed/
+data/processed/*
+!data/processed/capability_probe_yesno.json
+# key-only toxicity score tables (subreddit, idx, label, scores; no comment text) ship so the
+# GPU-free B2/B3 analysis modules rerun from a clean clone
+!data/processed/kumar_balanced_tox_sent.parquet
+!data/processed/kumar_balanced_multitox.parquet
+.DS_Store

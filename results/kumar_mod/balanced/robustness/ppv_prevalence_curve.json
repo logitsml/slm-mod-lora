@@ -1,0 +1,42 @@
+{
+  "analysis": "ppv_vs_assumed_prevalence_at_recall0.5",
+  "note": "Benchmark is balanced (~50%). PPV(pi)=pi*TPR/(pi*TPR+(1-pi)*FPR) at the recall=0.5 operating point, median over communities. Shows production precision at realistic (low) removal prevalence.",
+  "prevalence_grid": [
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "ppv_median_by_method": {
+    "encoder": {
+      "0.01": 0.0461,
+      "0.02": 0.089,
+      "0.05": 0.2013,
+      "0.1": 0.3473,
+      "0.2": 0.5449,
+      "0.3": 0.6724,
+      "0.5": 0.8273
+    },
+    "llm": {
+      "0.01": null,
+      "0.02": null,
+      "0.05": null,
+      "0.1": null,
+      "0.2": null,
+      "0.3": null,
+      "0.5": null
+    },
+    "slm": {
+      "0.01": 0.0641,
+      "0.02": 0.1216,
+      "0.05": 0.2632,
+      "0.1": 0.4299,
+      "0.2": 0.6291,
+      "0.3": 0.7441,
+      "0.5": 0.8716
+    }
+  }
+}

@@ -1,0 +1,2598 @@
+{
+  "analysis": "prevalence_transfer",
+  "note": "Balanced-set TPR/FPR per subreddit (at the model's NATIVE operating point, on the FULL balanced corpus) transferred to natural prevalence via the PPV identity. Shows balanced precision collapsing under real base rates with TPR/FPR fixed. NOTE: this is the standalone full-corpus variant; the cross-method head-to-head version (computed on the shared TEST fold) lives in fairness_compare.json's precision_at_natural_prevalence -- the two use different row sets by design (full corpus here vs held-out test fold there) and so will differ slightly.",
+  "by_family": {
+    "gemma": {
+      "n_subs": 95,
+      "n_subs_with_natural_prev": 95,
+      "median_precision_balanced_50pct": 0.7681,
+      "median_precision_at_natural_prevalence": 0.0383,
+      "median_precision_collapse": 0.7298,
+      "per_sub": [
+        {
+          "subreddit": "socialism",
+          "tpr": 0.6513,
+          "fpr": 0.1826,
+          "precision_balanced_50pct": 0.781,
+          "natural_prevalence": 0.0563,
+          "precision_at_natural_prevalence": 0.1754,
+          "n_natural": 3943
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "tpr": 0.33,
+          "fpr": 0.0754,
+          "precision_balanced_50pct": 0.8139,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.013,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "spacex",
+          "tpr": 0.171,
+          "fpr": 0.0193,
+          "precision_balanced_50pct": 0.8987,
+          "natural_prevalence": 0.0309,
+          "precision_at_natural_prevalence": 0.2204,
+          "n_natural": 3303
+        },
+        {
+          "subreddit": "gameofthrones",
+          "tpr": 0.4518,
+          "fpr": 0.122,
+          "precision_balanced_50pct": 0.7875,
+          "natural_prevalence": 0.004,
+          "precision_at_natural_prevalence": 0.0147,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "food",
+          "tpr": 0.5625,
+          "fpr": 0.1488,
+          "precision_balanced_50pct": 0.7908,
+          "natural_prevalence": 0.0264,
+          "precision_at_natural_prevalence": 0.093,
+          "n_natural": 3975
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "tpr": 0.218,
+          "fpr": 0.0217,
+          "precision_balanced_50pct": 0.9093,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.0638,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "tpr": 0.9442,
+          "fpr": 0.6611,
+          "precision_balanced_50pct": 0.5882,
+          "natural_prevalence": 0.0573,
+          "precision_at_natural_prevalence": 0.0799,
+          "n_natural": 279
+        },
+        {
+          "subreddit": "AskWomen",
+          "tpr": 0.4642,
+          "fpr": 0.167,
+          "precision_balanced_50pct": 0.7354,
+          "natural_prevalence": 0.0611,
+          "precision_at_natural_prevalence": 0.1532,
+          "n_natural": 3699
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "tpr": 0.6392,
+          "fpr": 0.2845,
+          "precision_balanced_50pct": 0.692,
+          "natural_prevalence": 0.0258,
+          "precision_at_natural_prevalence": 0.0562,
+          "n_natural": 2867
+        },
+        {
+          "subreddit": "europe",
+          "tpr": 0.495,
+          "fpr": 0.1016,
+          "precision_balanced_50pct": 0.8297,
+          "natural_prevalence": 0.0203,
+          "precision_at_natural_prevalence": 0.0915,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "science",
+          "tpr": 0.568,
+          "fpr": 0.2035,
+          "precision_balanced_50pct": 0.7363,
+          "natural_prevalence": 0.0267,
+          "precision_at_natural_prevalence": 0.0713,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "SandersForPresident",
+          "tpr": 0.6126,
+          "fpr": 0.0,
+          "precision_balanced_50pct": 1.0,
+          "natural_prevalence": 0.0488,
+          "precision_at_natural_prevalence": 1.0,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "anime",
+          "tpr": 0.5366,
+          "fpr": 0.2189,
+          "precision_balanced_50pct": 0.7103,
+          "natural_prevalence": 0.0084,
+          "precision_at_natural_prevalence": 0.0202,
+          "n_natural": 3710
+        },
+        {
+          "subreddit": "gaming",
+          "tpr": 0.501,
+          "fpr": 0.1487,
+          "precision_balanced_50pct": 0.7711,
+          "natural_prevalence": 0.013,
+          "precision_at_natural_prevalence": 0.0425,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemon",
+          "tpr": 0.625,
+          "fpr": 0.1537,
+          "precision_balanced_50pct": 0.8026,
+          "natural_prevalence": 0.0022,
+          "precision_at_natural_prevalence": 0.0091,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Android",
+          "tpr": 0.5025,
+          "fpr": 0.0671,
+          "precision_balanced_50pct": 0.8822,
+          "natural_prevalence": 0.0013,
+          "precision_at_natural_prevalence": 0.0093,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "tpr": 0.4899,
+          "fpr": 0.1438,
+          "precision_balanced_50pct": 0.7731,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0243,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "technology",
+          "tpr": 0.4224,
+          "fpr": 0.1395,
+          "precision_balanced_50pct": 0.7517,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.0083,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "MMA",
+          "tpr": 0.7556,
+          "fpr": 0.1856,
+          "precision_balanced_50pct": 0.8028,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0767,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "tpr": 0.5551,
+          "fpr": 0.1258,
+          "precision_balanced_50pct": 0.8152,
+          "natural_prevalence": 0.0043,
+          "precision_at_natural_prevalence": 0.0185,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "AskHistorians",
+          "tpr": 0.2631,
+          "fpr": 0.0714,
+          "precision_balanced_50pct": 0.7864,
+          "natural_prevalence": 0.4153,
+          "precision_at_natural_prevalence": 0.7234,
+          "n_natural": 2834
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "tpr": 0.5691,
+          "fpr": 0.1319,
+          "precision_balanced_50pct": 0.8118,
+          "natural_prevalence": 0.0372,
+          "precision_at_natural_prevalence": 0.143,
+          "n_natural": 2658
+        },
+        {
+          "subreddit": "AskReddit",
+          "tpr": 0.5366,
+          "fpr": 0.3868,
+          "precision_balanced_50pct": 0.5811,
+          "natural_prevalence": 0.0088,
+          "precision_at_natural_prevalence": 0.0121,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "CFB",
+          "tpr": 0.6061,
+          "fpr": 0.0861,
+          "precision_balanced_50pct": 0.8756,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0325,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gifs",
+          "tpr": 0.4379,
+          "fpr": 0.1912,
+          "precision_balanced_50pct": 0.6961,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0164,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "2007scape",
+          "tpr": 0.7742,
+          "fpr": 0.1961,
+          "precision_balanced_50pct": 0.7979,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.0214,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "tpr": 0.55,
+          "fpr": 0.1578,
+          "precision_balanced_50pct": 0.7771,
+          "natural_prevalence": 0.002,
+          "precision_at_natural_prevalence": 0.0069,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "tpr": 0.426,
+          "fpr": 0.1439,
+          "precision_balanced_50pct": 0.7475,
+          "natural_prevalence": 0.047,
+          "precision_at_natural_prevalence": 0.1274,
+          "n_natural": 2575
+        },
+        {
+          "subreddit": "Christianity",
+          "tpr": 0.517,
+          "fpr": 0.0824,
+          "precision_balanced_50pct": 0.8625,
+          "natural_prevalence": 0.018,
+          "precision_at_natural_prevalence": 0.1031,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "tpr": 0.5433,
+          "fpr": 0.1419,
+          "precision_balanced_50pct": 0.7929,
+          "natural_prevalence": 0.015,
+          "precision_at_natural_prevalence": 0.0551,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "tpr": 0.3952,
+          "fpr": 0.1148,
+          "precision_balanced_50pct": 0.7749,
+          "natural_prevalence": 0.0107,
+          "precision_at_natural_prevalence": 0.0361,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "tpr": 0.493,
+          "fpr": 0.2522,
+          "precision_balanced_50pct": 0.6615,
+          "natural_prevalence": 0.072,
+          "precision_at_natural_prevalence": 0.1317,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Futurology",
+          "tpr": 0.5462,
+          "fpr": 0.1537,
+          "precision_balanced_50pct": 0.7804,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0253,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemontrades",
+          "tpr": 0.2585,
+          "fpr": 0.1269,
+          "precision_balanced_50pct": 0.6708,
+          "natural_prevalence": 0.0057,
+          "precision_at_natural_prevalence": 0.0116,
+          "n_natural": 2448
+        },
+        {
+          "subreddit": "changemyview",
+          "tpr": 0.5622,
+          "fpr": 0.0776,
+          "precision_balanced_50pct": 0.8788,
+          "natural_prevalence": 0.023,
+          "precision_at_natural_prevalence": 0.1458,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemongo",
+          "tpr": 0.6578,
+          "fpr": 0.0847,
+          "precision_balanced_50pct": 0.8859,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.023,
+          "n_natural": 3966
+        },
+        {
+          "subreddit": "nfl",
+          "tpr": 0.5191,
+          "fpr": 0.1123,
+          "precision_balanced_50pct": 0.8222,
+          "natural_prevalence": 0.006,
+          "precision_at_natural_prevalence": 0.0271,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "tpr": 0.6034,
+          "fpr": 0.2284,
+          "precision_balanced_50pct": 0.7254,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0125,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "LifeProTips",
+          "tpr": 0.6511,
+          "fpr": 0.1948,
+          "precision_balanced_50pct": 0.7697,
+          "natural_prevalence": 0.0063,
+          "precision_at_natural_prevalence": 0.0206,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "space",
+          "tpr": 0.4093,
+          "fpr": 0.1485,
+          "precision_balanced_50pct": 0.7338,
+          "natural_prevalence": 0.0238,
+          "precision_at_natural_prevalence": 0.0629,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "jailbreak",
+          "tpr": 0.6716,
+          "fpr": 0.106,
+          "precision_balanced_50pct": 0.8637,
+          "natural_prevalence": 0.0049,
+          "precision_at_natural_prevalence": 0.0304,
+          "n_natural": 3658
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "tpr": 0.2072,
+          "fpr": 0.1155,
+          "precision_balanced_50pct": 0.642,
+          "natural_prevalence": 0.0138,
+          "precision_at_natural_prevalence": 0.0244,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "askscience",
+          "tpr": 0.2204,
+          "fpr": 0.063,
+          "precision_balanced_50pct": 0.7777,
+          "natural_prevalence": 0.1513,
+          "precision_at_natural_prevalence": 0.384,
+          "n_natural": 2552
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "tpr": 0.628,
+          "fpr": 0.1624,
+          "precision_balanced_50pct": 0.7946,
+          "natural_prevalence": 0.014,
+          "precision_at_natural_prevalence": 0.0521,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "depression",
+          "tpr": 0.8,
+          "fpr": 0.5057,
+          "precision_balanced_50pct": 0.6127,
+          "natural_prevalence": 0.14,
+          "precision_at_natural_prevalence": 0.2048,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "photoshopbattles",
+          "tpr": 0.78,
+          "fpr": 0.6019,
+          "precision_balanced_50pct": 0.5645,
+          "natural_prevalence": 0.0194,
+          "precision_at_natural_prevalence": 0.025,
+          "n_natural": 1547
+        },
+        {
+          "subreddit": "nosleep",
+          "tpr": 0.679,
+          "fpr": 0.4559,
+          "precision_balanced_50pct": 0.5983,
+          "natural_prevalence": 0.1476,
+          "precision_at_natural_prevalence": 0.205,
+          "n_natural": 3225
+        },
+        {
+          "subreddit": "atheism",
+          "tpr": 0.6647,
+          "fpr": 0.2319,
+          "precision_balanced_50pct": 0.7413,
+          "natural_prevalence": 0.021,
+          "precision_at_natural_prevalence": 0.0579,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gonewild",
+          "tpr": 0.5381,
+          "fpr": 0.4243,
+          "precision_balanced_50pct": 0.5591,
+          "natural_prevalence": 0.0533,
+          "precision_at_natural_prevalence": 0.0666,
+          "n_natural": 3059
+        },
+        {
+          "subreddit": "legaladvice",
+          "tpr": 0.5671,
+          "fpr": 0.295,
+          "precision_balanced_50pct": 0.6578,
+          "natural_prevalence": 0.178,
+          "precision_at_natural_prevalence": 0.2939,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "tpr": 0.5846,
+          "fpr": 0.279,
+          "precision_balanced_50pct": 0.677,
+          "natural_prevalence": 0.0134,
+          "precision_at_natural_prevalence": 0.0276,
+          "n_natural": 1571
+        },
+        {
+          "subreddit": "movies",
+          "tpr": 0.7847,
+          "fpr": 0.109,
+          "precision_balanced_50pct": 0.8781,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.0195,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "GetMotivated",
+          "tpr": 0.792,
+          "fpr": 0.3117,
+          "precision_balanced_50pct": 0.7176,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0182,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "nba",
+          "tpr": 0.6311,
+          "fpr": 0.1698,
+          "precision_balanced_50pct": 0.788,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0174,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "asoiaf",
+          "tpr": 0.4749,
+          "fpr": 0.0968,
+          "precision_balanced_50pct": 0.8306,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0229,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "tpr": 0.576,
+          "fpr": 0.265,
+          "precision_balanced_50pct": 0.6849,
+          "natural_prevalence": 0.0457,
+          "precision_at_natural_prevalence": 0.0943,
+          "n_natural": 328
+        },
+        {
+          "subreddit": "nottheonion",
+          "tpr": 0.5418,
+          "fpr": 0.1962,
+          "precision_balanced_50pct": 0.7341,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0096,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "creepyPMs",
+          "tpr": 0.684,
+          "fpr": 0.4774,
+          "precision_balanced_50pct": 0.589,
+          "natural_prevalence": 0.0485,
+          "precision_at_natural_prevalence": 0.0681,
+          "n_natural": 3173
+        },
+        {
+          "subreddit": "india",
+          "tpr": 0.5196,
+          "fpr": 0.2053,
+          "precision_balanced_50pct": 0.7168,
+          "natural_prevalence": 0.0285,
+          "precision_at_natural_prevalence": 0.0691,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hiphopheads",
+          "tpr": 0.4646,
+          "fpr": 0.1735,
+          "precision_balanced_50pct": 0.7281,
+          "natural_prevalence": 0.001,
+          "precision_at_natural_prevalence": 0.0027,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "tpr": 0.6053,
+          "fpr": 0.1956,
+          "precision_balanced_50pct": 0.7558,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.0198,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Games",
+          "tpr": 0.386,
+          "fpr": 0.0694,
+          "precision_balanced_50pct": 0.8475,
+          "natural_prevalence": 0.046,
+          "precision_at_natural_prevalence": 0.2114,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "IAmA",
+          "tpr": 0.4959,
+          "fpr": 0.135,
+          "precision_balanced_50pct": 0.7861,
+          "natural_prevalence": 0.0183,
+          "precision_at_natural_prevalence": 0.0642,
+          "n_natural": 3384
+        },
+        {
+          "subreddit": "personalfinance",
+          "tpr": 0.54,
+          "fpr": 0.1792,
+          "precision_balanced_50pct": 0.7508,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0579,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "television",
+          "tpr": 0.4585,
+          "fpr": 0.1432,
+          "precision_balanced_50pct": 0.762,
+          "natural_prevalence": 0.011,
+          "precision_at_natural_prevalence": 0.0344,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "DIY",
+          "tpr": 0.502,
+          "fpr": 0.1227,
+          "precision_balanced_50pct": 0.8036,
+          "natural_prevalence": 0.0032,
+          "precision_at_natural_prevalence": 0.0132,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "videos",
+          "tpr": 0.7856,
+          "fpr": 0.2134,
+          "precision_balanced_50pct": 0.7864,
+          "natural_prevalence": 0.012,
+          "precision_at_natural_prevalence": 0.0428,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "churning",
+          "tpr": 0.9737,
+          "fpr": 0.1844,
+          "precision_balanced_50pct": 0.8407,
+          "natural_prevalence": 0.0019,
+          "precision_at_natural_prevalence": 0.0099,
+          "n_natural": 3715
+        },
+        {
+          "subreddit": "canada",
+          "tpr": 0.7657,
+          "fpr": 0.2361,
+          "precision_balanced_50pct": 0.7644,
+          "natural_prevalence": 0.0297,
+          "precision_at_natural_prevalence": 0.0905,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "funny",
+          "tpr": 0.4412,
+          "fpr": 0.1663,
+          "precision_balanced_50pct": 0.7263,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.0145,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "relationships",
+          "tpr": 0.678,
+          "fpr": 0.3098,
+          "precision_balanced_50pct": 0.6864,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0157,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hearthstone",
+          "tpr": 0.716,
+          "fpr": 0.3604,
+          "precision_balanced_50pct": 0.6652,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0069,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "me_irl",
+          "tpr": 0.5578,
+          "fpr": 0.2323,
+          "precision_balanced_50pct": 0.706,
+          "natural_prevalence": 0.009,
+          "precision_at_natural_prevalence": 0.0213,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "NeutralPolitics",
+          "tpr": 0.716,
+          "fpr": 0.4365,
+          "precision_balanced_50pct": 0.6213,
+          "natural_prevalence": 0.2269,
+          "precision_at_natural_prevalence": 0.3251,
+          "n_natural": 2331
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "tpr": 0.2731,
+          "fpr": 0.0667,
+          "precision_balanced_50pct": 0.8038,
+          "natural_prevalence": 0.0143,
+          "precision_at_natural_prevalence": 0.0559,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "aww",
+          "tpr": 0.7566,
+          "fpr": 0.2532,
+          "precision_balanced_50pct": 0.7492,
+          "natural_prevalence": 0.0147,
+          "precision_at_natural_prevalence": 0.0427,
+          "n_natural": 3877
+        },
+        {
+          "subreddit": "news",
+          "tpr": 0.6707,
+          "fpr": 0.2754,
+          "precision_balanced_50pct": 0.7089,
+          "natural_prevalence": 0.0575,
+          "precision_at_natural_prevalence": 0.1294,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "books",
+          "tpr": 0.5677,
+          "fpr": 0.0852,
+          "precision_balanced_50pct": 0.8696,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0324,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "history",
+          "tpr": 0.5491,
+          "fpr": 0.1802,
+          "precision_balanced_50pct": 0.7529,
+          "natural_prevalence": 0.1742,
+          "precision_at_natural_prevalence": 0.3914,
+          "n_natural": 3891
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "tpr": 0.3727,
+          "fpr": 0.1058,
+          "precision_balanced_50pct": 0.7789,
+          "natural_prevalence": 0.146,
+          "precision_at_natural_prevalence": 0.3758,
+          "n_natural": 3590
+        },
+        {
+          "subreddit": "tifu",
+          "tpr": 0.57,
+          "fpr": 0.1596,
+          "precision_balanced_50pct": 0.7813,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0176,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pics",
+          "tpr": 0.7675,
+          "fpr": 0.267,
+          "precision_balanced_50pct": 0.7419,
+          "natural_prevalence": 0.0112,
+          "precision_at_natural_prevalence": 0.0317,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "worldnews",
+          "tpr": 0.7126,
+          "fpr": 0.2151,
+          "precision_balanced_50pct": 0.7681,
+          "natural_prevalence": 0.0483,
+          "precision_at_natural_prevalence": 0.1438,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Overwatch",
+          "tpr": 0.6652,
+          "fpr": 0.095,
+          "precision_balanced_50pct": 0.875,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0323,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "conspiracy",
+          "tpr": 0.8384,
+          "fpr": 0.2823,
+          "precision_balanced_50pct": 0.7481,
+          "natural_prevalence": 0.0335,
+          "precision_at_natural_prevalence": 0.0933,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "philosophy",
+          "tpr": 0.2465,
+          "fpr": 0.0364,
+          "precision_balanced_50pct": 0.8713,
+          "natural_prevalence": 0.0609,
+          "precision_at_natural_prevalence": 0.3051,
+          "n_natural": 3366
+        },
+        {
+          "subreddit": "wow",
+          "tpr": 0.5899,
+          "fpr": 0.1511,
+          "precision_balanced_50pct": 0.796,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.0249,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "tpr": 0.666,
+          "fpr": 0.3543,
+          "precision_balanced_50pct": 0.6527,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0089,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "tpr": 0.6593,
+          "fpr": 0.2832,
+          "precision_balanced_50pct": 0.6995,
+          "natural_prevalence": 0.0145,
+          "precision_at_natural_prevalence": 0.0331,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "sex",
+          "tpr": 0.7194,
+          "fpr": 0.2964,
+          "precision_balanced_50pct": 0.7082,
+          "natural_prevalence": 0.0255,
+          "precision_at_natural_prevalence": 0.0597,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "tpr": 0.7096,
+          "fpr": 0.0679,
+          "precision_balanced_50pct": 0.9127,
+          "natural_prevalence": 0.0015,
+          "precision_at_natural_prevalence": 0.0155,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "tpr": 0.4689,
+          "fpr": 0.3149,
+          "precision_balanced_50pct": 0.5982,
+          "natural_prevalence": 0.0386,
+          "precision_at_natural_prevalence": 0.0564,
+          "n_natural": 259
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "tpr": 0.4748,
+          "fpr": 0.1425,
+          "precision_balanced_50pct": 0.7691,
+          "natural_prevalence": 0.117,
+          "precision_at_natural_prevalence": 0.3062,
+          "n_natural": 3557
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "tpr": 0.804,
+          "fpr": 0.3065,
+          "precision_balanced_50pct": 0.724,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.0175,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "politics",
+          "tpr": 0.6633,
+          "fpr": 0.2064,
+          "precision_balanced_50pct": 0.7627,
+          "natural_prevalence": 0.0123,
+          "precision_at_natural_prevalence": 0.0383,
+          "n_natural": 4000
+        }
+      ]
+    },
+    "llama": {
+      "n_subs": 95,
+      "n_subs_with_natural_prev": 95,
+      "median_precision_balanced_50pct": 0.7534,
+      "median_precision_at_natural_prevalence": 0.0381,
+      "median_precision_collapse": 0.7153,
+      "per_sub": [
+        {
+          "subreddit": "news",
+          "tpr": 0.6466,
+          "fpr": 0.2874,
+          "precision_balanced_50pct": 0.6923,
+          "natural_prevalence": 0.0575,
+          "precision_at_natural_prevalence": 0.1207,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "SandersForPresident",
+          "tpr": 0.6471,
+          "fpr": 0.0,
+          "precision_balanced_50pct": 1.0,
+          "natural_prevalence": 0.0488,
+          "precision_at_natural_prevalence": 1.0,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "tpr": 0.246,
+          "fpr": 0.0391,
+          "precision_balanced_50pct": 0.8628,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.041,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "2007scape",
+          "tpr": 0.7621,
+          "fpr": 0.2349,
+          "precision_balanced_50pct": 0.7644,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.0176,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Overwatch",
+          "tpr": 0.6274,
+          "fpr": 0.0826,
+          "precision_balanced_50pct": 0.8836,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.035,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "AskHistorians",
+          "tpr": 0.3226,
+          "fpr": 0.0974,
+          "precision_balanced_50pct": 0.7682,
+          "natural_prevalence": 0.4153,
+          "precision_at_natural_prevalence": 0.7018,
+          "n_natural": 2834
+        },
+        {
+          "subreddit": "hiphopheads",
+          "tpr": 0.4384,
+          "fpr": 0.1735,
+          "precision_balanced_50pct": 0.7164,
+          "natural_prevalence": 0.001,
+          "precision_at_natural_prevalence": 0.0025,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "tpr": 0.5732,
+          "fpr": 0.2667,
+          "precision_balanced_50pct": 0.6825,
+          "natural_prevalence": 0.0258,
+          "precision_at_natural_prevalence": 0.0539,
+          "n_natural": 2867
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "tpr": 0.7275,
+          "fpr": 0.3659,
+          "precision_balanced_50pct": 0.6653,
+          "natural_prevalence": 0.0145,
+          "precision_at_natural_prevalence": 0.0284,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "legaladvice",
+          "tpr": 0.491,
+          "fpr": 0.2072,
+          "precision_balanced_50pct": 0.7032,
+          "natural_prevalence": 0.178,
+          "precision_at_natural_prevalence": 0.3391,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "churning",
+          "tpr": 0.9656,
+          "fpr": 0.1622,
+          "precision_balanced_50pct": 0.8562,
+          "natural_prevalence": 0.0019,
+          "precision_at_natural_prevalence": 0.0111,
+          "n_natural": 3715
+        },
+        {
+          "subreddit": "science",
+          "tpr": 0.528,
+          "fpr": 0.1991,
+          "precision_balanced_50pct": 0.7261,
+          "natural_prevalence": 0.0267,
+          "precision_at_natural_prevalence": 0.0679,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gifs",
+          "tpr": 0.387,
+          "fpr": 0.211,
+          "precision_balanced_50pct": 0.6471,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0132,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "tpr": 0.7134,
+          "fpr": 0.3039,
+          "precision_balanced_50pct": 0.7013,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0111,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "tpr": 0.2133,
+          "fpr": 0.1366,
+          "precision_balanced_50pct": 0.6097,
+          "natural_prevalence": 0.0138,
+          "precision_at_natural_prevalence": 0.0213,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "tpr": 0.436,
+          "fpr": 0.1486,
+          "precision_balanced_50pct": 0.7458,
+          "natural_prevalence": 0.047,
+          "precision_at_natural_prevalence": 0.1264,
+          "n_natural": 2575
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "tpr": 0.5863,
+          "fpr": 0.158,
+          "precision_balanced_50pct": 0.7877,
+          "natural_prevalence": 0.0043,
+          "precision_at_natural_prevalence": 0.0156,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "history",
+          "tpr": 0.604,
+          "fpr": 0.2919,
+          "precision_balanced_50pct": 0.6742,
+          "natural_prevalence": 0.1742,
+          "precision_at_natural_prevalence": 0.3039,
+          "n_natural": 3891
+        },
+        {
+          "subreddit": "gonewild",
+          "tpr": 0.3794,
+          "fpr": 0.1927,
+          "precision_balanced_50pct": 0.6632,
+          "natural_prevalence": 0.0533,
+          "precision_at_natural_prevalence": 0.0998,
+          "n_natural": 3059
+        },
+        {
+          "subreddit": "GetMotivated",
+          "tpr": 0.692,
+          "fpr": 0.2332,
+          "precision_balanced_50pct": 0.748,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0212,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "personalfinance",
+          "tpr": 0.704,
+          "fpr": 0.3208,
+          "precision_balanced_50pct": 0.687,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0429,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "askscience",
+          "tpr": 0.1703,
+          "fpr": 0.0294,
+          "precision_balanced_50pct": 0.8528,
+          "natural_prevalence": 0.1513,
+          "precision_at_natural_prevalence": 0.5079,
+          "n_natural": 2552
+        },
+        {
+          "subreddit": "gaming",
+          "tpr": 0.4768,
+          "fpr": 0.1444,
+          "precision_balanced_50pct": 0.7675,
+          "natural_prevalence": 0.013,
+          "precision_at_natural_prevalence": 0.0417,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Christianity",
+          "tpr": 0.5972,
+          "fpr": 0.1128,
+          "precision_balanced_50pct": 0.8411,
+          "natural_prevalence": 0.018,
+          "precision_at_natural_prevalence": 0.0885,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "technology",
+          "tpr": 0.4184,
+          "fpr": 0.1268,
+          "precision_balanced_50pct": 0.7673,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.009,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "tpr": 0.419,
+          "fpr": 0.0773,
+          "precision_balanced_50pct": 0.8443,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0381,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "conspiracy",
+          "tpr": 0.8772,
+          "fpr": 0.3103,
+          "precision_balanced_50pct": 0.7387,
+          "natural_prevalence": 0.0335,
+          "precision_at_natural_prevalence": 0.0892,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pics",
+          "tpr": 0.7654,
+          "fpr": 0.2385,
+          "precision_balanced_50pct": 0.7624,
+          "natural_prevalence": 0.0112,
+          "precision_at_natural_prevalence": 0.0352,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "DIY",
+          "tpr": 0.496,
+          "fpr": 0.1111,
+          "precision_balanced_50pct": 0.817,
+          "natural_prevalence": 0.0032,
+          "precision_at_natural_prevalence": 0.0143,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "tpr": 0.5,
+          "fpr": 0.1557,
+          "precision_balanced_50pct": 0.7626,
+          "natural_prevalence": 0.002,
+          "precision_at_natural_prevalence": 0.0064,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "sex",
+          "tpr": 0.6453,
+          "fpr": 0.1663,
+          "precision_balanced_50pct": 0.7951,
+          "natural_prevalence": 0.0255,
+          "precision_at_natural_prevalence": 0.0922,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "tpr": 0.585,
+          "fpr": 0.2018,
+          "precision_balanced_50pct": 0.7436,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.0186,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemongo",
+          "tpr": 0.6029,
+          "fpr": 0.1136,
+          "precision_balanced_50pct": 0.8414,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.0158,
+          "n_natural": 3966
+        },
+        {
+          "subreddit": "AskReddit",
+          "tpr": 0.4138,
+          "fpr": 0.2628,
+          "precision_balanced_50pct": 0.6116,
+          "natural_prevalence": 0.0088,
+          "precision_at_natural_prevalence": 0.0137,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "tpr": 0.905,
+          "fpr": 0.5126,
+          "precision_balanced_50pct": 0.6384,
+          "natural_prevalence": 0.0573,
+          "precision_at_natural_prevalence": 0.097,
+          "n_natural": 279
+        },
+        {
+          "subreddit": "nottheonion",
+          "tpr": 0.4868,
+          "fpr": 0.2009,
+          "precision_balanced_50pct": 0.7078,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0084,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "nosleep",
+          "tpr": 0.6008,
+          "fpr": 0.3829,
+          "precision_balanced_50pct": 0.6108,
+          "natural_prevalence": 0.1476,
+          "precision_at_natural_prevalence": 0.2137,
+          "n_natural": 3225
+        },
+        {
+          "subreddit": "relationships",
+          "tpr": 0.654,
+          "fpr": 0.4009,
+          "precision_balanced_50pct": 0.62,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0118,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Android",
+          "tpr": 0.4925,
+          "fpr": 0.0587,
+          "precision_balanced_50pct": 0.8935,
+          "natural_prevalence": 0.0013,
+          "precision_at_natural_prevalence": 0.0104,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "tpr": 0.5511,
+          "fpr": 0.1551,
+          "precision_balanced_50pct": 0.7804,
+          "natural_prevalence": 0.0372,
+          "precision_at_natural_prevalence": 0.1209,
+          "n_natural": 2658
+        },
+        {
+          "subreddit": "asoiaf",
+          "tpr": 0.4549,
+          "fpr": 0.1158,
+          "precision_balanced_50pct": 0.7971,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0184,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "tpr": 0.6539,
+          "fpr": 0.3435,
+          "precision_balanced_50pct": 0.6556,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.009,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "politics",
+          "tpr": 0.6694,
+          "fpr": 0.2383,
+          "precision_balanced_50pct": 0.7375,
+          "natural_prevalence": 0.0123,
+          "precision_at_natural_prevalence": 0.0337,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "anime",
+          "tpr": 0.5467,
+          "fpr": 0.1953,
+          "precision_balanced_50pct": 0.7368,
+          "natural_prevalence": 0.0084,
+          "precision_at_natural_prevalence": 0.023,
+          "n_natural": 3710
+        },
+        {
+          "subreddit": "AskWomen",
+          "tpr": 0.4928,
+          "fpr": 0.1758,
+          "precision_balanced_50pct": 0.7371,
+          "natural_prevalence": 0.0611,
+          "precision_at_natural_prevalence": 0.1543,
+          "n_natural": 3699
+        },
+        {
+          "subreddit": "creepyPMs",
+          "tpr": 0.672,
+          "fpr": 0.3371,
+          "precision_balanced_50pct": 0.6659,
+          "natural_prevalence": 0.0485,
+          "precision_at_natural_prevalence": 0.0923,
+          "n_natural": 3173
+        },
+        {
+          "subreddit": "changemyview",
+          "tpr": 0.5462,
+          "fpr": 0.086,
+          "precision_balanced_50pct": 0.864,
+          "natural_prevalence": 0.023,
+          "precision_at_natural_prevalence": 0.1301,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "aww",
+          "tpr": 0.7667,
+          "fpr": 0.3348,
+          "precision_balanced_50pct": 0.6961,
+          "natural_prevalence": 0.0147,
+          "precision_at_natural_prevalence": 0.033,
+          "n_natural": 3877
+        },
+        {
+          "subreddit": "depression",
+          "tpr": 0.7636,
+          "fpr": 0.4853,
+          "precision_balanced_50pct": 0.6114,
+          "natural_prevalence": 0.14,
+          "precision_at_natural_prevalence": 0.2039,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "socialism",
+          "tpr": 0.7435,
+          "fpr": 0.3697,
+          "precision_balanced_50pct": 0.6679,
+          "natural_prevalence": 0.0563,
+          "precision_at_natural_prevalence": 0.1071,
+          "n_natural": 3943
+        },
+        {
+          "subreddit": "movies",
+          "tpr": 0.8209,
+          "fpr": 0.1538,
+          "precision_balanced_50pct": 0.8422,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.0145,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "jailbreak",
+          "tpr": 0.6759,
+          "fpr": 0.1954,
+          "precision_balanced_50pct": 0.7757,
+          "natural_prevalence": 0.0049,
+          "precision_at_natural_prevalence": 0.0168,
+          "n_natural": 3658
+        },
+        {
+          "subreddit": "hearthstone",
+          "tpr": 0.7113,
+          "fpr": 0.3378,
+          "precision_balanced_50pct": 0.678,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0073,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "television",
+          "tpr": 0.4845,
+          "fpr": 0.1611,
+          "precision_balanced_50pct": 0.7505,
+          "natural_prevalence": 0.011,
+          "precision_at_natural_prevalence": 0.0324,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "tpr": 0.3238,
+          "fpr": 0.1173,
+          "precision_balanced_50pct": 0.734,
+          "natural_prevalence": 0.0107,
+          "precision_at_natural_prevalence": 0.0291,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gameofthrones",
+          "tpr": 0.4679,
+          "fpr": 0.1397,
+          "precision_balanced_50pct": 0.7701,
+          "natural_prevalence": 0.004,
+          "precision_at_natural_prevalence": 0.0133,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "tpr": 0.4165,
+          "fpr": 0.0938,
+          "precision_balanced_50pct": 0.8162,
+          "natural_prevalence": 0.015,
+          "precision_at_natural_prevalence": 0.0633,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "tpr": 0.696,
+          "fpr": 0.4321,
+          "precision_balanced_50pct": 0.617,
+          "natural_prevalence": 0.0457,
+          "precision_at_natural_prevalence": 0.0717,
+          "n_natural": 328
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "tpr": 0.2978,
+          "fpr": 0.0678,
+          "precision_balanced_50pct": 0.8146,
+          "natural_prevalence": 0.117,
+          "precision_at_natural_prevalence": 0.3679,
+          "n_natural": 3557
+        },
+        {
+          "subreddit": "funny",
+          "tpr": 0.4486,
+          "fpr": 0.1429,
+          "precision_balanced_50pct": 0.7584,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.0171,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Futurology",
+          "tpr": 0.3775,
+          "fpr": 0.1032,
+          "precision_balanced_50pct": 0.7853,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.026,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "nfl",
+          "tpr": 0.4723,
+          "fpr": 0.0975,
+          "precision_balanced_50pct": 0.829,
+          "natural_prevalence": 0.006,
+          "precision_at_natural_prevalence": 0.0284,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "books",
+          "tpr": 0.5071,
+          "fpr": 0.0546,
+          "precision_balanced_50pct": 0.9028,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0446,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "IAmA",
+          "tpr": 0.374,
+          "fpr": 0.0664,
+          "precision_balanced_50pct": 0.8493,
+          "natural_prevalence": 0.0183,
+          "precision_at_natural_prevalence": 0.0952,
+          "n_natural": 3384
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "tpr": 0.5763,
+          "fpr": 0.3075,
+          "precision_balanced_50pct": 0.6521,
+          "natural_prevalence": 0.072,
+          "precision_at_natural_prevalence": 0.1269,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "NeutralPolitics",
+          "tpr": 0.624,
+          "fpr": 0.295,
+          "precision_balanced_50pct": 0.679,
+          "natural_prevalence": 0.2269,
+          "precision_at_natural_prevalence": 0.3831,
+          "n_natural": 2331
+        },
+        {
+          "subreddit": "space",
+          "tpr": 0.3407,
+          "fpr": 0.1457,
+          "precision_balanced_50pct": 0.7005,
+          "natural_prevalence": 0.0238,
+          "precision_at_natural_prevalence": 0.0538,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Games",
+          "tpr": 0.342,
+          "fpr": 0.0648,
+          "precision_balanced_50pct": 0.8407,
+          "natural_prevalence": 0.046,
+          "precision_at_natural_prevalence": 0.2028,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "tpr": 0.7899,
+          "fpr": 0.2935,
+          "precision_balanced_50pct": 0.7291,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.018,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "europe",
+          "tpr": 0.516,
+          "fpr": 0.0926,
+          "precision_balanced_50pct": 0.8479,
+          "natural_prevalence": 0.0203,
+          "precision_at_natural_prevalence": 0.1033,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "MMA",
+          "tpr": 0.5939,
+          "fpr": 0.1397,
+          "precision_balanced_50pct": 0.8095,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0798,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "india",
+          "tpr": 0.6082,
+          "fpr": 0.244,
+          "precision_balanced_50pct": 0.7137,
+          "natural_prevalence": 0.0285,
+          "precision_at_natural_prevalence": 0.0682,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "atheism",
+          "tpr": 0.6647,
+          "fpr": 0.2298,
+          "precision_balanced_50pct": 0.7431,
+          "natural_prevalence": 0.021,
+          "precision_at_natural_prevalence": 0.0584,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "spacex",
+          "tpr": 0.1308,
+          "fpr": 0.0128,
+          "precision_balanced_50pct": 0.9105,
+          "natural_prevalence": 0.0309,
+          "precision_at_natural_prevalence": 0.2449,
+          "n_natural": 3303
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "tpr": 0.6441,
+          "fpr": 0.0802,
+          "precision_balanced_50pct": 0.8892,
+          "natural_prevalence": 0.0015,
+          "precision_at_natural_prevalence": 0.0119,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "wow",
+          "tpr": 0.5354,
+          "fpr": 0.1325,
+          "precision_balanced_50pct": 0.8016,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.0258,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "food",
+          "tpr": 0.6841,
+          "fpr": 0.2395,
+          "precision_balanced_50pct": 0.7407,
+          "natural_prevalence": 0.0264,
+          "precision_at_natural_prevalence": 0.0719,
+          "n_natural": 3975
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "tpr": 0.5411,
+          "fpr": 0.4253,
+          "precision_balanced_50pct": 0.5599,
+          "natural_prevalence": 0.0386,
+          "precision_at_natural_prevalence": 0.0486,
+          "n_natural": 259
+        },
+        {
+          "subreddit": "CFB",
+          "tpr": 0.5152,
+          "fpr": 0.0693,
+          "precision_balanced_50pct": 0.8814,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0342,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "tpr": 0.5889,
+          "fpr": 0.3004,
+          "precision_balanced_50pct": 0.6622,
+          "natural_prevalence": 0.0134,
+          "precision_at_natural_prevalence": 0.0259,
+          "n_natural": 1571
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "tpr": 0.3072,
+          "fpr": 0.0667,
+          "precision_balanced_50pct": 0.8217,
+          "natural_prevalence": 0.0143,
+          "precision_at_natural_prevalence": 0.0625,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemontrades",
+          "tpr": 0.2766,
+          "fpr": 0.1914,
+          "precision_balanced_50pct": 0.591,
+          "natural_prevalence": 0.0057,
+          "precision_at_natural_prevalence": 0.0082,
+          "n_natural": 2448
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "tpr": 0.4188,
+          "fpr": 0.1385,
+          "precision_balanced_50pct": 0.7514,
+          "natural_prevalence": 0.146,
+          "precision_at_natural_prevalence": 0.3407,
+          "n_natural": 3590
+        },
+        {
+          "subreddit": "nba",
+          "tpr": 0.6245,
+          "fpr": 0.1719,
+          "precision_balanced_50pct": 0.7841,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.017,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "philosophy",
+          "tpr": 0.2184,
+          "fpr": 0.0218,
+          "precision_balanced_50pct": 0.9091,
+          "natural_prevalence": 0.0609,
+          "precision_at_natural_prevalence": 0.3934,
+          "n_natural": 3366
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "tpr": 0.5335,
+          "fpr": 0.1388,
+          "precision_balanced_50pct": 0.7935,
+          "natural_prevalence": 0.014,
+          "precision_at_natural_prevalence": 0.0517,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "tifu",
+          "tpr": 0.6111,
+          "fpr": 0.2,
+          "precision_balanced_50pct": 0.7534,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0151,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "canada",
+          "tpr": 0.8182,
+          "fpr": 0.2918,
+          "precision_balanced_50pct": 0.7371,
+          "natural_prevalence": 0.0297,
+          "precision_at_natural_prevalence": 0.0792,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "me_irl",
+          "tpr": 0.4945,
+          "fpr": 0.1935,
+          "precision_balanced_50pct": 0.7188,
+          "natural_prevalence": 0.009,
+          "precision_at_natural_prevalence": 0.0227,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "videos",
+          "tpr": 0.7876,
+          "fpr": 0.2328,
+          "precision_balanced_50pct": 0.7719,
+          "natural_prevalence": 0.012,
+          "precision_at_natural_prevalence": 0.0395,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "worldnews",
+          "tpr": 0.7146,
+          "fpr": 0.2168,
+          "precision_balanced_50pct": 0.7672,
+          "natural_prevalence": 0.0483,
+          "precision_at_natural_prevalence": 0.1432,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "photoshopbattles",
+          "tpr": 0.428,
+          "fpr": 0.7083,
+          "precision_balanced_50pct": 0.3767,
+          "natural_prevalence": 0.0194,
+          "precision_at_natural_prevalence": 0.0118,
+          "n_natural": 1547
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "tpr": 0.3501,
+          "fpr": 0.0876,
+          "precision_balanced_50pct": 0.7999,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.0119,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemon",
+          "tpr": 0.6167,
+          "fpr": 0.1389,
+          "precision_balanced_50pct": 0.8161,
+          "natural_prevalence": 0.0022,
+          "precision_at_natural_prevalence": 0.0099,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "LifeProTips",
+          "tpr": 0.5923,
+          "fpr": 0.158,
+          "precision_balanced_50pct": 0.7894,
+          "natural_prevalence": 0.0063,
+          "precision_at_natural_prevalence": 0.023,
+          "n_natural": 4000
+        }
+      ]
+    },
+    "qwen": {
+      "n_subs": 95,
+      "n_subs_with_natural_prev": 95,
+      "median_precision_balanced_50pct": 0.7352,
+      "median_precision_at_natural_prevalence": 0.032,
+      "median_precision_collapse": 0.7032,
+      "per_sub": [
+        {
+          "subreddit": "changemyview",
+          "tpr": 0.6687,
+          "fpr": 0.2442,
+          "precision_balanced_50pct": 0.7325,
+          "natural_prevalence": 0.023,
+          "precision_at_natural_prevalence": 0.0606,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "socialism",
+          "tpr": 0.7606,
+          "fpr": 0.3716,
+          "precision_balanced_50pct": 0.6718,
+          "natural_prevalence": 0.0563,
+          "precision_at_natural_prevalence": 0.1088,
+          "n_natural": 3943
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "tpr": 0.636,
+          "fpr": 0.2747,
+          "precision_balanced_50pct": 0.6984,
+          "natural_prevalence": 0.002,
+          "precision_at_natural_prevalence": 0.0046,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "tpr": 0.6076,
+          "fpr": 0.1655,
+          "precision_balanced_50pct": 0.7859,
+          "natural_prevalence": 0.0372,
+          "precision_at_natural_prevalence": 0.1244,
+          "n_natural": 2658
+        },
+        {
+          "subreddit": "politics",
+          "tpr": 0.6769,
+          "fpr": 0.2957,
+          "precision_balanced_50pct": 0.6959,
+          "natural_prevalence": 0.0123,
+          "precision_at_natural_prevalence": 0.0276,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gaming",
+          "tpr": 0.4593,
+          "fpr": 0.1943,
+          "precision_balanced_50pct": 0.7027,
+          "natural_prevalence": 0.013,
+          "precision_at_natural_prevalence": 0.0302,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "tpr": 0.248,
+          "fpr": 0.0479,
+          "precision_balanced_50pct": 0.838,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.034,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "atheism",
+          "tpr": 0.6185,
+          "fpr": 0.227,
+          "precision_balanced_50pct": 0.7315,
+          "natural_prevalence": 0.021,
+          "precision_at_natural_prevalence": 0.0552,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Games",
+          "tpr": 0.2785,
+          "fpr": 0.0735,
+          "precision_balanced_50pct": 0.7913,
+          "natural_prevalence": 0.046,
+          "precision_at_natural_prevalence": 0.1545,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "depression",
+          "tpr": 0.7551,
+          "fpr": 0.4921,
+          "precision_balanced_50pct": 0.6054,
+          "natural_prevalence": 0.14,
+          "precision_at_natural_prevalence": 0.1999,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "sex",
+          "tpr": 0.6443,
+          "fpr": 0.2377,
+          "precision_balanced_50pct": 0.7305,
+          "natural_prevalence": 0.0255,
+          "precision_at_natural_prevalence": 0.0662,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "food",
+          "tpr": 0.5263,
+          "fpr": 0.1967,
+          "precision_balanced_50pct": 0.7279,
+          "natural_prevalence": 0.0264,
+          "precision_at_natural_prevalence": 0.0677,
+          "n_natural": 3975
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "tpr": 0.5426,
+          "fpr": 0.1379,
+          "precision_balanced_50pct": 0.7973,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0279,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "funny",
+          "tpr": 0.4802,
+          "fpr": 0.2193,
+          "precision_balanced_50pct": 0.6864,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.012,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "movies",
+          "tpr": 0.7384,
+          "fpr": 0.1135,
+          "precision_balanced_50pct": 0.8668,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.0176,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "legaladvice",
+          "tpr": 0.6112,
+          "fpr": 0.3401,
+          "precision_balanced_50pct": 0.6425,
+          "natural_prevalence": 0.178,
+          "precision_at_natural_prevalence": 0.2802,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "technology",
+          "tpr": 0.4247,
+          "fpr": 0.1423,
+          "precision_balanced_50pct": 0.7491,
+          "natural_prevalence": 0.0027,
+          "precision_at_natural_prevalence": 0.0082,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "tpr": 0.5346,
+          "fpr": 0.1497,
+          "precision_balanced_50pct": 0.7813,
+          "natural_prevalence": 0.0043,
+          "precision_at_natural_prevalence": 0.015,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "anime",
+          "tpr": 0.3471,
+          "fpr": 0.0996,
+          "precision_balanced_50pct": 0.7771,
+          "natural_prevalence": 0.0084,
+          "precision_at_natural_prevalence": 0.0285,
+          "n_natural": 3710
+        },
+        {
+          "subreddit": "books",
+          "tpr": 0.6377,
+          "fpr": 0.114,
+          "precision_balanced_50pct": 0.8483,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0273,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Futurology",
+          "tpr": 0.5382,
+          "fpr": 0.1835,
+          "precision_balanced_50pct": 0.7457,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.021,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "personalfinance",
+          "tpr": 0.6205,
+          "fpr": 0.2678,
+          "precision_balanced_50pct": 0.6985,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0452,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "videos",
+          "tpr": 0.7116,
+          "fpr": 0.2009,
+          "precision_balanced_50pct": 0.7799,
+          "natural_prevalence": 0.012,
+          "precision_at_natural_prevalence": 0.0413,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "conspiracy",
+          "tpr": 0.8402,
+          "fpr": 0.2527,
+          "precision_balanced_50pct": 0.7688,
+          "natural_prevalence": 0.0335,
+          "precision_at_natural_prevalence": 0.1033,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "tpr": 0.1411,
+          "fpr": 0.0444,
+          "precision_balanced_50pct": 0.7607,
+          "natural_prevalence": 0.0138,
+          "precision_at_natural_prevalence": 0.0424,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "tpr": 0.6477,
+          "fpr": 0.0845,
+          "precision_balanced_50pct": 0.8846,
+          "natural_prevalence": 0.0015,
+          "precision_at_natural_prevalence": 0.0114,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pics",
+          "tpr": 0.7209,
+          "fpr": 0.2759,
+          "precision_balanced_50pct": 0.7233,
+          "natural_prevalence": 0.0112,
+          "precision_at_natural_prevalence": 0.0289,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "tpr": 0.6801,
+          "fpr": 0.4176,
+          "precision_balanced_50pct": 0.6196,
+          "natural_prevalence": 0.0457,
+          "precision_at_natural_prevalence": 0.0724,
+          "n_natural": 328
+        },
+        {
+          "subreddit": "nosleep",
+          "tpr": 0.6461,
+          "fpr": 0.4156,
+          "precision_balanced_50pct": 0.6085,
+          "natural_prevalence": 0.1476,
+          "precision_at_natural_prevalence": 0.2121,
+          "n_natural": 3225
+        },
+        {
+          "subreddit": "gonewild",
+          "tpr": 0.3926,
+          "fpr": 0.2454,
+          "precision_balanced_50pct": 0.6153,
+          "natural_prevalence": 0.0533,
+          "precision_at_natural_prevalence": 0.0826,
+          "n_natural": 3059
+        },
+        {
+          "subreddit": "NeutralPolitics",
+          "tpr": 0.3554,
+          "fpr": 0.1559,
+          "precision_balanced_50pct": 0.6951,
+          "natural_prevalence": 0.2269,
+          "precision_at_natural_prevalence": 0.401,
+          "n_natural": 2331
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "tpr": 0.6727,
+          "fpr": 0.3699,
+          "precision_balanced_50pct": 0.6452,
+          "natural_prevalence": 0.0145,
+          "precision_at_natural_prevalence": 0.0261,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "india",
+          "tpr": 0.6477,
+          "fpr": 0.3035,
+          "precision_balanced_50pct": 0.6809,
+          "natural_prevalence": 0.0285,
+          "precision_at_natural_prevalence": 0.0589,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "spacex",
+          "tpr": 0.2805,
+          "fpr": 0.0498,
+          "precision_balanced_50pct": 0.8493,
+          "natural_prevalence": 0.0309,
+          "precision_at_natural_prevalence": 0.1522,
+          "n_natural": 3303
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "tpr": 0.5571,
+          "fpr": 0.2099,
+          "precision_balanced_50pct": 0.7263,
+          "natural_prevalence": 0.047,
+          "precision_at_natural_prevalence": 0.1157,
+          "n_natural": 2575
+        },
+        {
+          "subreddit": "AskHistorians",
+          "tpr": 0.1503,
+          "fpr": 0.0564,
+          "precision_balanced_50pct": 0.7272,
+          "natural_prevalence": 0.4153,
+          "precision_at_natural_prevalence": 0.6544,
+          "n_natural": 2834
+        },
+        {
+          "subreddit": "pokemongo",
+          "tpr": 0.6337,
+          "fpr": 0.1183,
+          "precision_balanced_50pct": 0.8427,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.016,
+          "n_natural": 3966
+        },
+        {
+          "subreddit": "canada",
+          "tpr": 0.7915,
+          "fpr": 0.2735,
+          "precision_balanced_50pct": 0.7432,
+          "natural_prevalence": 0.0297,
+          "precision_at_natural_prevalence": 0.0815,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "tpr": 0.3521,
+          "fpr": 0.1146,
+          "precision_balanced_50pct": 0.7544,
+          "natural_prevalence": 0.003,
+          "precision_at_natural_prevalence": 0.0092,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "2007scape",
+          "tpr": 0.756,
+          "fpr": 0.2348,
+          "precision_balanced_50pct": 0.763,
+          "natural_prevalence": 0.0055,
+          "precision_at_natural_prevalence": 0.0175,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "wow",
+          "tpr": 0.5972,
+          "fpr": 0.1771,
+          "precision_balanced_50pct": 0.7713,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.0216,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Android",
+          "tpr": 0.5477,
+          "fpr": 0.0734,
+          "precision_balanced_50pct": 0.8819,
+          "natural_prevalence": 0.0013,
+          "precision_at_natural_prevalence": 0.0093,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "tpr": 0.6029,
+          "fpr": 0.2052,
+          "precision_balanced_50pct": 0.7461,
+          "natural_prevalence": 0.014,
+          "precision_at_natural_prevalence": 0.04,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "tpr": 0.3903,
+          "fpr": 0.1709,
+          "precision_balanced_50pct": 0.6955,
+          "natural_prevalence": 0.0143,
+          "precision_at_natural_prevalence": 0.032,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "creepyPMs",
+          "tpr": 0.72,
+          "fpr": 0.4706,
+          "precision_balanced_50pct": 0.6047,
+          "natural_prevalence": 0.0485,
+          "precision_at_natural_prevalence": 0.0724,
+          "n_natural": 3173
+        },
+        {
+          "subreddit": "tifu",
+          "tpr": 0.6103,
+          "fpr": 0.2149,
+          "precision_balanced_50pct": 0.7396,
+          "natural_prevalence": 0.005,
+          "precision_at_natural_prevalence": 0.0141,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "jailbreak",
+          "tpr": 0.636,
+          "fpr": 0.1292,
+          "precision_balanced_50pct": 0.8311,
+          "natural_prevalence": 0.0049,
+          "precision_at_natural_prevalence": 0.0238,
+          "n_natural": 3658
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "tpr": 0.7951,
+          "fpr": 0.3022,
+          "precision_balanced_50pct": 0.7246,
+          "natural_prevalence": 0.0067,
+          "precision_at_natural_prevalence": 0.0176,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "photoshopbattles",
+          "tpr": 0.3253,
+          "fpr": 0.2233,
+          "precision_balanced_50pct": 0.593,
+          "natural_prevalence": 0.0194,
+          "precision_at_natural_prevalence": 0.028,
+          "n_natural": 1547
+        },
+        {
+          "subreddit": "LifeProTips",
+          "tpr": 0.622,
+          "fpr": 0.2234,
+          "precision_balanced_50pct": 0.7357,
+          "natural_prevalence": 0.0063,
+          "precision_at_natural_prevalence": 0.0172,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "hearthstone",
+          "tpr": 0.732,
+          "fpr": 0.3544,
+          "precision_balanced_50pct": 0.6738,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0072,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "space",
+          "tpr": 0.3837,
+          "fpr": 0.1961,
+          "precision_balanced_50pct": 0.6618,
+          "natural_prevalence": 0.0238,
+          "precision_at_natural_prevalence": 0.0454,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Overwatch",
+          "tpr": 0.7112,
+          "fpr": 0.1896,
+          "precision_balanced_50pct": 0.7895,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0176,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "Christianity",
+          "tpr": 0.5894,
+          "fpr": 0.125,
+          "precision_balanced_50pct": 0.825,
+          "natural_prevalence": 0.018,
+          "precision_at_natural_prevalence": 0.0796,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "SandersForPresident",
+          "tpr": 0.6148,
+          "fpr": 0.0,
+          "precision_balanced_50pct": 1.0,
+          "natural_prevalence": 0.0488,
+          "precision_at_natural_prevalence": 1.0,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "tpr": 0.5453,
+          "fpr": 0.3121,
+          "precision_balanced_50pct": 0.636,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0083,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "asoiaf",
+          "tpr": 0.5706,
+          "fpr": 0.2068,
+          "precision_balanced_50pct": 0.734,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.013,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "tpr": 0.513,
+          "fpr": 0.2065,
+          "precision_balanced_50pct": 0.713,
+          "natural_prevalence": 0.146,
+          "precision_at_natural_prevalence": 0.298,
+          "n_natural": 3590
+        },
+        {
+          "subreddit": "television",
+          "tpr": 0.5,
+          "fpr": 0.1996,
+          "precision_balanced_50pct": 0.7147,
+          "natural_prevalence": 0.011,
+          "precision_at_natural_prevalence": 0.0271,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "tpr": 0.8636,
+          "fpr": 0.4915,
+          "precision_balanced_50pct": 0.6373,
+          "natural_prevalence": 0.0573,
+          "precision_at_natural_prevalence": 0.0966,
+          "n_natural": 279
+        },
+        {
+          "subreddit": "nba",
+          "tpr": 0.6803,
+          "fpr": 0.2059,
+          "precision_balanced_50pct": 0.7677,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0155,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "tpr": 0.6488,
+          "fpr": 0.378,
+          "precision_balanced_50pct": 0.6319,
+          "natural_prevalence": 0.0134,
+          "precision_at_natural_prevalence": 0.0227,
+          "n_natural": 1571
+        },
+        {
+          "subreddit": "europe",
+          "tpr": 0.5787,
+          "fpr": 0.1482,
+          "precision_balanced_50pct": 0.7961,
+          "natural_prevalence": 0.0203,
+          "precision_at_natural_prevalence": 0.0747,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "tpr": 0.5862,
+          "fpr": 0.295,
+          "precision_balanced_50pct": 0.6652,
+          "natural_prevalence": 0.072,
+          "precision_at_natural_prevalence": 0.1336,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "AskWomen",
+          "tpr": 0.4016,
+          "fpr": 0.1101,
+          "precision_balanced_50pct": 0.7848,
+          "natural_prevalence": 0.0611,
+          "precision_at_natural_prevalence": 0.1918,
+          "n_natural": 3699
+        },
+        {
+          "subreddit": "aww",
+          "tpr": 0.7076,
+          "fpr": 0.2581,
+          "precision_balanced_50pct": 0.7327,
+          "natural_prevalence": 0.0147,
+          "precision_at_natural_prevalence": 0.0393,
+          "n_natural": 3877
+        },
+        {
+          "subreddit": "gameofthrones",
+          "tpr": 0.5161,
+          "fpr": 0.1432,
+          "precision_balanced_50pct": 0.7828,
+          "natural_prevalence": 0.004,
+          "precision_at_natural_prevalence": 0.0143,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "churning",
+          "tpr": 0.7169,
+          "fpr": 0.0989,
+          "precision_balanced_50pct": 0.8788,
+          "natural_prevalence": 0.0019,
+          "precision_at_natural_prevalence": 0.0135,
+          "n_natural": 3715
+        },
+        {
+          "subreddit": "AskReddit",
+          "tpr": 0.4604,
+          "fpr": 0.3498,
+          "precision_balanced_50pct": 0.5683,
+          "natural_prevalence": 0.0088,
+          "precision_at_natural_prevalence": 0.0115,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "news",
+          "tpr": 0.6787,
+          "fpr": 0.301,
+          "precision_balanced_50pct": 0.6928,
+          "natural_prevalence": 0.0575,
+          "precision_at_natural_prevalence": 0.1209,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "history",
+          "tpr": 0.494,
+          "fpr": 0.186,
+          "precision_balanced_50pct": 0.7264,
+          "natural_prevalence": 0.1742,
+          "precision_at_natural_prevalence": 0.3591,
+          "n_natural": 3891
+        },
+        {
+          "subreddit": "hiphopheads",
+          "tpr": 0.3796,
+          "fpr": 0.1419,
+          "precision_balanced_50pct": 0.7279,
+          "natural_prevalence": 0.001,
+          "precision_at_natural_prevalence": 0.0027,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "philosophy",
+          "tpr": 0.255,
+          "fpr": 0.0388,
+          "precision_balanced_50pct": 0.8678,
+          "natural_prevalence": 0.0609,
+          "precision_at_natural_prevalence": 0.2987,
+          "n_natural": 3366
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "tpr": 0.5781,
+          "fpr": 0.185,
+          "precision_balanced_50pct": 0.7575,
+          "natural_prevalence": 0.0065,
+          "precision_at_natural_prevalence": 0.02,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "DIY",
+          "tpr": 0.4949,
+          "fpr": 0.125,
+          "precision_balanced_50pct": 0.7984,
+          "natural_prevalence": 0.0032,
+          "precision_at_natural_prevalence": 0.0127,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "gifs",
+          "tpr": 0.4617,
+          "fpr": 0.3053,
+          "precision_balanced_50pct": 0.6019,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0109,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "pokemon",
+          "tpr": 0.6025,
+          "fpr": 0.1164,
+          "precision_balanced_50pct": 0.8381,
+          "natural_prevalence": 0.0022,
+          "precision_at_natural_prevalence": 0.0115,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "IAmA",
+          "tpr": 0.381,
+          "fpr": 0.1133,
+          "precision_balanced_50pct": 0.7707,
+          "natural_prevalence": 0.0183,
+          "precision_at_natural_prevalence": 0.059,
+          "n_natural": 3384
+        },
+        {
+          "subreddit": "pokemontrades",
+          "tpr": 0.2209,
+          "fpr": 0.1565,
+          "precision_balanced_50pct": 0.5852,
+          "natural_prevalence": 0.0057,
+          "precision_at_natural_prevalence": 0.0081,
+          "n_natural": 2448
+        },
+        {
+          "subreddit": "science",
+          "tpr": 0.546,
+          "fpr": 0.2251,
+          "precision_balanced_50pct": 0.7081,
+          "natural_prevalence": 0.0267,
+          "precision_at_natural_prevalence": 0.0625,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "tpr": 0.5773,
+          "fpr": 0.2376,
+          "precision_balanced_50pct": 0.7085,
+          "natural_prevalence": 0.0258,
+          "precision_at_natural_prevalence": 0.0605,
+          "n_natural": 2867
+        },
+        {
+          "subreddit": "worldnews",
+          "tpr": 0.6957,
+          "fpr": 0.2506,
+          "precision_balanced_50pct": 0.7352,
+          "natural_prevalence": 0.0483,
+          "precision_at_natural_prevalence": 0.1234,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "tpr": 0.4158,
+          "fpr": 0.096,
+          "precision_balanced_50pct": 0.8124,
+          "natural_prevalence": 0.117,
+          "precision_at_natural_prevalence": 0.3645,
+          "n_natural": 3557
+        },
+        {
+          "subreddit": "nfl",
+          "tpr": 0.5714,
+          "fpr": 0.1266,
+          "precision_balanced_50pct": 0.8186,
+          "natural_prevalence": 0.006,
+          "precision_at_natural_prevalence": 0.0265,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "GetMotivated",
+          "tpr": 0.6707,
+          "fpr": 0.2063,
+          "precision_balanced_50pct": 0.7648,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.0232,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "tpr": 0.4341,
+          "fpr": 0.1198,
+          "precision_balanced_50pct": 0.7837,
+          "natural_prevalence": 0.015,
+          "precision_at_natural_prevalence": 0.0523,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "me_irl",
+          "tpr": 0.5536,
+          "fpr": 0.2397,
+          "precision_balanced_50pct": 0.6978,
+          "natural_prevalence": 0.009,
+          "precision_at_natural_prevalence": 0.0205,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "CFB",
+          "tpr": 0.6377,
+          "fpr": 0.0998,
+          "precision_balanced_50pct": 0.8647,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0296,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "tpr": 0.598,
+          "fpr": 0.4676,
+          "precision_balanced_50pct": 0.5612,
+          "natural_prevalence": 0.0386,
+          "precision_at_natural_prevalence": 0.0489,
+          "n_natural": 259
+        },
+        {
+          "subreddit": "relationships",
+          "tpr": 0.666,
+          "fpr": 0.4009,
+          "precision_balanced_50pct": 0.6242,
+          "natural_prevalence": 0.0073,
+          "precision_at_natural_prevalence": 0.012,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "tpr": 0.4522,
+          "fpr": 0.1487,
+          "precision_balanced_50pct": 0.7525,
+          "natural_prevalence": 0.0107,
+          "precision_at_natural_prevalence": 0.032,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "askscience",
+          "tpr": 0.2272,
+          "fpr": 0.0601,
+          "precision_balanced_50pct": 0.7908,
+          "natural_prevalence": 0.1513,
+          "precision_at_natural_prevalence": 0.4026,
+          "n_natural": 2552
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "tpr": 0.6052,
+          "fpr": 0.18,
+          "precision_balanced_50pct": 0.7707,
+          "natural_prevalence": 0.0047,
+          "precision_at_natural_prevalence": 0.0158,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "MMA",
+          "tpr": 0.7409,
+          "fpr": 0.2274,
+          "precision_balanced_50pct": 0.7652,
+          "natural_prevalence": 0.02,
+          "precision_at_natural_prevalence": 0.0624,
+          "n_natural": 4000
+        },
+        {
+          "subreddit": "nottheonion",
+          "tpr": 0.5592,
+          "fpr": 0.2246,
+          "precision_balanced_50pct": 0.7135,
+          "natural_prevalence": 0.0035,
+          "precision_at_natural_prevalence": 0.0087,
+          "n_natural": 4000
+        }
+      ]
+    }
+  }
+}

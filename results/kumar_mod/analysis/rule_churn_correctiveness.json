@@ -1,0 +1,185 @@
+{
+ "analysis": "rule_churn_correctiveness",
+ "definition": "Among paired rows whose rule intervention changes the binary decision, delta_correct = Pr(intervention decision equals recorded label) - Pr(home decision equals recorded label). Negative means churn moves away from the recorded label more often than toward it.",
+ "by_family": {
+  "gemma": {
+   "scrambled": {
+    "n_paired": 2832,
+    "n_flips": 278,
+    "flip_rate": 0.0982,
+    "intervention_correct_given_flip": 0.4496,
+    "base_correct_given_flip": 0.5504,
+    "delta_correct": -0.1007,
+    "ci95_cluster_subreddit": [
+     -0.2201,
+     0.0187
+    ],
+    "moves_toward_label_n": 125,
+    "moves_away_from_label_n": 153,
+    "removal_to_keep_flips": 229,
+    "keep_to_removal_flips": 49,
+    "condition_label": "scrambled"
+   },
+   "none": {
+    "n_paired": 2824,
+    "n_flips": 364,
+    "flip_rate": 0.1289,
+    "intervention_correct_given_flip": 0.4313,
+    "base_correct_given_flip": 0.5687,
+    "delta_correct": -0.1374,
+    "ci95_cluster_subreddit": [
+     -0.2313,
+     -0.0421
+    ],
+    "moves_toward_label_n": 157,
+    "moves_away_from_label_n": 207,
+    "removal_to_keep_flips": 307,
+    "keep_to_removal_flips": 57,
+    "condition_label": "none"
+   },
+   "random": {
+    "n_paired": 2833,
+    "n_flips": 439,
+    "flip_rate": 0.155,
+    "intervention_correct_given_flip": 0.4032,
+    "base_correct_given_flip": 0.5968,
+    "delta_correct": -0.1936,
+    "ci95_cluster_subreddit": [
+     -0.2998,
+     -0.0905
+    ],
+    "moves_toward_label_n": 177,
+    "moves_away_from_label_n": 262,
+    "removal_to_keep_flips": 405,
+    "keep_to_removal_flips": 34,
+    "condition_label": "neutral_words"
+   }
+  },
+  "llama": {
+   "scrambled": {
+    "n_paired": 2836,
+    "n_flips": 321,
+    "flip_rate": 0.1132,
+    "intervention_correct_given_flip": 0.405,
+    "base_correct_given_flip": 0.595,
+    "delta_correct": -0.19,
+    "ci95_cluster_subreddit": [
+     -0.2937,
+     -0.0891
+    ],
+    "moves_toward_label_n": 130,
+    "moves_away_from_label_n": 191,
+    "removal_to_keep_flips": 266,
+    "keep_to_removal_flips": 55,
+    "condition_label": "scrambled"
+   },
+   "none": {
+    "n_paired": 2822,
+    "n_flips": 449,
+    "flip_rate": 0.1591,
+    "intervention_correct_given_flip": 0.3875,
+    "base_correct_given_flip": 0.6125,
+    "delta_correct": -0.2249,
+    "ci95_cluster_subreddit": [
+     -0.3138,
+     -0.1409
+    ],
+    "moves_toward_label_n": 174,
+    "moves_away_from_label_n": 275,
+    "removal_to_keep_flips": 398,
+    "keep_to_removal_flips": 51,
+    "condition_label": "none"
+   },
+   "random": {
+    "n_paired": 2782,
+    "n_flips": 524,
+    "flip_rate": 0.1884,
+    "intervention_correct_given_flip": 0.3454,
+    "base_correct_given_flip": 0.6546,
+    "delta_correct": -0.3092,
+    "ci95_cluster_subreddit": [
+     -0.3918,
+     -0.2295
+    ],
+    "moves_toward_label_n": 181,
+    "moves_away_from_label_n": 343,
+    "removal_to_keep_flips": 501,
+    "keep_to_removal_flips": 23,
+    "condition_label": "neutral_words"
+   }
+  },
+  "qwen": {
+   "scrambled": {
+    "n_paired": 2757,
+    "n_flips": 281,
+    "flip_rate": 0.1019,
+    "intervention_correct_given_flip": 0.452,
+    "base_correct_given_flip": 0.548,
+    "delta_correct": -0.0961,
+    "ci95_cluster_subreddit": [
+     -0.2156,
+     0.024
+    ],
+    "moves_toward_label_n": 127,
+    "moves_away_from_label_n": 154,
+    "removal_to_keep_flips": 186,
+    "keep_to_removal_flips": 95,
+    "condition_label": "scrambled"
+   },
+   "none": {
+    "n_paired": 2080,
+    "n_flips": 282,
+    "flip_rate": 0.1356,
+    "intervention_correct_given_flip": 0.4752,
+    "base_correct_given_flip": 0.5248,
+    "delta_correct": -0.0496,
+    "ci95_cluster_subreddit": [
+     -0.1673,
+     0.0667
+    ],
+    "moves_toward_label_n": 134,
+    "moves_away_from_label_n": 148,
+    "removal_to_keep_flips": 133,
+    "keep_to_removal_flips": 149,
+    "condition_label": "none"
+   },
+   "random": {
+    "n_paired": 2649,
+    "n_flips": 361,
+    "flip_rate": 0.1363,
+    "intervention_correct_given_flip": 0.4349,
+    "base_correct_given_flip": 0.5651,
+    "delta_correct": -0.1302,
+    "ci95_cluster_subreddit": [
+     -0.2364,
+     -0.0184
+    ],
+    "moves_toward_label_n": 157,
+    "moves_away_from_label_n": 204,
+    "removal_to_keep_flips": 269,
+    "keep_to_removal_flips": 92,
+    "condition_label": "neutral_words"
+   }
+  }
+ },
+ "pooled_family_condition_subreddit_cluster": {
+  "n_flips": 3299,
+  "intervention_correct_given_flip": 0.4129,
+  "base_correct_given_flip": 0.5871,
+  "delta_correct": -0.1743,
+  "ci95_cluster_family_condition_subreddit": [
+   -0.2095,
+   -0.1406
+  ]
+ },
+ "pooled_subreddit_cluster": {
+  "n_flips": 3299,
+  "intervention_correct_given_flip": 0.4129,
+  "base_correct_given_flip": 0.5871,
+  "delta_correct": -0.1743,
+  "ci95_cluster_subreddit": [
+   -0.2384,
+   -0.1123
+  ]
+ }
+}

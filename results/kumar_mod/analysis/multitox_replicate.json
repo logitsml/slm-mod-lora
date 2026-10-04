@@ -1,0 +1,31 @@
+{
+  "analysis": "multitox_replicate",
+  "n_consensus_rows": 65573,
+  "by_scorer": {
+    "detoxify_toxicbert": {
+      "n": 65573,
+      "auc_tox_predicts_consensus": 0.8278,
+      "auc_tox_predicts_moderator": 0.6852,
+      "dissociation": 0.1426
+    },
+    "tox_lexical": {
+      "n": 65573,
+      "auc_tox_predicts_consensus": 0.6373,
+      "auc_tox_predicts_moderator": 0.5752,
+      "dissociation": 0.0621
+    },
+    "tox_snlp": {
+      "n": 65573,
+      "auc_tox_predicts_consensus": 0.8238,
+      "auc_tox_predicts_moderator": 0.6803,
+      "dissociation": 0.1435
+    },
+    "tox_toxigen": {
+      "n": 65573,
+      "auc_tox_predicts_consensus": 0.7979,
+      "auc_tox_predicts_moderator": 0.6635,
+      "dissociation": 0.1344
+    }
+  },
+  "interpretation": "The consensus-toxicity dissociation (toxicity predicts the LLM consensus MORE than the moderator) replicates across toxicity scorers if every gap is clearly positive: detoxify_toxicbert: consensus 0.8278 vs moderator 0.6852 (gap 0.1426) | tox_lexical: consensus 0.6373 vs moderator 0.5752 (gap 0.0621) | tox_snlp: consensus 0.8238 vs moderator 0.6803 (gap 0.1435) | tox_toxigen: consensus 0.7979 vs moderator 0.6635 (gap 0.1344)"
+}

@@ -1,0 +1,271 @@
+{
+  "analysis": "coldstart_community_conditioned_encoder_LOCO",
+  "encoder": "intfloat/e5-large-v2",
+  "n_communities": 95,
+  "dz": 32,
+  "rank": 8,
+  "jobs": 14,
+  "protocol": "LOCO; c_s=e5(name+desc+rules); no target modlog; balanced test fold; no scaler; C=1.0",
+  "bal_auc": {
+    "warm_oracle": {
+      "median": 0.818,
+      "mean": 0.8104,
+      "n": 94,
+      "ci": [
+        0.7998,
+        0.8281
+      ]
+    },
+    "global_head": {
+      "median": 0.7596,
+      "mean": 0.7563,
+      "n": 95,
+      "ci": [
+        0.7456,
+        0.7883
+      ]
+    },
+    "nearest_source": {
+      "median": 0.7128,
+      "mean": 0.7075,
+      "n": 95,
+      "ci": [
+        0.6867,
+        0.7331
+      ]
+    },
+    "nearest_mixture": {
+      "median": 0.7421,
+      "mean": 0.7351,
+      "n": 95,
+      "ci": [
+        0.7177,
+        0.7634
+      ]
+    },
+    "lowrank_bilinear": {
+      "median": 0.7553,
+      "mean": 0.7435,
+      "n": 95,
+      "ci": [
+        0.7297,
+        0.774
+      ]
+    },
+    "bilinear_zperm": {
+      "median": 0.7522,
+      "mean": 0.7386,
+      "n": 95,
+      "ci": [
+        0.7283,
+        0.7609
+      ]
+    },
+    "bilinear_nulllabel": {
+      "median": 0.4896,
+      "mean": 0.5011,
+      "n": 95,
+      "ci": [
+        0.4731,
+        0.5184
+      ]
+    }
+  },
+  "pr_auc": {
+    "warm_oracle": {
+      "median": 0.8234,
+      "mean": 0.8242,
+      "n": 94,
+      "ci": [
+        0.811,
+        0.84
+      ]
+    },
+    "global_head": {
+      "median": 0.7879,
+      "mean": 0.7832,
+      "n": 95,
+      "ci": [
+        0.7695,
+        0.8086
+      ]
+    },
+    "nearest_source": {
+      "median": 0.738,
+      "mean": 0.7301,
+      "n": 95,
+      "ci": [
+        0.7053,
+        0.7586
+      ]
+    },
+    "nearest_mixture": {
+      "median": 0.7627,
+      "mean": 0.7562,
+      "n": 95,
+      "ci": [
+        0.7406,
+        0.7825
+      ]
+    },
+    "lowrank_bilinear": {
+      "median": 0.7802,
+      "mean": 0.7692,
+      "n": 95,
+      "ci": [
+        0.7585,
+        0.8013
+      ]
+    },
+    "bilinear_zperm": {
+      "median": 0.7746,
+      "mean": 0.764,
+      "n": 95,
+      "ci": [
+        0.75,
+        0.7949
+      ]
+    },
+    "bilinear_nulllabel": {
+      "median": 0.5404,
+      "mean": 0.5523,
+      "n": 95,
+      "ci": [
+        0.5261,
+        0.5559
+      ]
+    }
+  },
+  "nontox_auc": {
+    "warm_oracle": {
+      "median": 0.7594,
+      "mean": 0.7616,
+      "n": 94,
+      "ci": [
+        0.7453,
+        0.7759
+      ]
+    },
+    "global_head": {
+      "median": 0.6855,
+      "mean": 0.6812,
+      "n": 95,
+      "ci": [
+        0.6644,
+        0.7031
+      ]
+    },
+    "nearest_source": {
+      "median": 0.6457,
+      "mean": 0.6466,
+      "n": 95,
+      "ci": [
+        0.6239,
+        0.6759
+      ]
+    },
+    "nearest_mixture": {
+      "median": 0.6683,
+      "mean": 0.6624,
+      "n": 95,
+      "ci": [
+        0.6543,
+        0.6842
+      ]
+    },
+    "lowrank_bilinear": {
+      "median": 0.6706,
+      "mean": 0.6651,
+      "n": 95,
+      "ci": [
+        0.6564,
+        0.6906
+      ]
+    },
+    "bilinear_zperm": {
+      "median": 0.662,
+      "mean": 0.6602,
+      "n": 95,
+      "ci": [
+        0.6533,
+        0.6822
+      ]
+    },
+    "bilinear_nulllabel": {
+      "median": 0.5116,
+      "mean": 0.503,
+      "n": 95,
+      "ci": [
+        0.4801,
+        0.5224
+      ]
+    }
+  },
+  "deltas_bal_auc": {
+    "bilinear_minus_global": {
+      "median_delta": -0.0098,
+      "ci": [
+        -0.0166,
+        -0.004
+      ],
+      "frac_positive": 0.295,
+      "n": 95
+    },
+    "bilinear_minus_zperm": {
+      "median_delta": 0.0011,
+      "ci": [
+        -0.0001,
+        0.0017
+      ],
+      "frac_positive": 0.579,
+      "n": 95
+    },
+    "warm_minus_bilinear": {
+      "median_delta": 0.0541,
+      "ci": [
+        0.0383,
+        0.0645
+      ],
+      "frac_positive": 0.957,
+      "n": 94
+    },
+    "nearest_mixture_minus_global": {
+      "median_delta": -0.0206,
+      "ci": [
+        -0.0278,
+        -0.0102
+      ],
+      "frac_positive": 0.284,
+      "n": 95
+    }
+  },
+  "conditional_head_B1_TCbehav_median": 0.09,
+  "audit": {
+    "leakage_null_bilinear_balauc_should_be_~0.5": {
+      "median": 0.4896,
+      "mean": 0.5011,
+      "n": 95,
+      "ci": [
+        0.474,
+        0.5192
+      ]
+    },
+    "conditioning_real_if_bilinear_gt_zperm": "see deltas.bilinear_minus_zperm (CI should exclude 0 if real)",
+    "warm_oracle_vs_paper_tuned_0.826": "warm here uses no-scaler/C=1; gap to 0.826 is preprocessing"
+  },
+  "reference_rows_from_main_results": {
+    "oracle_percommunity_e5_head_BALAUC_tuned": 0.826,
+    "toxicity_classifier_macroAUC": 0.661,
+    "prompted_LLM_rating_BALAUC_mean": 0.682,
+    "prompted_LLM_rating_bymodel": {
+      "gemma3_12b": 0.665,
+      "llama31_8b": 0.705,
+      "qwen25_7b": 0.676
+    },
+    "prompted_LLM_logitgap_BALAUC": {
+      "gemma3_12b": 0.771,
+      "llama31_8b": 0.773
+    }
+  },
+  "smoke": false
+}

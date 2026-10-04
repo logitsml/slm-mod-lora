@@ -1,0 +1,259 @@
+{
+  "analysis": "crossmodel_causal",
+  "tag": "qwen",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "layers": [
+    19,
+    23,
+    27
+  ],
+  "k": 131072,
+  "k_active": 128,
+  "n_select": 8000,
+  "seed": 11,
+  "selection": "TOX=partial_r(act,Detoxify|VADER) top-K under consensus |r|>=.20 for >=2 of Detoxify/ToxiGen/SNLP; DEC=|r_tox|<.10 matched on r_gap; COMM=Waller-PC |r_tox|<.25; RAND=fire+p95 matched, tox/gap-orthogonal",
+  "cert_corr_lens_gap": {
+    "19": 0.9251054463309794,
+    "23": 0.9606132881971226,
+    "27": 0.9993584732218121
+  },
+  "cert_corr_featsum_gap": {
+    "19": 0.88989519150007,
+    "23": 0.9631179404269454,
+    "27": 0.9912425885740335
+  },
+  "dla_share": {
+    "19": {
+      "K20": {
+        "share_tox": 1.0,
+        "frac_tox": 1.0
+      },
+      "K50": {
+        "share_tox": 0.921,
+        "frac_tox": 0.82
+      },
+      "K100": {
+        "share_tox": 0.833,
+        "frac_tox": 0.63
+      }
+    },
+    "23": {
+      "K20": {
+        "share_tox": 0.993,
+        "frac_tox": 0.95
+      },
+      "K50": {
+        "share_tox": 0.976,
+        "frac_tox": 0.84
+      },
+      "K100": {
+        "share_tox": 0.972,
+        "frac_tox": 0.85
+      }
+    },
+    "27": {
+      "K20": {
+        "share_tox": 0.98,
+        "frac_tox": 0.9
+      },
+      "K50": {
+        "share_tox": 0.966,
+        "frac_tox": 0.86
+      },
+      "K100": {
+        "share_tox": 0.955,
+        "frac_tox": 0.76
+      }
+    }
+  },
+  "gate_n_tox_above_threshold": {
+    "19": 114,
+    "23": 153,
+    "27": 98
+  },
+  "tox_features": {
+    "19": [
+      33322,
+      8208,
+      78540,
+      34797,
+      61972,
+      129457,
+      22522,
+      70032,
+      54568,
+      89702
+    ],
+    "23": [
+      48469,
+      129806,
+      2361,
+      115219,
+      65779,
+      108718,
+      17348,
+      25510,
+      76168,
+      84054
+    ],
+    "27": [
+      74871,
+      91726,
+      93396,
+      76230,
+      114344,
+      38212,
+      121762,
+      69075,
+      101137,
+      119198
+    ]
+  },
+  "n_boot": 2000,
+  "necessity": {
+    "n": 592,
+    "n_subs": 94,
+    "pool": "model-removed (gap_rules>0)",
+    "base_positive_rate": 0.987,
+    "flip_rate": {
+      "all": {
+        "tox": 0.08614864864864864,
+        "dec_matched": 0.015202702702702704,
+        "community": 0.0,
+        "random": 0.03581081081081081
+      },
+      "human_keep": {
+        "tox": 0.14788732394366197,
+        "dec_matched": 0.028169014084507043,
+        "community": 0.0,
+        "random": 0.04225352112676057
+      },
+      "human_remove": {
+        "tox": 0.06666666666666667,
+        "dec_matched": 0.011111111111111112,
+        "community": 0.0,
+        "random": 0.03377777777777778
+      }
+    },
+    "mean_delta_gap_toward_keep": {
+      "tox": 6.369,
+      "dec_matched": -0.272,
+      "community": -0.794,
+      "random": 2.754
+    },
+    "arm_firing_on_pool": {
+      "tox": 0.694,
+      "dec_matched": 0.243,
+      "community": 0.235,
+      "random": 0.11
+    },
+    "dose_response_flip": {
+      "a0.5": 0.052364864864864864,
+      "a1.0": 0.08614864864864864,
+      "a1.5": 0.17060810810810811
+    },
+    "decision_token_only_flip": 0.030405405405405407,
+    "dissociation_ci95": {
+      "tox_minus_dec_matched": {
+        "point": 0.0709,
+        "ci95": [
+          0.0507,
+          0.0931
+        ]
+      },
+      "tox_minus_community": {
+        "point": 0.0861,
+        "ci95": [
+          0.0633,
+          0.1097
+        ]
+      },
+      "tox_minus_random": {
+        "point": 0.0541,
+        "ci95": [
+          0.0338,
+          0.0747
+        ]
+      }
+    },
+    "necessity_ksweep_flip": {
+      "10": 0.08614864864864864,
+      "20": 0.3530405405405405,
+      "40": 1.0,
+      "80": 1.0
+    },
+    "necessity_ksweep_flip_controls": {
+      "10": {
+        "dec_matched": 0.015202702702702704,
+        "random": 0.03581081081081081
+      },
+      "20": {
+        "dec_matched": 0.030405405405405407,
+        "random": 0.030405405405405407
+      },
+      "40": {
+        "dec_matched": 0.10641891891891891,
+        "random": 0.05743243243243243
+      },
+      "80": {
+        "dec_matched": 0.11993243243243243,
+        "random": 0.059966216216216214
+      }
+    }
+  },
+  "sufficiency": {
+    "n": 598,
+    "n_subs": 94,
+    "pool": "model-kept (gap<0) AND bottom-quartile toxicity",
+    "induction_rate": {
+      "tox_p95": 0.6521739130434783,
+      "dec_matched_p95": 0.0016722408026755853,
+      "community_p95": 0.008361204013377926,
+      "random_p95": 0.009364548494983277
+    },
+    "mean_delta_gap_toward_remove": {
+      "tox_p95": 13.476,
+      "dec_matched_p95": 0.259,
+      "community_p95": 1.939,
+      "random_p95": 1.736
+    },
+    "arm_firing_on_pool": {
+      "tox": 0.018,
+      "dec_matched": 0.222,
+      "community": 0.266,
+      "random": 0.105
+    },
+    "dose_response_induction": {
+      "p90": 0.5936454849498328,
+      "p95": 0.6521739130434783,
+      "p99": 0.7525083612040134
+    },
+    "off_distribution_guard": {
+      "added_contrib_norm_frac_mean": 0.1824
+    },
+    "dissociation_ci95": {
+      "tox_minus_dec_matched": {
+        "point": 0.6505,
+        "ci95": [
+          0.6069,
+          0.6923
+        ]
+      },
+      "tox_minus_community": {
+        "point": 0.6438,
+        "ci95": [
+          0.5987,
+          0.6873
+        ]
+      },
+      "tox_minus_random": {
+        "point": 0.6438,
+        "ci95": [
+          0.5984,
+          0.6882
+        ]
+      }
+    }
+  },
+  "runtime_min": 45.7
+}

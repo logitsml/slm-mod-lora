@@ -1,0 +1,40 @@
+{
+  "ar_tag": "gemma4_26b_a4b",
+  "dg_tag": "dgemma26b",
+  "n": 17508,
+  "by_scorer": {
+    "detoxify": {
+      "n_comm": 95,
+      "TC_behav_ar_macro": 0.0531,
+      "TC_behav_dg_macro": 0.0392,
+      "delta_dg_minus_ar_macro": -0.0139,
+      "delta_ci95_clustered": [
+        -0.0201,
+        -0.0076
+      ],
+      "frac_comm_delta_gt0": 0.337
+    },
+    "toxigen": {
+      "n_comm": 95,
+      "TC_behav_ar_macro": 0.0354,
+      "TC_behav_dg_macro": 0.024,
+      "delta_dg_minus_ar_macro": -0.0114,
+      "delta_ci95_clustered": [
+        -0.019,
+        -0.0036
+      ],
+      "frac_comm_delta_gt0": 0.368
+    },
+    "s-nlp": {
+      "n_comm": 95,
+      "TC_behav_ar_macro": 0.0607,
+      "TC_behav_dg_macro": 0.0458,
+      "delta_dg_minus_ar_macro": -0.0149,
+      "delta_ci95_clustered": [
+        -0.0218,
+        -0.008
+      ],
+      "frac_comm_delta_gt0": 0.305
+    }
+  }
+}

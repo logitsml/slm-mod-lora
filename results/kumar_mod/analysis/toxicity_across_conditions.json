@@ -1,0 +1,366 @@
+{
+  "analysis": "toxicity_across_conditions",
+  "nontox_threshold": 0.1,
+  "scorers": [
+    "tox_detoxify",
+    "tox_lexical",
+    "tox_snlp",
+    "tox_toxigen"
+  ],
+  "by_family": {
+    "gemma": {
+      "antitox:p1": {
+        "n": 2833,
+        "removal_rate": 0.4984,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7077,
+          "tox_lexical": 0.5818,
+          "tox_snlp": 0.7075,
+          "tox_toxigen": 0.6691
+        },
+        "nontox_balacc": 0.6646,
+        "nontox_n": 2068
+      },
+      "antitox:p2": {
+        "n": 2833,
+        "removal_rate": 0.3932,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7125,
+          "tox_lexical": 0.5903,
+          "tox_snlp": 0.712,
+          "tox_toxigen": 0.6809
+        },
+        "nontox_balacc": 0.6339,
+        "nontox_n": 2068
+      },
+      "antitox:p3": {
+        "n": 2833,
+        "removal_rate": 0.3773,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7385,
+          "tox_lexical": 0.5971,
+          "tox_snlp": 0.7379,
+          "tox_toxigen": 0.7039
+        },
+        "nontox_balacc": 0.6301,
+        "nontox_n": 2068
+      },
+      "antitox:p4": {
+        "n": 2830,
+        "removal_rate": 0.4809,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.685,
+          "tox_lexical": 0.5728,
+          "tox_snlp": 0.6773,
+          "tox_toxigen": 0.6412
+        },
+        "nontox_balacc": 0.6531,
+        "nontox_n": 2065
+      },
+      "antitox:baseline": {
+        "n": 2833,
+        "removal_rate": 0.3883,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7453,
+          "tox_lexical": 0.5966,
+          "tox_snlp": 0.7459,
+          "tox_toxigen": 0.7103
+        },
+        "nontox_balacc": 0.6366,
+        "nontox_n": 2068
+      },
+      "rule_scramble:none": {
+        "n": 2824,
+        "removal_rate": 0.2996,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8234,
+          "tox_lexical": 0.6318,
+          "tox_snlp": 0.8296,
+          "tox_toxigen": 0.793
+        },
+        "nontox_balacc": 0.5938,
+        "nontox_n": 2060
+      },
+      "rule_scramble:random": {
+        "n": 2834,
+        "removal_rate": 0.2572,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8609,
+          "tox_lexical": 0.6556,
+          "tox_snlp": 0.8627,
+          "tox_toxigen": 0.8303
+        },
+        "nontox_balacc": 0.5728,
+        "nontox_n": 2069
+      },
+      "rule_scramble:scrambled": {
+        "n": 2833,
+        "removal_rate": 0.3247,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7983,
+          "tox_lexical": 0.6206,
+          "tox_snlp": 0.8004,
+          "tox_toxigen": 0.7593
+        },
+        "nontox_balacc": 0.6112,
+        "nontox_n": 2068
+      },
+      "rule_scramble:home": {
+        "n": 2833,
+        "removal_rate": 0.3883,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7453,
+          "tox_lexical": 0.5966,
+          "tox_snlp": 0.7459,
+          "tox_toxigen": 0.7103
+        },
+        "nontox_balacc": 0.6366,
+        "nontox_n": 2068
+      },
+      "_antitox_summary": {
+        "scorer": "tox_detoxify",
+        "baseline_auc_tox": 0.7453,
+        "antitox_auc_tox_min": 0.685,
+        "antitox_auc_tox_max": 0.7385,
+        "max_drop_from_baseline": 0.0603,
+        "verdict": "anti-tox prompting moved toxicity-tracking -- inspect"
+      }
+    },
+    "llama": {
+      "antitox:p3": {
+        "n": 2836,
+        "removal_rate": 0.3681,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7329,
+          "tox_lexical": 0.5892,
+          "tox_snlp": 0.7305,
+          "tox_toxigen": 0.7046
+        },
+        "nontox_balacc": 0.629,
+        "nontox_n": 2071
+      },
+      "antitox:baseline": {
+        "n": 2836,
+        "removal_rate": 0.3614,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7365,
+          "tox_lexical": 0.5895,
+          "tox_snlp": 0.736,
+          "tox_toxigen": 0.709
+        },
+        "nontox_balacc": 0.6281,
+        "nontox_n": 2071
+      },
+      "antitox:p2": {
+        "n": 2835,
+        "removal_rate": 0.3538,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.6896,
+          "tox_lexical": 0.5605,
+          "tox_snlp": 0.6889,
+          "tox_toxigen": 0.6662
+        },
+        "nontox_balacc": 0.6288,
+        "nontox_n": 2070
+      },
+      "antitox:p1": {
+        "n": 2836,
+        "removal_rate": 0.4129,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.6995,
+          "tox_lexical": 0.5739,
+          "tox_snlp": 0.695,
+          "tox_toxigen": 0.6623
+        },
+        "nontox_balacc": 0.6508,
+        "nontox_n": 2071
+      },
+      "antitox:p4": {
+        "n": 2836,
+        "removal_rate": 0.4302,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.6813,
+          "tox_lexical": 0.5638,
+          "tox_snlp": 0.6777,
+          "tox_toxigen": 0.6472
+        },
+        "nontox_balacc": 0.6395,
+        "nontox_n": 2071
+      },
+      "rule_scramble:random": {
+        "n": 2782,
+        "removal_rate": 0.1858,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8697,
+          "tox_lexical": 0.6711,
+          "tox_snlp": 0.8659,
+          "tox_toxigen": 0.8395
+        },
+        "nontox_balacc": 0.5427,
+        "nontox_n": 2037
+      },
+      "rule_scramble:home": {
+        "n": 2836,
+        "removal_rate": 0.3614,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7365,
+          "tox_lexical": 0.5895,
+          "tox_snlp": 0.736,
+          "tox_toxigen": 0.709
+        },
+        "nontox_balacc": 0.6281,
+        "nontox_n": 2071
+      },
+      "rule_scramble:scrambled": {
+        "n": 2836,
+        "removal_rate": 0.287,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7759,
+          "tox_lexical": 0.6079,
+          "tox_snlp": 0.7723,
+          "tox_toxigen": 0.7476
+        },
+        "nontox_balacc": 0.6,
+        "nontox_n": 2071
+      },
+      "rule_scramble:none": {
+        "n": 2822,
+        "removal_rate": 0.2378,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8035,
+          "tox_lexical": 0.6259,
+          "tox_snlp": 0.804,
+          "tox_toxigen": 0.7725
+        },
+        "nontox_balacc": 0.5714,
+        "nontox_n": 2063
+      },
+      "_antitox_summary": {
+        "scorer": "tox_detoxify",
+        "baseline_auc_tox": 0.7365,
+        "antitox_auc_tox_min": 0.6813,
+        "antitox_auc_tox_max": 0.7329,
+        "max_drop_from_baseline": 0.0552,
+        "verdict": "anti-tox prompting moved toxicity-tracking -- inspect"
+      }
+    },
+    "qwen": {
+      "antitox:p2": {
+        "n": 2815,
+        "removal_rate": 0.3996,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7727,
+          "tox_lexical": 0.6016,
+          "tox_snlp": 0.7801,
+          "tox_toxigen": 0.7592
+        },
+        "nontox_balacc": 0.6118,
+        "nontox_n": 2052
+      },
+      "antitox:p4": {
+        "n": 2808,
+        "removal_rate": 0.3892,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7765,
+          "tox_lexical": 0.6072,
+          "tox_snlp": 0.7889,
+          "tox_toxigen": 0.7575
+        },
+        "nontox_balacc": 0.6161,
+        "nontox_n": 2046
+      },
+      "antitox:baseline": {
+        "n": 2818,
+        "removal_rate": 0.3808,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7721,
+          "tox_lexical": 0.6037,
+          "tox_snlp": 0.7815,
+          "tox_toxigen": 0.7558
+        },
+        "nontox_balacc": 0.6047,
+        "nontox_n": 2054
+      },
+      "antitox:p1": {
+        "n": 2820,
+        "removal_rate": 0.3642,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7824,
+          "tox_lexical": 0.6106,
+          "tox_snlp": 0.7882,
+          "tox_toxigen": 0.7643
+        },
+        "nontox_balacc": 0.6112,
+        "nontox_n": 2056
+      },
+      "antitox:p3": {
+        "n": 2807,
+        "removal_rate": 0.3837,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7716,
+          "tox_lexical": 0.6021,
+          "tox_snlp": 0.7828,
+          "tox_toxigen": 0.7569
+        },
+        "nontox_balacc": 0.6128,
+        "nontox_n": 2045
+      },
+      "rule_scramble:random": {
+        "n": 2662,
+        "removal_rate": 0.3137,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8421,
+          "tox_lexical": 0.6402,
+          "tox_snlp": 0.8416,
+          "tox_toxigen": 0.8245
+        },
+        "nontox_balacc": 0.5691,
+        "nontox_n": 1915
+      },
+      "rule_scramble:scrambled": {
+        "n": 2769,
+        "removal_rate": 0.3481,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7921,
+          "tox_lexical": 0.6107,
+          "tox_snlp": 0.8021,
+          "tox_toxigen": 0.7802
+        },
+        "nontox_balacc": 0.593,
+        "nontox_n": 2006
+      },
+      "rule_scramble:none": {
+        "n": 2091,
+        "removal_rate": 0.4146,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.8193,
+          "tox_lexical": 0.6216,
+          "tox_snlp": 0.8217,
+          "tox_toxigen": 0.7865
+        },
+        "nontox_balacc": 0.5796,
+        "nontox_n": 1458
+      },
+      "rule_scramble:home": {
+        "n": 2818,
+        "removal_rate": 0.3765,
+        "auc_tox_predicts_decision": {
+          "tox_detoxify": 0.7722,
+          "tox_lexical": 0.6039,
+          "tox_snlp": 0.7838,
+          "tox_toxigen": 0.7599
+        },
+        "nontox_balacc": 0.6032,
+        "nontox_n": 2054
+      },
+      "_antitox_summary": {
+        "scorer": "tox_detoxify",
+        "baseline_auc_tox": 0.7721,
+        "antitox_auc_tox_min": 0.7716,
+        "antitox_auc_tox_max": 0.7824,
+        "max_drop_from_baseline": 0.0005,
+        "verdict": "toxicity-tracking NOT reduced by anti-tox prompting (collapse not promptable-away)"
+      }
+    }
+  }
+}

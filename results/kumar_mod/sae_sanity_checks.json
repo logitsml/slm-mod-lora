@@ -1,0 +1,31 @@
+{
+  "analysis": "sae_necessity_sanity_checks",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "16k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "n": 800,
+  "n_decided": 800,
+  "pool": "model-removed (gap_rules>0)",
+  "format_validity": {
+    "base_argmax_valid_yesno": 1.0,
+    "tox_ablated_argmax_valid_yesno": 1.0,
+    "note": "fraction whose argmax next token is a valid yes/no; ablation keeps generation well-formed"
+  },
+  "flip_rate": {
+    "tox_ablation": 1.0,
+    "generic_keep_steer_matched": 0.015,
+    "random_steer_matched": 0.00625,
+    "note": "generic_keep_steer adds the unembedding keep-direction at L41 with norm matched per-comment to the toxicity-ablation perturbation; random_steer is the null. CAVEAT: tox flip saturates at ~1.0, so read mean_keepgap_shift (below) for the magnitude comparison; the matched-control content-specificity evidence lives in the dosedense/controls battery, not in this file. The steers act at L41 ONLY whereas the ablation acts at L24+L31+L41, so this flip comparison is a single-site lower bound."
+  },
+  "mean_keepgap_shift_toward_keep": {
+    "tox_ablation": 20.973,
+    "generic_keep_steer": 1.303,
+    "random_steer": 0.678
+  },
+  "mean_match_norm_m_i": 611.866
+}

@@ -1,0 +1,93 @@
+{
+  "analysis": "antitox_margin_ci",
+  "scorer": "tox_toxicity (Detoxify)",
+  "seed": 11,
+  "by_family": {
+    "gemma": {
+      "strongest_cond": "p4",
+      "margins": [
+        {
+          "margin_cond": "p4",
+          "paired_mean": 0.0396,
+          "ci95": [
+            0.0136,
+            0.0654
+          ],
+          "n_subs": 95,
+          "frac_positive": 0.6526
+        }
+      ]
+    },
+    "llama": {
+      "strongest_cond": "p4",
+      "margins": [
+        {
+          "margin_cond": "p4",
+          "paired_mean": 0.0353,
+          "ci95": [
+            0.0114,
+            0.0609
+          ],
+          "n_subs": 95,
+          "frac_positive": 0.6
+        }
+      ]
+    },
+    "qwen": {
+      "strongest_cond": "p3",
+      "margins": [
+        {
+          "margin_cond": "p3",
+          "paired_mean": 0.1236,
+          "ci95": [
+            0.0986,
+            0.1498
+          ],
+          "n_subs": 95,
+          "frac_positive": 0.8842
+        },
+        {
+          "margin_cond": "p4",
+          "paired_mean": 0.1266,
+          "ci95": [
+            0.1026,
+            0.1524
+          ],
+          "n_subs": 95,
+          "frac_positive": 0.8526
+        }
+      ]
+    },
+    "gemma4_26b_a4b": {
+      "strongest_cond": "p4",
+      "margins": [
+        {
+          "margin_cond": "p4",
+          "paired_mean": 0.0502,
+          "ci95": [
+            0.0239,
+            0.0769
+          ],
+          "n_subs": 94,
+          "frac_positive": 0.6702
+        }
+      ]
+    },
+    "dgemma26b": {
+      "strongest_cond": "p4",
+      "margins": [
+        {
+          "margin_cond": "p4",
+          "paired_mean": 0.0327,
+          "ci95": [
+            0.0074,
+            0.0601
+          ],
+          "n_subs": 93,
+          "frac_positive": 0.5914
+        }
+      ]
+    }
+  },
+  "note": "paired per-sub margin AUC(t->yhat|cond_m) - AUC(t->mod|baseline rows) over shared subs; cond_m = strongest (argmin macro AUC over p1..p4, as antitox_drop_ci) plus p4 when distinct; community-clustered percentile bootstrap 2000 reps rng(SEED+2), SEED=11; source md5s: {\"antitox_dgemma26b.parquet\": \"f700a68cbd21f5e4d06403eac6766c49\", \"antitox_gemma.parquet\": \"5e57b9d0eddac25929b4d29067d27401\", \"antitox_gemma4_26b_a4b.parquet\": \"ec609bcc0226858cbd2b319bf9a35876\", \"antitox_llama.parquet\": \"58a80441780b032e825f8ffdb59443fa\", \"antitox_qwen.parquet\": \"fa9bdacfc69eb9d3021984fafedfb888\", \"kumar_balanced_tox_sent.parquet\": \"40332a104891aaf0328c09a9ddf3f3bc\"}"
+}

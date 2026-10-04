@@ -1,0 +1,116 @@
+{
+  "analysis": "antitox_drop_ci",
+  "epsilon": 0.06,
+  "scorer": "tox_toxicity (Detoxify)",
+  "by_family": {
+    "gemma": {
+      "auc_t_to_yhat_by_cond": {
+        "baseline": 0.7454,
+        "p1": 0.7141,
+        "p2": 0.7212,
+        "p3": 0.7428,
+        "p4": 0.6933
+      },
+      "baseline_auc": 0.7454,
+      "strongest_cond": "p4",
+      "strongest_auc": 0.6933,
+      "auc_t_to_moderator": 0.6537,
+      "paired_drop_mean": 0.0521,
+      "drop_ci95": [
+        0.0304,
+        0.0749
+      ],
+      "n_subs": 95,
+      "tost_within_eps": false,
+      "drop_upper_below_eps": false,
+      "dominance_survives": true,
+      "post_drop_dominance_margin": 0.0396
+    },
+    "llama": {
+      "auc_t_to_yhat_by_cond": {
+        "baseline": 0.7411,
+        "p1": 0.702,
+        "p2": 0.7022,
+        "p3": 0.7391,
+        "p4": 0.6884
+      },
+      "baseline_auc": 0.7411,
+      "strongest_cond": "p4",
+      "strongest_auc": 0.6884,
+      "auc_t_to_moderator": 0.6531,
+      "paired_drop_mean": 0.0527,
+      "drop_ci95": [
+        0.0356,
+        0.0676
+      ],
+      "n_subs": 95,
+      "tost_within_eps": false,
+      "drop_upper_below_eps": false,
+      "dominance_survives": true,
+      "post_drop_dominance_margin": 0.0353
+    },
+    "qwen": {
+      "auc_t_to_yhat_by_cond": {
+        "baseline": 0.7765,
+        "p1": 0.7863,
+        "p2": 0.7781,
+        "p3": 0.7774,
+        "p4": 0.7805
+      },
+      "baseline_auc": 0.7765,
+      "strongest_cond": "p3",
+      "strongest_auc": 0.7774,
+      "auc_t_to_moderator": 0.6538,
+      "paired_drop_mean": -0.0009,
+      "drop_ci95": [
+        -0.012,
+        0.0106
+      ],
+      "n_subs": 95,
+      "tost_within_eps": true,
+      "drop_upper_below_eps": true,
+      "dominance_survives": true,
+      "post_drop_dominance_margin": 0.1236
+    },
+    "gemma4_26b_a4b": {
+      "auc_t_to_yhat_by_cond": {
+        "baseline": 0.7178,
+        "p4": 0.7035
+      },
+      "baseline_auc": 0.7178,
+      "strongest_cond": "p4",
+      "strongest_auc": 0.7035,
+      "auc_t_to_moderator": 0.6533,
+      "paired_drop_mean": 0.0126,
+      "drop_ci95": [
+        -0.0132,
+        0.0362
+      ],
+      "n_subs": 94,
+      "tost_within_eps": true,
+      "drop_upper_below_eps": true,
+      "dominance_survives": true,
+      "post_drop_dominance_margin": 0.0502
+    },
+    "dgemma26b": {
+      "auc_t_to_yhat_by_cond": {
+        "baseline": 0.7184,
+        "p4": 0.6861
+      },
+      "baseline_auc": 0.7184,
+      "strongest_cond": "p4",
+      "strongest_auc": 0.6861,
+      "auc_t_to_moderator": 0.6531,
+      "paired_drop_mean": 0.0324,
+      "drop_ci95": [
+        0.0092,
+        0.0524
+      ],
+      "n_subs": 93,
+      "tost_within_eps": true,
+      "drop_upper_below_eps": true,
+      "dominance_survives": true,
+      "post_drop_dominance_margin": 0.033
+    }
+  }
+}

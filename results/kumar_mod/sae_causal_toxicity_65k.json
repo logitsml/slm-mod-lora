@@ -1,0 +1,129 @@
+{
+  "analysis": "sae_feature_causal_toxicity_necessity",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "65k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "K_tox": 10,
+  "n": 1500,
+  "n_subs": 95,
+  "n_random_draws_per_comment": 5,
+  "pool": "model-removed (gap_rules>0)",
+  "tox_features": {
+    "L24": [
+      57844,
+      2781,
+      4321,
+      430,
+      1467,
+      4320,
+      15421,
+      11214,
+      15635,
+      9690
+    ],
+    "L31": [
+      2255,
+      3329,
+      675,
+      64498,
+      964,
+      920,
+      12232,
+      2203,
+      20788,
+      672
+    ],
+    "L41": [
+      57620,
+      840,
+      18846,
+      3125,
+      33876,
+      2836,
+      3970,
+      1633,
+      42854,
+      6265
+    ]
+  },
+  "flip_rate": {
+    "all": {
+      "tox": 1.0,
+      "decmatch": 0.013333333333333334,
+      "community": 0.068,
+      "random": 0.005066666666666666,
+      "tox_a0.5": 0.18533333333333332,
+      "tox_a1.0": 1.0,
+      "tox_a1.5": 1.0,
+      "tox_noL41": 0.11933333333333333,
+      "tox_dectok": 0.616
+    },
+    "human_keep": {
+      "tox": 1.0,
+      "decmatch": 0.0273972602739726,
+      "community": 0.11232876712328767,
+      "random": 0.009315068493150686,
+      "tox_a0.5": 0.2876712328767123,
+      "tox_a1.0": 1.0,
+      "tox_a1.5": 1.0,
+      "tox_noL41": 0.2054794520547945,
+      "tox_dectok": 0.8
+    },
+    "human_remove": {
+      "tox": 1.0,
+      "decmatch": 0.00881057268722467,
+      "community": 0.053744493392070485,
+      "random": 0.0037004405286343613,
+      "tox_a0.5": 0.1524229074889868,
+      "tox_a1.0": 1.0,
+      "tox_a1.5": 1.0,
+      "tox_noL41": 0.09162995594713656,
+      "tox_dectok": 0.5568281938325991
+    }
+  },
+  "mean_delta_gap_toward_keep": {
+    "tox": 25.179083333333335,
+    "decmatch": -1.4305833333333333,
+    "community": 1.9196666666666666,
+    "random": -0.9621833333333335
+  },
+  "dissociation_ci95": {
+    "tox_minus_decmatch": {
+      "point": 0.9867,
+      "ci95": [
+        0.9812,
+        0.9917
+      ]
+    },
+    "tox_minus_random": {
+      "point": 0.9949,
+      "ci95": [
+        0.99,
+        0.9986
+      ]
+    },
+    "tox_minus_community": {
+      "point": 0.932,
+      "ci95": [
+        0.9179,
+        0.9455
+      ]
+    }
+  },
+  "dose_response_flip": {
+    "a0.5": 0.18533333333333332,
+    "a1.0": 1.0,
+    "a1.5": 1.0
+  },
+  "re_aggregation": {
+    "tox_L24_31_41": 1.0,
+    "tox_L24_31_only": 0.11933333333333333,
+    "note": "no-L41 should UNDER-remove (decision re-derived downstream)"
+  },
+  "interpretation": "Causal toxicity reliance is licensed iff flip(tox) - flip(decmatch) CI95 excludes 0 AND holds within both human-label strata; dose-response monotone in alpha; live hook defeats the offline null and the OOD/FVU objection. tox features Neuronpedia-lookupable."
+}

@@ -1,0 +1,13 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "precision": "bfloat16",
+  "attn": "hf-default",
+  "n_comments_timed": 968,
+  "batch": 16,
+  "prompt_eval_tok_per_s": 10196.4,
+  "mean_prompt_tokens": 914.5,
+  "ms_per_comment_batched": 90.709,
+  "usd_per_1M_comments": 25.2,
+  "gpu": "NVIDIA L40S",
+  "protocol": "identical to throughput_bench.py bench_causal (n, batch, prompts)"
+}

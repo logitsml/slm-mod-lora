@@ -1,0 +1,90 @@
+{
+  "analysis": "detoxify_B1_for_additional_prompted_checkpoints_macro_columns",
+  "definition": "per-community macro AUC columns; decision is yes/no logit gap > 0; Detoxify tox_toxicity; 2000 community bootstrap reps for TC CI",
+  "rows": [
+    {
+      "model": "google/gemma-4-E2B-it",
+      "tag": "gemma4_E2B",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7475,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0794,
+      "TC_behav_macro_ci95": [
+        0.0635,
+        0.0959
+      ],
+      "frac_comm_gt0": 0.884
+    },
+    {
+      "model": "google/gemma-4-E4B-it",
+      "tag": "gemma4_E4B",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7412,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0732,
+      "TC_behav_macro_ci95": [
+        0.0563,
+        0.0906
+      ],
+      "frac_comm_gt0": 0.832
+    },
+    {
+      "model": "google/gemma-4-12B-it",
+      "tag": "gemma4_12b",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7237,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0556,
+      "TC_behav_macro_ci95": [
+        0.0407,
+        0.0704
+      ],
+      "frac_comm_gt0": 0.811
+    },
+    {
+      "model": "google/gemma-4-31B-it",
+      "tag": "gemma4_31B",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7368,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0687,
+      "TC_behav_macro_ci95": [
+        0.054,
+        0.0828
+      ],
+      "frac_comm_gt0": 0.863
+    },
+    {
+      "model": "Qwen/Qwen3.6-27B",
+      "tag": "qwen36_27b",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7648,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0968,
+      "TC_behav_macro_ci95": [
+        0.0826,
+        0.1111
+      ],
+      "frac_comm_gt0": 0.958
+    },
+    {
+      "model": "meta-llama/Llama-3.1-70B-Instruct",
+      "tag": "llama70b",
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7285,
+      "auc_tox_to_moderator_macro": 0.6681,
+      "TC_behav_macro": 0.0604,
+      "TC_behav_macro_ci95": [
+        0.0458,
+        0.0749
+      ],
+      "frac_comm_gt0": 0.768
+    }
+  ]
+}

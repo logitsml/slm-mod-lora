@@ -1,0 +1,21 @@
+{
+  "tag": "dgemma26b",
+  "model": "google/diffusiongemma-26B-A4B-it",
+  "n": 17508,
+  "n_subs": 95,
+  "k_canvas_inits": 4,
+  "argmax_ok": 1.0,
+  "sec_per_comment": 0.633,
+  "bal_auc_logitgap_median": 0.7742,
+  "pr_auc_logitgap_median": 0.8024,
+  "note": "FULL test fold; diffusion gap analog: mean over K seeded uniform-random canvas inits of logit[yes]-logit[no] at canvas position 0, single first denoising step, teacher-forced JSON prefix in the encoder prompt",
+  "runtime": {
+    "transformers": "5.11.0",
+    "accelerate": "1.14.0",
+    "torch": "2.10.0+cu130",
+    "load_path": "cpu-materialize + manual duplication-free placement of the shared encoder/decoder layers (tied storage moved once) with explicit boundary pre-hooks; workaround for transformers#46566 and an accelerate dispatch_model tied-twin duplication OOM; placement-only",
+    "lm_head": "untied by clone of model.decoder.embed_tokens",
+    "device_map": "enc/dec layers 0-14 + embeddings + vision -> gpu0; enc/dec layers 15-29 + lm_head -> gpu1",
+    "eqcheck": null
+  }
+}

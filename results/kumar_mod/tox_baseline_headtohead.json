@@ -1,0 +1,20 @@
+{
+  "protocol": "per-community AUC/PR-AUC of Detoxify tox_toxicity predicting label on the seed-11 held-out fold (17,508 comments; fold taken from llm_gap_gemma3_12b.parquet), median across communities, subreddit-clustered bootstrap (2000 reps, seed 11) CI",
+  "gate_reproduced": {
+    "gemma_bal_auc_median": 0.771,
+    "gemma_pr_auc_median": 0.798,
+    "n_communities_gemma": 95
+  },
+  "gate_macro_mean_auc_t_to_m": 0.6681,
+  "n_communities": 95,
+  "detoxify_bal_auc_median": 0.673,
+  "detoxify_bal_auc_ci95": [
+    0.659,
+    0.698
+  ],
+  "detoxify_pr_auc_median": 0.713,
+  "detoxify_pr_auc_ci95": [
+    0.689,
+    0.741
+  ]
+}

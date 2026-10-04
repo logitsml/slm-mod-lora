@@ -1,0 +1,119 @@
+{
+  "note": "Per-community macro AUC(Detoxify tox_toxicity -> would_moderate), per_comm_auc semantics from pipeline/kumar_mod/_common.py (finite mask, single-class communities skipped); non-home conds report paired diffs vs home on the community intersection with a community-clustered bootstrap (B=2000, seed 11, percentile CI). Source parquet md5s recorded below.",
+  "source_md5": {
+    "rule_scramble_gemma.parquet": "075ccad3879516e42705c9fdc43de995",
+    "rule_scramble_llama.parquet": "ca8f737d0bd0892870a9d15cb7ae084d",
+    "rule_scramble_qwen.parquet": "826be554f7e6af8761104f6662860873",
+    "kumar_balanced_tox_sent.parquet": "40332a104891aaf0328c09a9ddf3f3bc"
+  },
+  "families": {
+    "gemma": {
+      "home": {
+        "macro_auc": 0.7453852167571999,
+        "n_comm": 95
+      },
+      "scrambled": {
+        "macro_auc": 0.7811912616873995,
+        "n_comm": 95,
+        "diff_mean": 0.03580604493019933,
+        "ci95": [
+          0.016759113736876646,
+          0.05451534369351563
+        ],
+        "frac_positive": 0.5684210526315789
+      },
+      "random": {
+        "macro_auc": 0.8465926674317844,
+        "n_comm": 94,
+        "diff_mean": 0.09840700004038956,
+        "ci95": [
+          0.07810442646671067,
+          0.11929008966346635
+        ],
+        "frac_positive": 0.7978723404255319
+      },
+      "none": {
+        "macro_auc": 0.8102852528548012,
+        "n_comm": 94,
+        "diff_mean": 0.06209958546340615,
+        "ci95": [
+          0.04336077362030233,
+          0.08122856132298822
+        ],
+        "frac_positive": 0.723404255319149
+      }
+    },
+    "llama": {
+      "home": {
+        "macro_auc": 0.7411344887921667,
+        "n_comm": 95
+      },
+      "scrambled": {
+        "macro_auc": 0.7680645678701947,
+        "n_comm": 95,
+        "diff_mean": 0.026930079078027865,
+        "ci95": [
+          0.0077737788534266,
+          0.046362522131285056
+        ],
+        "frac_positive": 0.5157894736842106
+      },
+      "random": {
+        "macro_auc": 0.8747696522853402,
+        "n_comm": 92,
+        "diff_mean": 0.13287910574827813,
+        "ci95": [
+          0.10771546006066798,
+          0.15775245278116054
+        ],
+        "frac_positive": 0.8695652173913043
+      },
+      "none": {
+        "macro_auc": 0.7958546725363679,
+        "n_comm": 94,
+        "diff_mean": 0.05215492322513511,
+        "ci95": [
+          0.029882424059197676,
+          0.07428784884792232
+        ],
+        "frac_positive": 0.6808510638297872
+      }
+    },
+    "qwen": {
+      "home": {
+        "macro_auc": 0.7699603896650887,
+        "n_comm": 95
+      },
+      "scrambled": {
+        "macro_auc": 0.7847082419932986,
+        "n_comm": 95,
+        "diff_mean": 0.014747852328210048,
+        "ci95": [
+          -0.0044222649350644724,
+          0.03511557954173597
+        ],
+        "frac_positive": 0.5157894736842106
+      },
+      "random": {
+        "macro_auc": 0.8331714850837656,
+        "n_comm": 95,
+        "diff_mean": 0.0632110954186766,
+        "ci95": [
+          0.0413679527124894,
+          0.08697794113707005
+        ],
+        "frac_positive": 0.7157894736842105
+      },
+      "none": {
+        "macro_auc": 0.806685382385282,
+        "n_comm": 95,
+        "diff_mean": 0.03672499272019313,
+        "ci95": [
+          0.013228480836923297,
+          0.06101351866549566
+        ],
+        "frac_positive": 0.6947368421052632
+      }
+    }
+  }
+}

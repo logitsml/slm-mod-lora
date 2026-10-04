@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model Families Compared</title>
+  <style>
+    @font-face {
+      font-family: "Linux Libertine";
+      src: url("fonts/LinLibertine_R.otf") format("opentype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Linux Libertine";
+      src: url("fonts/LinLibertine_RZ.otf") format("opentype");
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Linux Libertine";
+      src: url("fonts/LinLibertine_RB.otf") format("opentype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Linux Libertine";
+      src: url("fonts/LinLibertine_RI.otf") format("opentype");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    :root {
+      --ink: #1f2a33;
+      --muted: #525e68;
+      --rule: #d8dcdf;
+      --paper: #ffffff;
+      --soft: #f7f8f8;
+      --frozen: #e3edf7;
+      --frozen-ink: #173a5e;
+      --pooled: #e8f2e7;
+      --pooled-ink: #315f40;
+      --trained: #fff1bf;
+      --trained-ink: #8f4f21;
+      --llm: #bd6130;
+      --slm: #3d827a;
+      --enc: #12365f;
+      --cold: #5f7540;
+      --card-radius: 18px;
+      --box-radius: 13px;
+      --card-pad: 26px;
+      --shadow: 0 14px 32px rgba(23, 31, 38, 0.092), 0 2px 7px rgba(23, 31, 38, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      font-synthesis: none;
+      text-rendering: geometricPrecision;
+    }
+
+    body {
+      margin: 0;
+      min-width: 2360px;
+      color: var(--ink);
+      background: #ffffff;
+      font-family: "Linux Libertine", "Libertinus Serif", "Iowan Old Style", Georgia, serif;
+    }
+
+    .figure {
+      width: 2360px;
+      padding: 46px 58px 42px;
+      background: var(--paper);
+    }
+
+    .title-row {
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 auto;
+      color: #141e26;
+      font-size: 62px;
+      line-height: 1.06;
+      font-weight: 700;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    /* The four cards share one 10-row grid (header, 4 boxes, 3 arrows,
+       explainer, metrics) via subgrid: every row auto-sizes to its tallest
+       card, so rows stay aligned across cards and nothing can clip. */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(10, auto);
+      column-gap: 24px;
+    }
+
+    .card {
+      display: grid;
+      grid-row: 1 / span 10;
+      grid-template-rows: subgrid;
+      row-gap: 0;
+      overflow: hidden;
+      border-radius: var(--card-radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      outline: 2px solid rgba(34, 44, 52, 0.16);
+    }
+
+    .header {
+      display: grid;
+      margin-bottom: 26px;
+      padding: 24px 26px 26px;
+      align-content: center;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .llm .header {
+      background: var(--llm);
+    }
+
+    .slm .header {
+      background: var(--slm);
+    }
+
+    .encoder .header {
+      background: var(--enc);
+    }
+
+    .coldstart .header {
+      background: var(--cold);
+    }
+
+    .header h2 {
+      margin: 0;
+      font-size: 48px;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .tagline {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.96);
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.22;
+      text-wrap: balance;
+    }
+
+    .box {
+      display: grid;
+      margin: 0 var(--card-pad);
+      padding: 16px 18px;
+      align-content: center;
+      border-radius: var(--box-radius);
+      text-align: center;
+      box-shadow: inset 0 0 0 3px rgba(18, 38, 56, 0.2);
+    }
+
+    .box.neutral {
+      color: #2b333b;
+      background: var(--soft);
+    }
+
+    .box.frozen {
+      color: var(--frozen-ink);
+      background: var(--frozen);
+      box-shadow: inset 0 0 0 4px var(--frozen-ink);
+    }
+
+    .box.pooled {
+      color: var(--pooled-ink);
+      background: var(--pooled);
+      box-shadow: inset 0 0 0 4px #4f805e;
+    }
+
+    .box.trained {
+      color: var(--trained-ink);
+      background: var(--trained);
+      box-shadow: inset 0 0 0 4px #c86a2c;
+    }
+
+    .box-subtle {
+      color: #3f474e;
+      background: var(--soft);
+      box-shadow: inset 0 0 0 3px rgba(31, 42, 51, 0.26);
+    }
+
+    .box-title {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .box-sub {
+      margin-top: 8px;
+      color: rgba(31, 42, 51, 0.88);
+      font-size: 27px;
+      line-height: 1.25;
+      text-wrap: balance;
+    }
+
+    .box-sub.strong {
+      color: rgba(92, 50, 21, 0.95);
+      font-weight: 600;
+      font-size: 27px;
+    }
+
+    .box.pooled .box-sub.strong {
+      color: var(--pooled-ink);
+    }
+
+    .arrow {
+      width: 0;
+      height: 0;
+      margin: 10px auto;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 26px solid rgba(52, 57, 61, 0.92);
+    }
+
+    .explain {
+      margin: 28px var(--card-pad) 0;
+      padding-top: 20px;
+      border-top: 3px solid rgba(31, 42, 51, 0.13);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 27px;
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-variant-caps: all-small-caps;
+    }
+
+    .llm .eyebrow,
+    .llm .metric-label {
+      color: var(--llm);
+    }
+
+    .slm .eyebrow,
+    .slm .metric-label {
+      color: var(--slm);
+    }
+
+    .encoder .eyebrow,
+    .encoder .metric-label {
+      color: var(--enc);
+    }
+
+    .coldstart .eyebrow,
+    .coldstart .metric-label {
+      color: var(--cold);
+    }
+
+    .explain p {
+      margin: 0;
+      color: #262b30;
+      font-size: 33px;
+      line-height: 1.22;
+      text-wrap: pretty;
+    }
+
+    .metrics {
+      display: grid;
+      gap: 16px;
+      align-content: start;
+      margin: 24px var(--card-pad) 28px;
+      padding-top: 20px;
+      border-top: 3px solid rgba(31, 42, 51, 0.13);
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .metric-label {
+      font-size: 27px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-variant-caps: all-small-caps;
+    }
+
+    .metric-value {
+      color: #20252a;
+      font-size: 34px;
+      line-height: 1.08;
+      font-weight: 600;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .metric-note {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .legend {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 30px;
+      color: #2c3640;
+      font-size: 30px;
+      white-space: nowrap;
+    }
+
+    .key {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .swatch {
+      width: 38px;
+      height: 26px;
+      border-radius: 6px;
+      box-shadow: inset 0 0 0 3px currentColor;
+    }
+
+    .swatch.frozen {
+      color: var(--frozen-ink);
+      background: var(--frozen);
+    }
+
+    .swatch.pooled {
+      color: #4f805e;
+      background: var(--pooled);
+    }
+
+    .swatch.trained {
+      color: #c4682d;
+      background: var(--trained);
+    }
+  </style>
+</head>
+<body>
+  <main class="figure" aria-label="Comparison of prompted LLM, cross-community encoder, SLM-Mod, and frozen encoder methods">
+    <div class="title-row">
+      <h1>Four ways to turn a comment into a moderation decision</h1>
+    </div>
+
+    <section class="cards">
+      <article class="card llm">
+        <header class="header">
+          <h2>(A) Prompted LLM</h2>
+          <p class="tagline">Gemma 3, Llama 3.1, Qwen 2.5 with the Kumar et al. (2024) prompt</p>
+        </header>
+        <div class="box neutral">
+          <div class="box-title">Rules + comment</div>
+          <div class="box-sub">prompt input</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box frozen">
+          <div class="box-title">Off-the-shelf generative LLM</div>
+          <div class="box-sub">Gemma-3-12B-it<br>Llama-3.1-8B-Instruct<br>Qwen2.5-7B-Instruct</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box box-subtle">
+          <div class="box-title">No trained part</div>
+          <div class="box-sub">same prompt for every community</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box neutral">
+          <div class="box-title">Yes/no decision</div>
+          <div class="box-sub">plus 1–5 severity rating</div>
+        </div>
+        <div class="explain">
+          <h3 class="eyebrow">What it does</h3>
+          <p>Applies written rules cold. With no history from the community, the decision can drift toward broad toxicity cues.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Trained part</span>
+            <span class="metric-value">none</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Needs modlog?</span>
+            <span class="metric-value">no</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card coldstart">
+        <header class="header">
+          <h2>Cross-community encoder</h2>
+          <p class="tagline">Global head on frozen e5-large-v2</p>
+        </header>
+        <div class="box neutral">
+          <div class="box-title">Comment only</div>
+          <div class="box-sub">rules not used at inference</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box frozen">
+          <div class="box-title">Frozen text encoder &rarr; vector</div>
+          <div class="box-sub">e5-large-v2 (335M)</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box pooled">
+          <div class="box-title">Global logistic head</div>
+          <div class="box-sub strong">trained on other communities&rsquo; modlogs</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box neutral">
+          <div class="box-title">Removal probability</div>
+          <div class="box-sub">continuous score</div>
+        </div>
+        <div class="explain">
+          <h3 class="eyebrow">What it does</h3>
+          <p>Learns a Reddit-wide removal prior from other communities. Public-rule conditioning was tested, but did not beat this global head.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Trained part</span>
+            <span class="metric-value">global head</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Needs modlog?</span>
+            <span class="metric-value">no</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card slm">
+        <header class="header">
+          <h2>(B) SLM-Mod</h2>
+          <p class="tagline">Per-community LoRA on Llama-3.1-8B-Instruct (Zhan et al. 2025)</p>
+        </header>
+        <div class="box neutral">
+          <div class="box-title">Rules + comment</div>
+          <div class="box-sub">prompt input</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box frozen">
+          <div class="box-title">Frozen 8B base model</div>
+          <div class="box-sub">Llama-3.1-8B-Instruct</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box trained">
+          <div class="box-title">Per-community LoRA adapter</div>
+          <div class="box-sub strong">trained on that community&rsquo;s modlog</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box neutral">
+          <div class="box-title">Yes/no score</div>
+          <div class="box-sub">yes/no logit gap</div>
+        </div>
+        <div class="explain">
+          <h3 class="eyebrow">What it does</h3>
+          <p>Mirrors the encoder&rsquo;s frozen-base-plus-local-head recipe inside a generative model. Each community needs its own adapter.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Trained part</span>
+            <span class="metric-value">LoRA adapter</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Needs modlog?</span>
+            <span class="metric-value">yes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card encoder">
+        <header class="header">
+          <h2>(C) Encoder + head</h2>
+          <p class="tagline">Per-community head on frozen e5-large-v2 (335M)</p>
+        </header>
+        <div class="box neutral">
+          <div class="box-title">Comment only</div>
+          <div class="box-sub">rules not used at inference</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box frozen">
+          <div class="box-title">Frozen text encoder &rarr; vector</div>
+          <div class="box-sub">e5-large-v2 (335M)</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box trained">
+          <div class="box-title">Per-community logistic head</div>
+          <div class="box-sub strong">trained on that community&rsquo;s modlog</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="box neutral">
+          <div class="box-title">Removal probability</div>
+          <div class="box-sub">continuous score</div>
+        </div>
+        <div class="explain">
+          <h3 class="eyebrow">What it does</h3>
+          <p>Turns each comment into a reusable vector. A small classifier then learns that community&rsquo;s removal boundary from past decisions.</p>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Trained part</span>
+            <span class="metric-value">community head</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Needs modlog?</span>
+            <span class="metric-value">yes</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="legend" aria-label="Legend">
+      <span class="key"><span class="swatch frozen"></span>Frozen component</span>
+      <span class="key"><span class="swatch pooled"></span>Trained on other communities</span>
+      <span class="key"><span class="swatch trained"></span>Trained on target modlog</span>
+    </div>
+  </main>
+</body>
+</html>

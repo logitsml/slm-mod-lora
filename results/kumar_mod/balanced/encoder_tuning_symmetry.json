@@ -1,0 +1,70 @@
+{
+  "analysis": "encoder_tuning_symmetry",
+  "split": "slm_mod_split.parquet",
+  "n_subs": 94,
+  "global_C_star": 0.001584893192461114,
+  "slm_median_auc": 0.813844971453667,
+  "regimes": {
+    "fixed_c1": {
+      "desc": "C=1.0 default (the naive floor)",
+      "encoder": {
+        "median": 0.7696491030431759,
+        "ci95": [
+          0.7412152777777777,
+          0.7827058823529411
+        ],
+        "n": 94
+      },
+      "paired_vs_slm": {
+        "median_delta_vs_slm": -0.043739396250837836,
+        "ci95": [
+          -0.055168539325842536,
+          -0.03463987703118154
+        ],
+        "encoder_wins_frac": 0.14893617021276595,
+        "n_shared": 94
+      }
+    },
+    "global_c": {
+      "desc": "ONE leakage-free global C=0.001585 for all communities (SYMMETRIC with the SLM's single fixed recipe)",
+      "encoder": {
+        "median": 0.8259814241486068,
+        "ci95": [
+          0.8027898524630643,
+          0.8358227848101266
+        ],
+        "n": 94
+      },
+      "paired_vs_slm": {
+        "median_delta_vs_slm": 0.007747518286311483,
+        "ci95": [
+          0.0007260055176419034,
+          0.015225129723923425
+        ],
+        "encoder_wins_frac": 0.6382978723404256,
+        "n_shared": 94
+      }
+    },
+    "per_comm_cv": {
+      "desc": "per-community LogisticRegressionCV (the 0.826 recipe; encoder's cheap leakage-free adaptation)",
+      "encoder": {
+        "median": 0.8259249889789726,
+        "ci95": [
+          0.8023065304948216,
+          0.834516336522369
+        ],
+        "n": 94
+      },
+      "paired_vs_slm": {
+        "median_delta_vs_slm": 0.008752011678570537,
+        "ci95": [
+          0.0009664510346830135,
+          0.015645161290322562
+        ],
+        "encoder_wins_frac": 0.6382978723404256,
+        "n_shared": 94
+      }
+    }
+  },
+  "headline": "SYMMETRIC (single global C=0.001585): encoder 0.8260 vs SLM 0.8138, paired delta +0.0077 CI[0.0007260055176419034, 0.015225129723923425]. Floor(C=1.0)=0.7696; per-comm-CV=0.8259. Under the SYMMETRIC one-fixed-recipe treatment the encoder and SLM are at PARITY."
+}

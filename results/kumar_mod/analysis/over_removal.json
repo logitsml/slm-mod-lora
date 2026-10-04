@@ -1,0 +1,552 @@
+{
+  "analysis": "over_removal_silencing",
+  "n_common_rows": 17276,
+  "n_methods": 5,
+  "definition": {
+    "ratio": "P(flag|kept,toxic) / P(flag|kept,non-toxic); flag=committed remove, kept=label0",
+    "matched": "P(score>=t_m | kept, toxic) with t_m set to a common overall removal rate"
+  },
+  "by_tox_def": {
+    "Detoxify>=0.3": {
+      "methods": {
+        "encoder_e5": {
+          "selectivity_ratio": 1.895,
+          "ratio_ci95": [
+            1.716,
+            2.0924
+          ],
+          "p_flag_kept_toxic": 0.4937,
+          "p_flag_kept_nontoxic": 0.2606,
+          "n_kept_toxic": 1033,
+          "n_kept_nontoxic": 7115
+        },
+        "slm_mod": {
+          "selectivity_ratio": 1.979,
+          "ratio_ci95": [
+            1.6965,
+            2.3496
+          ],
+          "p_flag_kept_toxic": 0.4656,
+          "p_flag_kept_nontoxic": 0.2353,
+          "n_kept_toxic": 1033,
+          "n_kept_nontoxic": 7115
+        },
+        "llm_gemma": {
+          "selectivity_ratio": 3.22,
+          "ratio_ci95": [
+            2.8319,
+            3.6931
+          ],
+          "p_flag_kept_toxic": 0.5015,
+          "p_flag_kept_nontoxic": 0.1557,
+          "n_kept_toxic": 1033,
+          "n_kept_nontoxic": 7115
+        },
+        "llm_llama": {
+          "selectivity_ratio": 2.86,
+          "ratio_ci95": [
+            2.5277,
+            3.2555
+          ],
+          "p_flag_kept_toxic": 0.4414,
+          "p_flag_kept_nontoxic": 0.1543,
+          "n_kept_toxic": 1033,
+          "n_kept_nontoxic": 7115
+        },
+        "llm_qwen": {
+          "selectivity_ratio": 3.412,
+          "ratio_ci95": [
+            3.0244,
+            3.8533
+          ],
+          "p_flag_kept_toxic": 0.5634,
+          "p_flag_kept_nontoxic": 0.1651,
+          "n_kept_toxic": 1033,
+          "n_kept_nontoxic": 7115
+        }
+      },
+      "llm_minus_encoder_ratio": {
+        "llm_gemma_minus_encoder": {
+          "point": 1.325,
+          "ci95": [
+            0.9376,
+            1.7775
+          ]
+        },
+        "llm_llama_minus_encoder": {
+          "point": 0.965,
+          "ci95": [
+            0.6181,
+            1.3566
+          ]
+        },
+        "llm_qwen_minus_encoder": {
+          "point": 1.517,
+          "ci95": [
+            1.1297,
+            1.9575
+          ]
+        }
+      }
+    },
+    "Detoxify>=0.5": {
+      "methods": {
+        "encoder_e5": {
+          "selectivity_ratio": 1.908,
+          "ratio_ci95": [
+            1.7186,
+            2.0968
+          ],
+          "p_flag_kept_toxic": 0.5074,
+          "p_flag_kept_nontoxic": 0.266,
+          "n_kept_toxic": 816,
+          "n_kept_nontoxic": 7332
+        },
+        "slm_mod": {
+          "selectivity_ratio": 1.998,
+          "ratio_ci95": [
+            1.7115,
+            2.367
+          ],
+          "p_flag_kept_toxic": 0.4804,
+          "p_flag_kept_nontoxic": 0.2405,
+          "n_kept_toxic": 816,
+          "n_kept_nontoxic": 7332
+        },
+        "llm_gemma": {
+          "selectivity_ratio": 3.2,
+          "ratio_ci95": [
+            2.8204,
+            3.6725
+          ],
+          "p_flag_kept_toxic": 0.5233,
+          "p_flag_kept_nontoxic": 0.1635,
+          "n_kept_toxic": 816,
+          "n_kept_nontoxic": 7332
+        },
+        "llm_llama": {
+          "selectivity_ratio": 2.918,
+          "ratio_ci95": [
+            2.5808,
+            3.3272
+          ],
+          "p_flag_kept_toxic": 0.4669,
+          "p_flag_kept_nontoxic": 0.16,
+          "n_kept_toxic": 816,
+          "n_kept_nontoxic": 7332
+        },
+        "llm_qwen": {
+          "selectivity_ratio": 3.416,
+          "ratio_ci95": [
+            3.0331,
+            3.858
+          ],
+          "p_flag_kept_toxic": 0.5931,
+          "p_flag_kept_nontoxic": 0.1736,
+          "n_kept_toxic": 816,
+          "n_kept_nontoxic": 7332
+        }
+      },
+      "llm_minus_encoder_ratio": {
+        "llm_gemma_minus_encoder": {
+          "point": 1.292,
+          "ci95": [
+            0.914,
+            1.7523
+          ]
+        },
+        "llm_llama_minus_encoder": {
+          "point": 1.01,
+          "ci95": [
+            0.6629,
+            1.4248
+          ]
+        },
+        "llm_qwen_minus_encoder": {
+          "point": 1.508,
+          "ci95": [
+            1.1222,
+            1.9588
+          ]
+        }
+      }
+    },
+    "Detoxify>=0.7": {
+      "methods": {
+        "encoder_e5": {
+          "selectivity_ratio": 1.957,
+          "ratio_ci95": [
+            1.7633,
+            2.1637
+          ],
+          "p_flag_kept_toxic": 0.528,
+          "p_flag_kept_nontoxic": 0.2697,
+          "n_kept_toxic": 644,
+          "n_kept_nontoxic": 7504
+        },
+        "slm_mod": {
+          "selectivity_ratio": 2.115,
+          "ratio_ci95": [
+            1.797,
+            2.508
+          ],
+          "p_flag_kept_toxic": 0.514,
+          "p_flag_kept_nontoxic": 0.2431,
+          "n_kept_toxic": 644,
+          "n_kept_nontoxic": 7504
+        },
+        "llm_gemma": {
+          "selectivity_ratio": 3.409,
+          "ratio_ci95": [
+            2.983,
+            3.8863
+          ],
+          "p_flag_kept_toxic": 0.5714,
+          "p_flag_kept_nontoxic": 0.1676,
+          "n_kept_toxic": 644,
+          "n_kept_nontoxic": 7504
+        },
+        "llm_llama": {
+          "selectivity_ratio": 2.962,
+          "ratio_ci95": [
+            2.6067,
+            3.4014
+          ],
+          "p_flag_kept_toxic": 0.4891,
+          "p_flag_kept_nontoxic": 0.1651,
+          "n_kept_toxic": 644,
+          "n_kept_nontoxic": 7504
+        },
+        "llm_qwen": {
+          "selectivity_ratio": 3.547,
+          "ratio_ci95": [
+            3.1543,
+            3.9996
+          ],
+          "p_flag_kept_toxic": 0.6366,
+          "p_flag_kept_nontoxic": 0.1795,
+          "n_kept_toxic": 644,
+          "n_kept_nontoxic": 7504
+        }
+      },
+      "llm_minus_encoder_ratio": {
+        "llm_gemma_minus_encoder": {
+          "point": 1.452,
+          "ci95": [
+            1.0398,
+            1.9288
+          ]
+        },
+        "llm_llama_minus_encoder": {
+          "point": 1.005,
+          "ci95": [
+            0.6357,
+            1.4291
+          ]
+        },
+        "llm_qwen_minus_encoder": {
+          "point": 1.59,
+          "ci95": [
+            1.2061,
+            2.0239
+          ]
+        }
+      }
+    },
+    "Detoxify_top_decile_per_comm": {
+      "methods": {
+        "encoder_e5": {
+          "selectivity_ratio": 2.03,
+          "ratio_ci95": [
+            1.8141,
+            2.2489
+          ],
+          "p_flag_kept_toxic": 0.5647,
+          "p_flag_kept_nontoxic": 0.2782,
+          "n_kept_toxic": 340,
+          "n_kept_nontoxic": 7808
+        },
+        "slm_mod": {
+          "selectivity_ratio": 2.336,
+          "ratio_ci95": [
+            1.9858,
+            2.7711
+          ],
+          "p_flag_kept_toxic": 0.5853,
+          "p_flag_kept_nontoxic": 0.2505,
+          "n_kept_toxic": 340,
+          "n_kept_nontoxic": 7808
+        },
+        "llm_gemma": {
+          "selectivity_ratio": 3.462,
+          "ratio_ci95": [
+            3.0307,
+            3.9473
+          ],
+          "p_flag_kept_toxic": 0.6265,
+          "p_flag_kept_nontoxic": 0.181,
+          "n_kept_toxic": 340,
+          "n_kept_nontoxic": 7808
+        },
+        "llm_llama": {
+          "selectivity_ratio": 3.027,
+          "ratio_ci95": [
+            2.6558,
+            3.4201
+          ],
+          "p_flag_kept_toxic": 0.5324,
+          "p_flag_kept_nontoxic": 0.1758,
+          "n_kept_toxic": 340,
+          "n_kept_nontoxic": 7808
+        },
+        "llm_qwen": {
+          "selectivity_ratio": 3.304,
+          "ratio_ci95": [
+            2.9544,
+            3.6815
+          ],
+          "p_flag_kept_toxic": 0.65,
+          "p_flag_kept_nontoxic": 0.1967,
+          "n_kept_toxic": 340,
+          "n_kept_nontoxic": 7808
+        }
+      },
+      "llm_minus_encoder_ratio": {
+        "llm_gemma_minus_encoder": {
+          "point": 1.432,
+          "ci95": [
+            1.0259,
+            1.8765
+          ]
+        },
+        "llm_llama_minus_encoder": {
+          "point": 0.997,
+          "ci95": [
+            0.6098,
+            1.3951
+          ]
+        },
+        "llm_qwen_minus_encoder": {
+          "point": 1.274,
+          "ci95": [
+            0.9105,
+            1.6574
+          ]
+        }
+      }
+    },
+    "ToxiGen>=0.5": {
+      "methods": {
+        "encoder_e5": {
+          "selectivity_ratio": 1.88,
+          "ratio_ci95": [
+            1.6949,
+            2.0795
+          ],
+          "p_flag_kept_toxic": 0.4967,
+          "p_flag_kept_nontoxic": 0.2642,
+          "n_kept_toxic": 910,
+          "n_kept_nontoxic": 7238
+        },
+        "slm_mod": {
+          "selectivity_ratio": 2.058,
+          "ratio_ci95": [
+            1.7546,
+            2.4244
+          ],
+          "p_flag_kept_toxic": 0.4868,
+          "p_flag_kept_nontoxic": 0.2365,
+          "n_kept_toxic": 910,
+          "n_kept_nontoxic": 7238
+        },
+        "llm_gemma": {
+          "selectivity_ratio": 3.081,
+          "ratio_ci95": [
+            2.6925,
+            3.5162
+          ],
+          "p_flag_kept_toxic": 0.4989,
+          "p_flag_kept_nontoxic": 0.1619,
+          "n_kept_toxic": 910,
+          "n_kept_nontoxic": 7238
+        },
+        "llm_llama": {
+          "selectivity_ratio": 3.172,
+          "ratio_ci95": [
+            2.7888,
+            3.6046
+          ],
+          "p_flag_kept_toxic": 0.4868,
+          "p_flag_kept_nontoxic": 0.1535,
+          "n_kept_toxic": 910,
+          "n_kept_nontoxic": 7238
+        },
+        "llm_qwen": {
+          "selectivity_ratio": 3.624,
+          "ratio_ci95": [
+            3.2659,
+            4.051
+          ],
+          "p_flag_kept_toxic": 0.6044,
+          "p_flag_kept_nontoxic": 0.1668,
+          "n_kept_toxic": 910,
+          "n_kept_nontoxic": 7238
+        }
+      },
+      "llm_minus_encoder_ratio": {
+        "llm_gemma_minus_encoder": {
+          "point": 1.201,
+          "ci95": [
+            0.8231,
+            1.611
+          ]
+        },
+        "llm_llama_minus_encoder": {
+          "point": 1.292,
+          "ci95": [
+            0.9115,
+            1.7016
+          ]
+        },
+        "llm_qwen_minus_encoder": {
+          "point": 1.744,
+          "ci95": [
+            1.3665,
+            2.1456
+          ]
+        }
+      }
+    }
+  },
+  "strictness_matched": {
+    "target_removal_rates": {
+      "0.528": {
+        "encoder_e5": {
+          "false_flag_kept_toxic": 0.4767,
+          "achieved_removal_rate": 0.528,
+          "ci95": [
+            0.4301,
+            0.5221
+          ]
+        },
+        "slm_mod": {
+          "false_flag_kept_toxic": 0.549,
+          "achieved_removal_rate": 0.5483,
+          "ci95": [
+            0.4839,
+            0.6154
+          ]
+        },
+        "llm_gemma": {
+          "false_flag_kept_toxic": 0.7243,
+          "achieved_removal_rate": 0.5412,
+          "ci95": [
+            0.6795,
+            0.7656
+          ]
+        },
+        "llm_llama": {
+          "false_flag_kept_toxic": 0.6752,
+          "achieved_removal_rate": 0.5353,
+          "ci95": [
+            0.6349,
+            0.7168
+          ]
+        },
+        "llm_qwen": {
+          "false_flag_kept_toxic": 0.7733,
+          "achieved_removal_rate": 0.5314,
+          "ci95": [
+            0.7351,
+            0.8094
+          ]
+        }
+      },
+      "0.4": {
+        "encoder_e5": {
+          "false_flag_kept_toxic": 0.3382,
+          "achieved_removal_rate": 0.4,
+          "ci95": [
+            0.2982,
+            0.3803
+          ]
+        },
+        "slm_mod": {
+          "false_flag_kept_toxic": 0.4191,
+          "achieved_removal_rate": 0.4374,
+          "ci95": [
+            0.3565,
+            0.4877
+          ]
+        },
+        "llm_gemma": {
+          "false_flag_kept_toxic": 0.5208,
+          "achieved_removal_rate": 0.4018,
+          "ci95": [
+            0.4757,
+            0.5676
+          ]
+        },
+        "llm_llama": {
+          "false_flag_kept_toxic": 0.4926,
+          "achieved_removal_rate": 0.4007,
+          "ci95": [
+            0.4519,
+            0.5353
+          ]
+        },
+        "llm_qwen": {
+          "false_flag_kept_toxic": 0.6029,
+          "achieved_removal_rate": 0.4007,
+          "ci95": [
+            0.5563,
+            0.6485
+          ]
+        }
+      },
+      "0.5": {
+        "encoder_e5": {
+          "false_flag_kept_toxic": 0.4338,
+          "achieved_removal_rate": 0.5,
+          "ci95": [
+            0.3901,
+            0.477
+          ]
+        },
+        "slm_mod": {
+          "false_flag_kept_toxic": 0.549,
+          "achieved_removal_rate": 0.5483,
+          "ci95": [
+            0.4839,
+            0.6154
+          ]
+        },
+        "llm_gemma": {
+          "false_flag_kept_toxic": 0.6777,
+          "achieved_removal_rate": 0.512,
+          "ci95": [
+            0.634,
+            0.7196
+          ]
+        },
+        "llm_llama": {
+          "false_flag_kept_toxic": 0.6225,
+          "achieved_removal_rate": 0.5009,
+          "ci95": [
+            0.5795,
+            0.6672
+          ]
+        },
+        "llm_qwen": {
+          "false_flag_kept_toxic": 0.7377,
+          "achieved_removal_rate": 0.5035,
+          "ci95": [
+            0.6945,
+            0.78
+          ]
+        }
+      }
+    },
+    "note": "false-flag = P(score>=t_m | kept, toxic@0.5)"
+  }
+}

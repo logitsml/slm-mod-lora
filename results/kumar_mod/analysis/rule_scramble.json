@@ -1,0 +1,100 @@
+{
+  "analysis": "rule_scramble",
+  "design": "Kumar prompt under home / scrambled (same rules, words shuffled to nonsense) / random (rules with every word replaced by neutral filler) / none, per family; scrambled is a length-matched absurd-rules control.",
+  "by_family": {
+    "gemma": {
+      "by_condition": {
+        "home": {
+          "n": 2833,
+          "removal_rate": 0.3883,
+          "auc_toxicity_predicts_remove": 0.7453
+        },
+        "scrambled": {
+          "n": 2833,
+          "removal_rate": 0.3247,
+          "auc_toxicity_predicts_remove": 0.7983
+        },
+        "random": {
+          "n": 2834,
+          "removal_rate": 0.2572,
+          "auc_toxicity_predicts_remove": 0.8609
+        },
+        "none": {
+          "n": 2824,
+          "removal_rate": 0.2996,
+          "auc_toxicity_predicts_remove": 0.8234
+        }
+      },
+      "flip_vs_home": {
+        "home_vs_scrambled_flip_rate": 0.0982,
+        "home_vs_random_flip_rate": 0.155,
+        "home_vs_none_flip_rate": 0.1289
+      },
+      "scrambled_minus_home_removal_pp": -6.36,
+      "none_minus_home_removal_pp": -8.87
+    },
+    "llama": {
+      "by_condition": {
+        "home": {
+          "n": 2836,
+          "removal_rate": 0.3614,
+          "auc_toxicity_predicts_remove": 0.7365
+        },
+        "scrambled": {
+          "n": 2836,
+          "removal_rate": 0.287,
+          "auc_toxicity_predicts_remove": 0.7759
+        },
+        "random": {
+          "n": 2782,
+          "removal_rate": 0.1858,
+          "auc_toxicity_predicts_remove": 0.8697
+        },
+        "none": {
+          "n": 2822,
+          "removal_rate": 0.2378,
+          "auc_toxicity_predicts_remove": 0.8035
+        }
+      },
+      "flip_vs_home": {
+        "home_vs_scrambled_flip_rate": 0.1132,
+        "home_vs_random_flip_rate": 0.1884,
+        "home_vs_none_flip_rate": 0.1591
+      },
+      "scrambled_minus_home_removal_pp": -7.44,
+      "none_minus_home_removal_pp": -12.36
+    },
+    "qwen": {
+      "by_condition": {
+        "home": {
+          "n": 2818,
+          "removal_rate": 0.3765,
+          "auc_toxicity_predicts_remove": 0.7722
+        },
+        "scrambled": {
+          "n": 2769,
+          "removal_rate": 0.3481,
+          "auc_toxicity_predicts_remove": 0.7921
+        },
+        "random": {
+          "n": 2662,
+          "removal_rate": 0.3137,
+          "auc_toxicity_predicts_remove": 0.8421
+        },
+        "none": {
+          "n": 2091,
+          "removal_rate": 0.4146,
+          "auc_toxicity_predicts_remove": 0.8193
+        }
+      },
+      "flip_vs_home": {
+        "home_vs_scrambled_flip_rate": 0.1019,
+        "home_vs_random_flip_rate": 0.1363,
+        "home_vs_none_flip_rate": 0.1356
+      },
+      "scrambled_minus_home_removal_pp": -2.84,
+      "none_minus_home_removal_pp": 3.81
+    }
+  },
+  "interpretation": "If scrambled removal ~= home removal (and the home-vs-scrambled flip rate is low), the model reacts to the PRESENCE of rule text, not its content -- the 'rules' are a strictness dial, not the community's norm. Scrambled is length-matched to home, so this is free of the prompt-length confound. Per family: gemma: removal home 0.3883 / scrambled 0.3247 / random 0.2572 / none 0.2996; home-vs-random flip 0.155 | llama: removal home 0.3614 / scrambled 0.287 / random 0.1858 / none 0.2378; home-vs-random flip 0.1884 | qwen: removal home 0.3765 / scrambled 0.3481 / random 0.3137 / none 0.4146; home-vs-random flip 0.1363"
+}

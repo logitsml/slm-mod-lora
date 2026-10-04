@@ -1,0 +1,21 @@
+{
+  "analysis": "per-community head fit timing (warm-start encoder arm)",
+  "config": "StandardScaler + LogisticRegressionCV(Cs=logspace(-4,2,16), cv=5, scoring=roc_auc, max_iter=2000, seed 11) on cached e5-large-v2 embeddings (_fairness_e5_cache.npy), 80% stratified train fold, 4 CPU threads",
+  "communities_timed": {
+    "2007scape": 0.42,
+    "EnoughTrumpSpam": 0.37,
+    "OutOfTheLoop": 0.38,
+    "askscience": 0.37,
+    "europe": 0.36,
+    "history": 0.37,
+    "pcmasterrace": 0.37,
+    "socialism": 0.38
+  },
+  "median_s_per_community": 0.37,
+  "mean_s_per_community": 0.38,
+  "total_94_communities_cpu_min": 0.6,
+  "context": "embedding the ~800 train comments once costs ~0.4 s GPU at the measured 0.52 ms/comment (throughput_bench.json); SLM-Mod train cost per cost_model: bf16 LoRA ~5-15 GPU-min/sub",
+  "measured": "2026-06-10",
+  "cpu": "AMD EPYC 7763 64-Core Processor (4 threads)",
+  "slm_mod_total_estimate": "95 subs x 5-15 GPU-min = roughly 8-24 GPU-hours on NVIDIA L40S"
+}

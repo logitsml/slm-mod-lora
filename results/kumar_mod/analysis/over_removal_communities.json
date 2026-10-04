@@ -1,0 +1,102 @@
+{
+  "analysis": "insult_tolerant_communities",
+  "definition": "communities with >=5 toxic comments, ranked by keep-rate among toxic",
+  "top": [
+    {
+      "subreddit": "NSFW_GIF",
+      "n_toxic": 36,
+      "keep_rate_among_toxic": 0.639,
+      "n_kept_toxic": 23,
+      "gemma_flags_kept_toxic": 0.87,
+      "encoder_flags_kept_toxic": 0.087
+    },
+    {
+      "subreddit": "ShitRedditSays",
+      "n_toxic": 43,
+      "keep_rate_among_toxic": 0.535,
+      "n_kept_toxic": 23,
+      "gemma_flags_kept_toxic": 0.435,
+      "encoder_flags_kept_toxic": 0.391
+    },
+    {
+      "subreddit": "nosleep",
+      "n_toxic": 34,
+      "keep_rate_among_toxic": 0.5,
+      "n_kept_toxic": 17,
+      "gemma_flags_kept_toxic": 0.765,
+      "encoder_flags_kept_toxic": 0.176
+    },
+    {
+      "subreddit": "BlackPeopleTwitter",
+      "n_toxic": 58,
+      "keep_rate_among_toxic": 0.483,
+      "n_kept_toxic": 28,
+      "gemma_flags_kept_toxic": 0.5,
+      "encoder_flags_kept_toxic": 0.607
+    },
+    {
+      "subreddit": "gonewild",
+      "n_toxic": 42,
+      "keep_rate_among_toxic": 0.476,
+      "n_kept_toxic": 20,
+      "gemma_flags_kept_toxic": 0.65,
+      "encoder_flags_kept_toxic": 0.55
+    },
+    {
+      "subreddit": "hiphopheads",
+      "n_toxic": 44,
+      "keep_rate_among_toxic": 0.455,
+      "n_kept_toxic": 20,
+      "gemma_flags_kept_toxic": 0.3,
+      "encoder_flags_kept_toxic": 0.35
+    },
+    {
+      "subreddit": "hillaryclinton",
+      "n_toxic": 18,
+      "keep_rate_among_toxic": 0.444,
+      "n_kept_toxic": 8,
+      "gemma_flags_kept_toxic": 0.75,
+      "encoder_flags_kept_toxic": 0.375
+    },
+    {
+      "subreddit": "space",
+      "n_toxic": 23,
+      "keep_rate_among_toxic": 0.391,
+      "n_kept_toxic": 9,
+      "gemma_flags_kept_toxic": 0.444,
+      "encoder_flags_kept_toxic": 0.444
+    },
+    {
+      "subreddit": "gaming",
+      "n_toxic": 32,
+      "keep_rate_among_toxic": 0.375,
+      "n_kept_toxic": 12,
+      "gemma_flags_kept_toxic": 0.333,
+      "encoder_flags_kept_toxic": 0.417
+    },
+    {
+      "subreddit": "gifs",
+      "n_toxic": 35,
+      "keep_rate_among_toxic": 0.371,
+      "n_kept_toxic": 13,
+      "gemma_flags_kept_toxic": 0.769,
+      "encoder_flags_kept_toxic": 0.385
+    },
+    {
+      "subreddit": "sex",
+      "n_toxic": 65,
+      "keep_rate_among_toxic": 0.369,
+      "n_kept_toxic": 24,
+      "gemma_flags_kept_toxic": 0.542,
+      "encoder_flags_kept_toxic": 0.458
+    },
+    {
+      "subreddit": "anime",
+      "n_toxic": 19,
+      "keep_rate_among_toxic": 0.368,
+      "n_kept_toxic": 7,
+      "gemma_flags_kept_toxic": 0.286,
+      "encoder_flags_kept_toxic": 0.286
+    }
+  ]
+}

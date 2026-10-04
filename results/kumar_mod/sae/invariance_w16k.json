@@ -1,0 +1,639 @@
+{
+  "L24": {
+    "width": "16k",
+    "C2_composition": {
+      "K10": {
+        "frac_tox": 0.6,
+        "frac_comm": 0.2,
+        "frac_other": 0.2,
+        "decisiveness_share": {
+          "TOX": 0.673,
+          "COMMUNITY": 0.181,
+          "OTHER": 0.146
+        },
+        "top_features": [
+          2933,
+          7007,
+          1917,
+          55,
+          485,
+          7789,
+          1837,
+          13891,
+          11819,
+          4391
+        ]
+      },
+      "K20": {
+        "frac_tox": 0.75,
+        "frac_comm": 0.15,
+        "frac_other": 0.1,
+        "decisiveness_share": {
+          "TOX": 0.756,
+          "COMMUNITY": 0.147,
+          "OTHER": 0.096
+        },
+        "top_features": [
+          2933,
+          7007,
+          1917,
+          55,
+          485,
+          7789,
+          1837,
+          13891,
+          11819,
+          4391,
+          11747,
+          6244,
+          5059,
+          831,
+          11297,
+          9916,
+          3599,
+          13633,
+          12678,
+          10992
+        ]
+      },
+      "K40": {
+        "frac_tox": 0.525,
+        "frac_comm": 0.25,
+        "frac_other": 0.225,
+        "decisiveness_share": {
+          "TOX": 0.636,
+          "COMMUNITY": 0.205,
+          "OTHER": 0.159
+        },
+        "top_features": [
+          2933,
+          7007,
+          1917,
+          55,
+          485,
+          7789,
+          1837,
+          13891,
+          11819,
+          4391,
+          11747,
+          6244,
+          5059,
+          831,
+          11297,
+          9916,
+          3599,
+          13633,
+          12678,
+          10992,
+          2839,
+          3051,
+          7283,
+          9150,
+          1904,
+          2074,
+          10611,
+          15504,
+          12501,
+          9533,
+          7339,
+          13457,
+          13635,
+          11059,
+          2823,
+          414,
+          3116,
+          16001,
+          5462,
+          6382
+        ]
+      }
+    },
+    "C3_consistency": {
+      "n_elig_subs": 95,
+      "K10": {
+        "median_jaccard": 0.333,
+        "null_median_jaccard_mean": 0.053,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.333,
+          0.429
+        ],
+        "universal_set_size": 7,
+        "universal_set_tox_frac": 0.857,
+        "universal_set": [
+          55,
+          485,
+          1917,
+          2933,
+          7007,
+          7789,
+          13891
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.429,
+        "null_median_jaccard_mean": 0.099,
+        "null_median_jaccard_p95": 0.111,
+        "boot_ci95": [
+          0.379,
+          0.429
+        ],
+        "universal_set_size": 15,
+        "universal_set_tox_frac": 0.733,
+        "universal_set": [
+          55,
+          485,
+          831,
+          1837,
+          1917,
+          2933,
+          4391,
+          5059,
+          6244,
+          7007,
+          7789,
+          11297,
+          11747,
+          11819,
+          13891
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.481,
+        "null_median_jaccard_mean": 0.14,
+        "null_median_jaccard_p95": 0.143,
+        "boot_ci95": [
+          0.455,
+          0.509
+        ],
+        "universal_set_size": 35,
+        "universal_set_tox_frac": 0.543,
+        "universal_set": [
+          55,
+          485,
+          831,
+          1837,
+          1904,
+          1917,
+          2074,
+          2823,
+          2839,
+          2933,
+          3051,
+          3116,
+          3599,
+          4391,
+          5059,
+          6244,
+          7007,
+          7283,
+          7789,
+          9150,
+          9533,
+          9916,
+          10611,
+          10992,
+          11297,
+          11747,
+          11819,
+          12501,
+          12678,
+          13457
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.527
+    },
+    "n_tox_features": 58,
+    "n_comm_features": 80
+  },
+  "L31": {
+    "width": "16k",
+    "C2_composition": {
+      "K10": {
+        "frac_tox": 1.0,
+        "frac_comm": 0.0,
+        "frac_other": 0.0,
+        "decisiveness_share": {
+          "TOX": 1.0,
+          "COMMUNITY": 0.0,
+          "OTHER": 0.0
+        },
+        "top_features": [
+          8639,
+          324,
+          952,
+          18,
+          515,
+          8305,
+          1625,
+          1837,
+          481,
+          357
+        ]
+      },
+      "K20": {
+        "frac_tox": 0.95,
+        "frac_comm": 0.0,
+        "frac_other": 0.05,
+        "decisiveness_share": {
+          "TOX": 0.963,
+          "COMMUNITY": 0.0,
+          "OTHER": 0.037
+        },
+        "top_features": [
+          8639,
+          324,
+          952,
+          18,
+          515,
+          8305,
+          1625,
+          1837,
+          481,
+          357,
+          326,
+          5184,
+          10927,
+          464,
+          347,
+          7661,
+          11352,
+          7092,
+          1964,
+          13140
+        ]
+      },
+      "K40": {
+        "frac_tox": 0.925,
+        "frac_comm": 0.0,
+        "frac_other": 0.075,
+        "decisiveness_share": {
+          "TOX": 0.946,
+          "COMMUNITY": 0.0,
+          "OTHER": 0.054
+        },
+        "top_features": [
+          8639,
+          324,
+          952,
+          18,
+          515,
+          8305,
+          1625,
+          1837,
+          481,
+          357,
+          326,
+          5184,
+          10927,
+          464,
+          347,
+          7661,
+          11352,
+          7092,
+          1964,
+          13140,
+          4618,
+          879,
+          1732,
+          1147,
+          577,
+          219,
+          1744,
+          172,
+          10565,
+          12730,
+          16020,
+          294,
+          149,
+          2579,
+          9937,
+          168,
+          3079,
+          2479,
+          11549,
+          930
+        ]
+      }
+    },
+    "C3_consistency": {
+      "n_elig_subs": 95,
+      "K10": {
+        "median_jaccard": 0.667,
+        "null_median_jaccard_mean": 0.053,
+        "null_median_jaccard_p95": 0.053,
+        "boot_ci95": [
+          0.538,
+          0.667
+        ],
+        "universal_set_size": 9,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          18,
+          324,
+          481,
+          515,
+          952,
+          1625,
+          1837,
+          8305,
+          8639
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.6,
+        "null_median_jaccard_mean": 0.081,
+        "null_median_jaccard_p95": 0.081,
+        "boot_ci95": [
+          0.6,
+          0.6
+        ],
+        "universal_set_size": 20,
+        "universal_set_tox_frac": 0.95,
+        "universal_set": [
+          18,
+          324,
+          326,
+          347,
+          357,
+          464,
+          481,
+          515,
+          952,
+          1625,
+          1837,
+          1964,
+          5184,
+          7092,
+          7661,
+          8305,
+          8639,
+          10927,
+          11352,
+          13140
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.702,
+        "null_median_jaccard_mean": 0.13,
+        "null_median_jaccard_p95": 0.143,
+        "boot_ci95": [
+          0.667,
+          0.739
+        ],
+        "universal_set_size": 39,
+        "universal_set_tox_frac": 0.923,
+        "universal_set": [
+          18,
+          149,
+          168,
+          172,
+          219,
+          294,
+          324,
+          326,
+          347,
+          357,
+          464,
+          481,
+          515,
+          577,
+          879,
+          952,
+          1147,
+          1625,
+          1732,
+          1744,
+          1837,
+          1964,
+          2479,
+          2579,
+          3079,
+          4618,
+          5184,
+          7092,
+          7661,
+          8305
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.662
+    },
+    "n_tox_features": 99,
+    "n_comm_features": 89
+  },
+  "L41": {
+    "width": "16k",
+    "C2_composition": {
+      "K10": {
+        "frac_tox": 1.0,
+        "frac_comm": 0.0,
+        "frac_other": 0.0,
+        "decisiveness_share": {
+          "TOX": 1.0,
+          "COMMUNITY": 0.0,
+          "OTHER": 0.0
+        },
+        "top_features": [
+          14476,
+          10622,
+          1648,
+          2439,
+          15307,
+          3627,
+          367,
+          10495,
+          730,
+          1497
+        ]
+      },
+      "K20": {
+        "frac_tox": 0.7,
+        "frac_comm": 0.15,
+        "frac_other": 0.15,
+        "decisiveness_share": {
+          "TOX": 0.89,
+          "COMMUNITY": 0.048,
+          "OTHER": 0.061
+        },
+        "top_features": [
+          14476,
+          10622,
+          1648,
+          2439,
+          15307,
+          3627,
+          367,
+          10495,
+          730,
+          1497,
+          464,
+          5061,
+          4620,
+          4725,
+          14220,
+          5325,
+          2479,
+          4515,
+          404,
+          1635
+        ]
+      },
+      "K40": {
+        "frac_tox": 0.575,
+        "frac_comm": 0.325,
+        "frac_other": 0.1,
+        "decisiveness_share": {
+          "TOX": 0.82,
+          "COMMUNITY": 0.124,
+          "OTHER": 0.056
+        },
+        "top_features": [
+          14476,
+          10622,
+          1648,
+          2439,
+          15307,
+          3627,
+          367,
+          10495,
+          730,
+          1497,
+          464,
+          5061,
+          4620,
+          4725,
+          14220,
+          5325,
+          2479,
+          4515,
+          404,
+          1635,
+          375,
+          9420,
+          6872,
+          351,
+          1869,
+          16270,
+          495,
+          973,
+          600,
+          2607,
+          5413,
+          10180,
+          1864,
+          1034,
+          2130,
+          1046,
+          4291,
+          6118,
+          2,
+          9884
+        ]
+      }
+    },
+    "C3_consistency": {
+      "n_elig_subs": 95,
+      "K10": {
+        "median_jaccard": 0.818,
+        "null_median_jaccard_mean": 0.058,
+        "null_median_jaccard_p95": 0.111,
+        "boot_ci95": [
+          0.818,
+          0.818
+        ],
+        "universal_set_size": 9,
+        "universal_set_tox_frac": 1.0,
+        "universal_set": [
+          367,
+          730,
+          1648,
+          2439,
+          3627,
+          10495,
+          10622,
+          14476,
+          15307
+        ]
+      },
+      "K20": {
+        "median_jaccard": 0.667,
+        "null_median_jaccard_mean": 0.106,
+        "null_median_jaccard_p95": 0.111,
+        "boot_ci95": [
+          0.667,
+          0.667
+        ],
+        "universal_set_size": 19,
+        "universal_set_tox_frac": 0.737,
+        "universal_set": [
+          367,
+          464,
+          730,
+          1497,
+          1648,
+          2439,
+          2479,
+          3627,
+          4515,
+          4620,
+          4725,
+          5061,
+          5325,
+          6872,
+          10495,
+          10622,
+          14220,
+          14476,
+          15307
+        ]
+      },
+      "K40": {
+        "median_jaccard": 0.633,
+        "null_median_jaccard_mean": 0.145,
+        "null_median_jaccard_p95": 0.159,
+        "boot_ci95": [
+          0.6,
+          0.633
+        ],
+        "universal_set_size": 35,
+        "universal_set_tox_frac": 0.6,
+        "universal_set": [
+          351,
+          367,
+          375,
+          404,
+          464,
+          495,
+          600,
+          730,
+          973,
+          1046,
+          1497,
+          1635,
+          1648,
+          1864,
+          1869,
+          2130,
+          2439,
+          2479,
+          2607,
+          3627,
+          4515,
+          4620,
+          4725,
+          5061,
+          5325,
+          5413,
+          6872,
+          9420,
+          10180,
+          10495
+        ]
+      },
+      "mean_pairwise_spearman_decisiveness": 0.587
+    },
+    "n_tox_features": 75,
+    "n_comm_features": 132
+  }
+}

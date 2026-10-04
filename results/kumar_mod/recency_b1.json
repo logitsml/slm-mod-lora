@@ -1,0 +1,272 @@
+{
+  "gemma4_12b": {
+    "status": "ok",
+    "n": 17508,
+    "by_scorer": {
+      "detoxify": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6864,
+        "auc_tox_to_human": 0.6552,
+        "TC_behav_macro": 0.0556,
+        "TC_behav_macro_ci95": [
+          0.0407,
+          0.0704
+        ],
+        "frac_comm_gt0": 0.811,
+        "n_comm": 95
+      },
+      "toxigen": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6545,
+        "auc_tox_to_human": 0.6345,
+        "TC_behav_macro": 0.0392,
+        "TC_behav_macro_ci95": [
+          0.0237,
+          0.0557
+        ],
+        "frac_comm_gt0": 0.716,
+        "n_comm": 95
+      },
+      "s-nlp": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.686,
+        "auc_tox_to_human": 0.6483,
+        "TC_behav_macro": 0.0675,
+        "TC_behav_macro_ci95": [
+          0.0534,
+          0.0823
+        ],
+        "frac_comm_gt0": 0.8,
+        "n_comm": 95
+      },
+      "lexical": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.5769,
+        "auc_tox_to_human": 0.5568,
+        "TC_behav_macro": 0.0284,
+        "TC_behav_macro_ci95": [
+          0.0197,
+          0.0367
+        ],
+        "frac_comm_gt0": 0.758,
+        "n_comm": 95
+      }
+    }
+  },
+  "qwen36_27b": {
+    "status": "ok",
+    "n": 17508,
+    "by_scorer": {
+      "detoxify": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.744,
+        "auc_tox_to_human": 0.6552,
+        "TC_behav_macro": 0.0968,
+        "TC_behav_macro_ci95": [
+          0.0826,
+          0.1111
+        ],
+        "frac_comm_gt0": 0.958,
+        "n_comm": 95
+      },
+      "toxigen": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.7206,
+        "auc_tox_to_human": 0.6345,
+        "TC_behav_macro": 0.0901,
+        "TC_behav_macro_ci95": [
+          0.0756,
+          0.1053
+        ],
+        "frac_comm_gt0": 0.874,
+        "n_comm": 95
+      },
+      "s-nlp": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.7441,
+        "auc_tox_to_human": 0.6483,
+        "TC_behav_macro": 0.1083,
+        "TC_behav_macro_ci95": [
+          0.0953,
+          0.1223
+        ],
+        "frac_comm_gt0": 0.937,
+        "n_comm": 95
+      },
+      "lexical": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6046,
+        "auc_tox_to_human": 0.5568,
+        "TC_behav_macro": 0.0538,
+        "TC_behav_macro_ci95": [
+          0.0451,
+          0.0637
+        ],
+        "frac_comm_gt0": 0.968,
+        "n_comm": 95
+      }
+    }
+  },
+  "llama70b": {
+    "status": "ok",
+    "n": 17508,
+    "by_scorer": {
+      "detoxify": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.7127,
+        "auc_tox_to_human": 0.6552,
+        "TC_behav_macro": 0.0604,
+        "TC_behav_macro_ci95": [
+          0.0458,
+          0.0749
+        ],
+        "frac_comm_gt0": 0.768,
+        "n_comm": 95
+      },
+      "toxigen": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6819,
+        "auc_tox_to_human": 0.6345,
+        "TC_behav_macro": 0.0483,
+        "TC_behav_macro_ci95": [
+          0.0337,
+          0.0632
+        ],
+        "frac_comm_gt0": 0.779,
+        "n_comm": 95
+      },
+      "s-nlp": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.7103,
+        "auc_tox_to_human": 0.6483,
+        "TC_behav_macro": 0.0713,
+        "TC_behav_macro_ci95": [
+          0.0585,
+          0.0847
+        ],
+        "frac_comm_gt0": 0.842,
+        "n_comm": 95
+      },
+      "lexical": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.5893,
+        "auc_tox_to_human": 0.5568,
+        "TC_behav_macro": 0.0349,
+        "TC_behav_macro_ci95": [
+          0.0275,
+          0.0425
+        ],
+        "frac_comm_gt0": 0.842,
+        "n_comm": 95
+      }
+    }
+  },
+  "gemma4_26b_a4b": {
+    "status": "ok",
+    "n": 17508,
+    "by_scorer": {
+      "detoxify": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6805,
+        "auc_tox_to_human": 0.6552,
+        "TC_behav_macro": 0.0531,
+        "TC_behav_macro_ci95": [
+          0.0363,
+          0.0692
+        ],
+        "frac_comm_gt0": 0.747,
+        "n_comm": 95
+      },
+      "toxigen": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6498,
+        "auc_tox_to_human": 0.6345,
+        "TC_behav_macro": 0.0354,
+        "TC_behav_macro_ci95": [
+          0.0187,
+          0.0532
+        ],
+        "frac_comm_gt0": 0.695,
+        "n_comm": 95
+      },
+      "s-nlp": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6777,
+        "auc_tox_to_human": 0.6483,
+        "TC_behav_macro": 0.0607,
+        "TC_behav_macro_ci95": [
+          0.0465,
+          0.0757
+        ],
+        "frac_comm_gt0": 0.8,
+        "n_comm": 95
+      },
+      "lexical": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.5775,
+        "auc_tox_to_human": 0.5568,
+        "TC_behav_macro": 0.03,
+        "TC_behav_macro_ci95": [
+          0.0214,
+          0.0388
+        ],
+        "frac_comm_gt0": 0.768,
+        "n_comm": 95
+      }
+    }
+  },
+  "dgemma26b": {
+    "status": "ok",
+    "n": 17508,
+    "by_scorer": {
+      "detoxify": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6723,
+        "auc_tox_to_human": 0.6552,
+        "TC_behav_macro": 0.0392,
+        "TC_behav_macro_ci95": [
+          0.0244,
+          0.0539
+        ],
+        "frac_comm_gt0": 0.716,
+        "n_comm": 95
+      },
+      "toxigen": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6407,
+        "auc_tox_to_human": 0.6345,
+        "TC_behav_macro": 0.024,
+        "TC_behav_macro_ci95": [
+          0.0082,
+          0.0393
+        ],
+        "frac_comm_gt0": 0.642,
+        "n_comm": 95
+      },
+      "s-nlp": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.6691,
+        "auc_tox_to_human": 0.6483,
+        "TC_behav_macro": 0.0458,
+        "TC_behav_macro_ci95": [
+          0.0321,
+          0.0594
+        ],
+        "frac_comm_gt0": 0.716,
+        "n_comm": 95
+      },
+      "lexical": {
+        "cov": 1.0,
+        "auc_tox_to_model": 0.5697,
+        "auc_tox_to_human": 0.5568,
+        "TC_behav_macro": 0.02,
+        "TC_behav_macro_ci95": [
+          0.0119,
+          0.028
+        ],
+        "frac_comm_gt0": 0.758,
+        "n_comm": 95
+      }
+    }
+  }
+}

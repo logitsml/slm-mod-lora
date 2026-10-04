@@ -1,0 +1,124 @@
+{
+  "analysis": "encoder_scale_ladder",
+  "protocol": "run_encoder 5-fold CV on full per-sub data (internally comparable across encoders)",
+  "points": [
+    {
+      "key": "tfidf",
+      "label": "TF-IDF",
+      "params": 0.0,
+      "family": "floor",
+      "median_auc": 0.7070804952279884,
+      "median_bacc": 0.644471527514951,
+      "n_subs": 94
+    },
+    {
+      "key": "minilm",
+      "label": "MiniLM",
+      "params": 22000000.0,
+      "family": "ref",
+      "median_auc": 0.7832430219428359,
+      "median_bacc": 0.7042230952796693,
+      "n_subs": 94
+    },
+    {
+      "key": "e5",
+      "label": "e5-large",
+      "params": 335000000.0,
+      "family": "ref",
+      "median_auc": 0.8216187919566651,
+      "median_bacc": 0.7392069615021584,
+      "n_subs": 94
+    },
+    {
+      "key": "mxbai_large",
+      "label": "mxbai-large",
+      "params": 335000000.0,
+      "family": "ref",
+      "median_auc": 0.803402442817102,
+      "median_bacc": 0.7262577582064714,
+      "n_subs": 94
+    },
+    {
+      "key": "gte",
+      "label": "GTE-large",
+      "params": 434000000.0,
+      "family": "ref",
+      "median_auc": 0.8084242585621535,
+      "median_bacc": 0.7319891309455193,
+      "n_subs": 94
+    },
+    {
+      "key": "gte_v15_large",
+      "label": "GTE-large-v1.5",
+      "params": 434000000.0,
+      "family": "ref",
+      "median_auc": 0.8122677064771444,
+      "median_bacc": 0.7343360474253282,
+      "n_subs": 94
+    },
+    {
+      "key": "qwen3_0_6b",
+      "label": "Qwen3-Emb 0.6B",
+      "params": 600000000.0,
+      "family": "qwen3",
+      "median_auc": 0.7674992871242121,
+      "median_bacc": 0.6955572581554554,
+      "n_subs": 94
+    },
+    {
+      "key": "qwen3_4b",
+      "label": "Qwen3-Emb 4B",
+      "params": 4000000000.0,
+      "family": "qwen3",
+      "median_auc": 0.7957018847379429,
+      "median_bacc": 0.7166446624065135,
+      "n_subs": 94
+    },
+    {
+      "key": "qwen3_8b",
+      "label": "Qwen3-Emb 8B",
+      "params": 8000000000.0,
+      "family": "qwen3",
+      "median_auc": 0.8058979896280113,
+      "median_bacc": 0.7170934456524014,
+      "n_subs": 94
+    },
+    {
+      "key": "harrier_270m",
+      "label": "Harrier 270M",
+      "params": 270000000.0,
+      "family": "harrier",
+      "median_auc": 0.7829611324350559,
+      "median_bacc": 0.7007422479818659,
+      "n_subs": 94
+    },
+    {
+      "key": "harrier_0_6b",
+      "label": "Harrier 0.6B",
+      "params": 600000000.0,
+      "family": "harrier",
+      "median_auc": 0.8036545250479598,
+      "median_bacc": 0.7260096881738053,
+      "n_subs": 94
+    }
+  ],
+  "slm_mod_ref_median_auc": 0.813844971453667,
+  "slm_mod_ref_caveat": "80/20 head-to-head protocol -- different from the 5-fold encoder ladder; rough locator only",
+  "interpretation": "Within-family scale curves on common-subreddit sets -- qwen3: Qwen3-Emb 0.6B (0.767)->Qwen3-Emb 8B (0.806) (+0.038, size helps); harrier: Harrier 270M (0.783)->Harrier 0.6B (0.804) (+0.021, size helps). Reference encoders: TF-IDF=0.707, MiniLM=0.783, e5-large=0.822, mxbai-large=0.803, GTE-large=0.808, GTE-large-v1.5=0.812",
+  "scale_trend_qwen3": {
+    "from": "Qwen3-Emb 0.6B (0.767)",
+    "to": "Qwen3-Emb 8B (0.806)",
+    "delta_auc": 0.0384,
+    "auc_per_10x_params": 0.0341,
+    "n_common_subs": 94,
+    "computed_on": "common-subreddit intersection across all qwen3 rungs (apples-to-apples)"
+  },
+  "scale_trend_harrier": {
+    "from": "Harrier 270M (0.783)",
+    "to": "Harrier 0.6B (0.804)",
+    "delta_auc": 0.0207,
+    "auc_per_10x_params": 0.0597,
+    "n_common_subs": 94,
+    "computed_on": "common-subreddit intersection across all harrier rungs (apples-to-apples)"
+  }
+}

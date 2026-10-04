@@ -1,0 +1,173 @@
+{
+  "analysis": "sae_extra_controls_necessity",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "16k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "n": 2000,
+  "n_subs": 95,
+  "n_in_B": 971,
+  "pool": "model-removed (gap_rules>0)",
+  "flip_rate": {
+    "all": {
+      "tox": 1.0,
+      "actfreq": 0.0885,
+      "decnorm": 0.0,
+      "dla": 0.001,
+      "perm": 0.0025,
+      "held": 1.0,
+      "base_decided": 2000
+    },
+    "human_keep": {
+      "tox": 1.0,
+      "actfreq": 0.13485477178423236,
+      "decnorm": 0.0,
+      "dla": 0.0,
+      "perm": 0.006224066390041493,
+      "held": 1.0,
+      "base_decided": 482
+    },
+    "human_remove": {
+      "tox": 1.0,
+      "actfreq": 0.07378129117259552,
+      "decnorm": 0.0,
+      "dla": 0.0013175230566534915,
+      "perm": 0.0013175230566534915,
+      "held": 1.0,
+      "base_decided": 1518
+    }
+  },
+  "mean_delta_gap_toward_keep": {
+    "tox": 20.883375,
+    "actfreq": 1.007375,
+    "decnorm": -12.6815,
+    "dla": -0.5796875,
+    "perm": 0.1415,
+    "held": 20.87275
+  },
+  "dissociation_tox_minus_control_ci95": {
+    "actfreq": {
+      "point": 0.9115,
+      "ci95": [
+        0.899,
+        0.9241
+      ]
+    },
+    "decnorm": {
+      "point": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "dla": {
+      "point": 0.999,
+      "ci95": [
+        0.9974,
+        1.0
+      ]
+    },
+    "perm": {
+      "point": 0.9975,
+      "ci95": [
+        0.9951,
+        0.9995
+      ]
+    }
+  },
+  "heldout_on_disjoint_B": {
+    "flip_tox_on_B": 1.0,
+    "flip_heldout_on_B": 1.0,
+    "flip_perm_on_B": 0.0010298661174047373,
+    "diss_heldout_minus_perm_on_B": {
+      "point": 0.999,
+      "ci95": [
+        0.9967,
+        1.0
+      ]
+    },
+    "diss_heldout_minus_tox_on_B": {
+      "point": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "note": "HELDOUT_TOX features were selected on disjoint half A; flip measured on half B => not selection-on-eval circular. heldout-minus-tox near 0 = no circularity penalty; heldout-minus-perm > 0 = real toxicity selection beats the null."
+  },
+  "position_localization": {
+    "n_target_resolved": 2000,
+    "flip_tox_all_positions": 1.0,
+    "flip_tox_target_only": 0.0025,
+    "flip_tox_nontarget_only": 1.0,
+    "diss_target_minus_nontarget": {
+      "point": -0.9975,
+      "ci95": [
+        -0.9995,
+        -0.9953
+      ]
+    },
+    "note": "Ablating toxicity ONLY in the target comment vs ONLY outside it (rules, the few-shot demo, and the post-comment decision region). Observed: non-target-only matches all-positions (~1.0) while target-only is near zero, so by the ablated layers (L24+) the toxicity signal driving the flip has already propagated to the post-comment readout positions. The flip is not produced by damaging the target comment's own tokens, consistent with the position-resolved probe placing necessity in the decision region."
+  },
+  "match_quality_from_freeze": {
+    "L24": {
+      "fire_tox_mean": 0.2994,
+      "fire_actfreq_mean": 0.2921,
+      "decnorm_tox_mean": 1.0,
+      "decnorm_match_mean": 1.0,
+      "absdla_tox_mean": 0.2021,
+      "absdla_match_mean": 0.2039,
+      "rtox_actfreq_mean": 0.0402,
+      "rtox_decnorm_mean": 0.0121,
+      "rtox_dla_mean": 0.0196,
+      "rtox_perm_mean": 0.0,
+      "rtox_held_mean": 0.3673,
+      "rgap_tox_mean": 0.515,
+      "rgap_perm_mean": 0.0,
+      "rgap_actfreq_mean": 0.1591,
+      "rgap_dla_mean": 0.0619,
+      "held_vs_tox_overlap": 8
+    },
+    "L31": {
+      "fire_tox_mean": 0.3738,
+      "fire_actfreq_mean": 0.3848,
+      "decnorm_tox_mean": 1.0,
+      "decnorm_match_mean": 1.0,
+      "absdla_tox_mean": 0.279,
+      "absdla_match_mean": 0.3551,
+      "rtox_actfreq_mean": 0.0593,
+      "rtox_decnorm_mean": 0.0152,
+      "rtox_dla_mean": 0.0132,
+      "rtox_perm_mean": 0.0061,
+      "rtox_held_mean": 0.4944,
+      "rgap_tox_mean": 0.7942,
+      "rgap_perm_mean": 0.0051,
+      "rgap_actfreq_mean": 0.1703,
+      "rgap_dla_mean": 0.0198,
+      "held_vs_tox_overlap": 10
+    },
+    "L41": {
+      "fire_tox_mean": 0.6435,
+      "fire_actfreq_mean": 0.4829,
+      "decnorm_tox_mean": 1.0,
+      "decnorm_match_mean": 1.0,
+      "absdla_tox_mean": 0.9544,
+      "absdla_match_mean": 0.4072,
+      "rtox_actfreq_mean": 0.0394,
+      "rtox_decnorm_mean": 0.0283,
+      "rtox_dla_mean": 0.015,
+      "rtox_perm_mean": 0.0,
+      "rtox_held_mean": 0.434,
+      "rgap_tox_mean": 0.8717,
+      "rgap_perm_mean": 0.0,
+      "rgap_actfreq_mean": 0.1783,
+      "rgap_dla_mean": 0.0199,
+      "held_vs_tox_overlap": 10
+    }
+  },
+  "interpretation": "Each control isolates one alternative explanation for the ~100% toxicity flip: actfreq=firing-rate, decnorm=residual-edit-size (VACUOUS: Gemma Scope decoders are unit-norm, so this is just another matched non-tox set), dla=decision-readout magnitude (matched at L24/L31; at L41 no non-tox feature reaches toxicity's DLA, so the L41 DLA control is a LOWER BOUND, not a true match -- itself evidence that toxicity uniquely owns the readout), perm=selection-procedure null (check rgap_perm_mean: a clean null also has low r_gap), held=selection circularity. Toxicity necessity is robust iff flip(tox)-flip(control) CI95>0 for the matched controls, perm flips ~like random, and heldout_tox still flips B (heldout-minus-tox CI ~ 0)."
+}

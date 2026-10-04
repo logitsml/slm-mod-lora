@@ -1,0 +1,940 @@
+{
+ "analysis": "fairness_compare",
+ "shared_split": "slm_mod_split.parquet",
+ "cost_model": {
+  "encoder_e5": {
+   "measured_ms_per_comment": 0.52,
+   "train": "logistic head, CPU-seconds/sub",
+   "vram_gb": 1.4,
+   "note": "measured e5 encoder forward pass on matched L40S stack"
+  },
+  "tfidf": {
+   "train": "CPU-seconds/sub",
+   "vram_gb": 0.0,
+   "note": "no matched L40S price point computed"
+  },
+  "slm_mod": {
+   "measured_ms_per_comment": 63.8,
+   "train": "bf16 LoRA fine-tune ~5-15 GPU-min/sub x 95 subs",
+   "vram_gb": 13.0,
+   "note": "measured Llama-3.1-8B forward pass; excludes fine-tuning cost"
+  },
+  "llm_zeroshot_gemma": {
+   "measured_ms_per_comment": 132.3,
+   "train": "none",
+   "vram_gb": 13.0,
+   "note": "measured Gemma-3-12B forward pass"
+  },
+  "llm_zeroshot_llama": {
+   "measured_ms_per_comment": 63.8,
+   "train": "none",
+   "vram_gb": 13.0,
+   "note": "measured Llama-3.1-8B forward pass"
+  },
+  "uncomputed": {
+   "train": "varies",
+   "vram_gb": null,
+   "note": "no direct matched L40S price point computed"
+  }
+ },
+ "by_method": {
+  "llm_zeroshot_gemma": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.6650726617811451,
+    "ci95": [
+     0.6411271808999082,
+     0.6937059142702118
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6795517050375248,
+    "ci95": [
+     0.6670236783082946,
+     0.6958145052114885
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.1368,
+   "frac_subs_certify_0.95_precision": 0.0421,
+   "frac_subs_certify_0.90_precision_heldout": 0.0638,
+   "frac_subs_certify_0.95_precision_heldout": 0.0106,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 1,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6808608058608059,
+    "ci95": [
+     0.6675169388989716,
+     0.7143181818181819
+    ]
+   },
+   "mcc": {
+    "median": 0.3928354163793632,
+    "ci95": [
+     0.34634536876838157,
+     0.42986903823062844
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.040109868703003856,
+    "ci95": [
+     0.028590971272229822,
+     0.05544535905024184
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.680860805860806,
+    "ci95": [
+     0.6675169388989716,
+     0.7143181818181819
+    ]
+   },
+   "rating_coverage": 0.5327,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": 0.03676055,
+    "measured_ms_per_comment": 132.3,
+    "train": "none",
+    "vram_gb": 13.0,
+    "note": "measured Gemma-3-12B forward pass"
+   }
+  },
+  "llm_fewshot_gemma": {
+   "n_subs": 94,
+   "bal_auc": {
+    "median": 0.7131910009721307,
+    "ci95": [
+     0.687935174069628,
+     0.7291379310344828
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6997158598137256,
+    "ci95": [
+     0.6702162388497276,
+     0.7074946269391055
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.1064,
+   "frac_subs_certify_0.95_precision": 0.0106,
+   "frac_subs_certify_0.90_precision_heldout": 0.0532,
+   "frac_subs_certify_0.95_precision_heldout": 0.0,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 0,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.7018885869565217,
+    "ci95": [
+     0.684169467867692,
+     0.7198957771470411
+    ]
+   },
+   "mcc": {
+    "median": 0.4156587264873113,
+    "ci95": [
+     0.366753893111247,
+     0.442688165063266
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.030007617234215855,
+    "ci95": [
+     0.025867366581768643,
+     0.04735479725000051
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.7018885869565217,
+    "ci95": [
+     0.684169467867692,
+     0.7198957771470411
+    ]
+   },
+   "rating_coverage": 0.7811,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "llm_zeroshot_llama": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.7050555555555555,
+    "ci95": [
+     0.6804430379746835,
+     0.7313641245972073
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6941393074253486,
+    "ci95": [
+     0.6782053139740414,
+     0.7099702069956949
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.1684,
+   "frac_subs_certify_0.95_precision": 0.0526,
+   "frac_subs_certify_0.90_precision_heldout": 0.0957,
+   "frac_subs_certify_0.95_precision_heldout": 0.0213,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 1,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6849339735894358,
+    "ci95": [
+     0.661578947368421,
+     0.7114075537988582
+    ]
+   },
+   "mcc": {
+    "median": 0.37562652600113,
+    "ci95": [
+     0.34255954782729625,
+     0.4347700046832025
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.03699604286808032,
+    "ci95": [
+     0.02697047198325971,
+     0.06047303908877975
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6849339735894358,
+    "ci95": [
+     0.661578947368421,
+     0.7114075537988581
+    ]
+   },
+   "rating_coverage": 0.97,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": 0.017729725,
+    "measured_ms_per_comment": 63.8,
+    "train": "none",
+    "vram_gb": 13.0,
+    "note": "measured Llama-3.1-8B forward pass"
+   }
+  },
+  "llm_fewshot_llama": {
+   "n_subs": 94,
+   "bal_auc": {
+    "median": 0.7003260743658056,
+    "ci95": [
+     0.685816292034055,
+     0.7161387462558837
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6809504032011313,
+    "ci95": [
+     0.6660021288046674,
+     0.6875574001771704
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.0426,
+   "frac_subs_certify_0.95_precision": 0.0106,
+   "frac_subs_certify_0.90_precision_heldout": 0.0106,
+   "frac_subs_certify_0.95_precision_heldout": 0.0,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 0,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6877559169449687,
+    "ci95": [
+     0.6782086248219361,
+     0.7060439560439561
+    ]
+   },
+   "mcc": {
+    "median": 0.3903320001667153,
+    "ci95": [
+     0.3592365901780572,
+     0.41762759249127945
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.028727053875156745,
+    "ci95": [
+     0.01920954362949142,
+     0.04278114319356947
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6877559169449687,
+    "ci95": [
+     0.6782086248219361,
+     0.706043956043956
+    ]
+   },
+   "rating_coverage": 0.9928,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "llm_zeroshot_qwen": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.6760555234239444,
+    "ci95": [
+     0.6536082474226804,
+     0.7026744186046511
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6706361692973893,
+    "ci95": [
+     0.6553462344326896,
+     0.6959446298566236
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.2316,
+   "frac_subs_certify_0.95_precision": 0.1263,
+   "frac_subs_certify_0.90_precision_heldout": 0.0957,
+   "frac_subs_certify_0.95_precision_heldout": 0.0426,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 1,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6736585365853658,
+    "ci95": [
+     0.658026976116549,
+     0.6942930699925611
+    ]
+   },
+   "mcc": {
+    "median": 0.36446519178406167,
+    "ci95": [
+     0.31183876838089297,
+     0.38918306534088715
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.03767653960242618,
+    "ci95": [
+     0.02728385705124468,
+     0.049760195483449066
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6736585365853658,
+    "ci95": [
+     0.658026976116549,
+     0.694293069992561
+    ]
+   },
+   "rating_coverage": 0.8665,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "llm_fewshot_qwen": {
+   "n_subs": 94,
+   "bal_auc": {
+    "median": 0.6885828392621871,
+    "ci95": [
+     0.6756638139126618,
+     0.7064072719210731
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6812580468258012,
+    "ci95": [
+     0.6575792059201513,
+     0.704136066551381
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.3617,
+   "frac_subs_certify_0.95_precision": 0.1915,
+   "frac_subs_certify_0.90_precision_heldout": 0.1915,
+   "frac_subs_certify_0.95_precision_heldout": 0.117,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 0,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6738559508124726,
+    "ci95": [
+     0.6595744680851063,
+     0.6969277059336217
+    ]
+   },
+   "mcc": {
+    "median": 0.35503566586726243,
+    "ci95": [
+     0.3266668804911531,
+     0.40125260621139247
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.035262761298833135,
+    "ci95": [
+     0.024423901763005833,
+     0.04794035288957862
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6738559508124726,
+    "ci95": [
+     0.6595744680851063,
+     0.6969277059336216
+    ]
+   },
+   "rating_coverage": 0.9631,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "llm_zeroshot_gemma4_12b": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.7,
+    "ci95": [
+     0.6666666666666666,
+     0.7222222222222222
+    ]
+   },
+   "pr_auc": {
+    "median": 0.7236842105263157,
+    "ci95": [
+     0.6944444444444444,
+     0.7543859649122807
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.5368,
+   "frac_subs_certify_0.95_precision": 0.5368,
+   "frac_subs_certify_0.90_precision_heldout": 0.3404,
+   "frac_subs_certify_0.95_precision_heldout": 0.3368,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6875,
+    "ci95": [
+     0.6515151515151515,
+     0.7222222222222222
+    ]
+   },
+   "mcc": {
+    "median": 0.37777777777777777,
+    "ci95": [
+     0.3286878675669582,
+     0.4444444444444444
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.07396449704142012,
+    "ci95": [
+     0.04085603112840467,
+     0.14705882352941177
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6875,
+    "ci95": [
+     0.6515151515151516,
+     0.7222222222222222
+    ]
+   },
+   "rating_coverage": 0.806,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "llm_zeroshot_qwen36_27b": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.6181325301204819,
+    "ci95": [
+     0.5970253164556962,
+     0.6413043478260869
+    ]
+   },
+   "pr_auc": {
+    "median": 0.6650248939483164,
+    "ci95": [
+     0.6475266886729016,
+     0.6786715073729567
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.4842,
+   "frac_subs_certify_0.95_precision": 0.2421,
+   "frac_subs_certify_0.90_precision_heldout": 0.266,
+   "frac_subs_certify_0.95_precision_heldout": 0.1489,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 1,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6683673469387755,
+    "ci95": [
+     0.6468745921962678,
+     0.6873584905660377
+    ]
+   },
+   "mcc": {
+    "median": 0.3757387465255713,
+    "ci95": [
+     0.34045478483690017,
+     0.4231432212681977
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.0823196286565566,
+    "ci95": [
+     0.0650046747601495,
+     0.09983115238497256
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": 0.6683673469387755,
+    "ci95": [
+     0.6468745921962679,
+     0.6873584905660378
+    ]
+   },
+   "rating_coverage": 0.6195,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "varies",
+    "vram_gb": null,
+    "note": "no direct matched L40S price point computed"
+   }
+  },
+  "slm_mod": {
+   "n_subs": 95,
+   "bal_auc": {
+    "median": 0.813844971453667,
+    "ci95": [
+     0.7873791621911924,
+     0.827529657035471
+    ]
+   },
+   "pr_auc": {
+    "median": 0.8310234212209366,
+    "ci95": [
+     0.8040035322363095,
+     0.8484474820763043
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.8632,
+   "frac_subs_certify_0.95_precision": 0.7789,
+   "frac_subs_certify_0.90_precision_heldout": 0.2979,
+   "frac_subs_certify_0.95_precision_heldout": 0.1596,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 1,
+    "n_excl_trivial_baserate_0.95": 1,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.7180851063829787,
+    "ci95": [
+     0.7005494505494505,
+     0.737710843373494
+    ]
+   },
+   "mcc": {
+    "median": 0.46379861688890867,
+    "ci95": [
+     0.418908489323674,
+     0.4932973508617691
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.04538585728780472,
+    "ci95": [
+     0.02947557246134062,
+     0.06566354883577068
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": null,
+    "ci95": [
+     null,
+     null
+    ],
+    "note": "native continuous score -- no binary fallback"
+   },
+   "rating_coverage": null,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": 0.017729725,
+    "measured_ms_per_comment": 63.8,
+    "train": "bf16 LoRA fine-tune ~5-15 GPU-min/sub x 95 subs",
+    "vram_gb": 13.0,
+    "note": "measured Llama-3.1-8B forward pass; excludes fine-tuning cost"
+   }
+  },
+  "encoder_e5": {
+   "n_subs": 94,
+   "bal_auc": {
+    "median": 0.8259249889789726,
+    "ci95": [
+     0.8023308249997365,
+     0.8343144730822021
+    ]
+   },
+   "pr_auc": {
+    "median": 0.8334569576180408,
+    "ci95": [
+     0.8180039067904517,
+     0.8460369506520694
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.9362,
+   "frac_subs_certify_0.95_precision": 0.8723,
+   "frac_subs_certify_0.90_precision_heldout": 0.2021,
+   "frac_subs_certify_0.95_precision_heldout": 0.1383,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 0,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.7384975520195839,
+    "ci95": [
+     0.7277777777777777,
+     0.7545944911766219
+    ]
+   },
+   "mcc": {
+    "median": 0.48627030625884005,
+    "ci95": [
+     0.46175334112768024,
+     0.5204307374509964
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.031025480271489134,
+    "ci95": [
+     0.023516722423005933,
+     0.04758167677734789
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": null,
+    "ci95": [
+     null,
+     null
+    ],
+    "note": "native continuous score -- no binary fallback"
+   },
+   "rating_coverage": null,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": 0.000145075,
+    "measured_ms_per_comment": 0.52,
+    "train": "logistic head, CPU-seconds/sub",
+    "vram_gb": 1.4,
+    "note": "measured e5 encoder forward pass on matched L40S stack"
+   }
+  },
+  "tfidf": {
+   "n_subs": 94,
+   "bal_auc": {
+    "median": 0.7211227764514684,
+    "ci95": [
+     0.6940710380579564,
+     0.7397959183673468
+    ]
+   },
+   "pr_auc": {
+    "median": 0.7396545897654765,
+    "ci95": [
+     0.7166903124940596,
+     0.7524483860155365
+    ]
+   },
+   "frac_subs_certify_0.90_precision": 0.7872,
+   "frac_subs_certify_0.95_precision": 0.6064,
+   "frac_subs_certify_0.90_precision_heldout": 0.0957,
+   "frac_subs_certify_0.95_precision_heldout": 0.0851,
+   "cert_heldout_meta": {
+    "n_excl_trivial_baserate_0.90": 0,
+    "n_excl_trivial_baserate_0.95": 0,
+    "in_sample_is": "feasibility upper bound (oracle threshold) -- not for paper"
+   },
+   "balanced_acc_natural_threshold": {
+    "median": 0.6513985354392825,
+    "ci95": [
+     0.6255263157894737,
+     0.6637804878048781
+    ]
+   },
+   "mcc": {
+    "median": 0.3133914406238631,
+    "ci95": [
+     0.28227704114160596,
+     0.34426518632954817
+    ]
+   },
+   "precision_at_natural_prevalence": {
+    "median": 0.022329854908480044,
+    "ci95": [
+     0.014743745614753086,
+     0.03631750912239414
+    ]
+   },
+   "bal_auc_binary_score": {
+    "median": null,
+    "ci95": [
+     null,
+     null
+    ],
+    "note": "native continuous score -- no binary fallback"
+   },
+   "rating_coverage": null,
+   "threshold_free_headline": [
+    "bal_auc",
+    "pr_auc",
+    "frac_subs_certify_0.90_precision_heldout",
+    "frac_subs_certify_0.95_precision_heldout"
+   ],
+   "threshold_dependent_secondary": [
+    "balanced_acc_natural_threshold",
+    "mcc",
+    "precision_at_natural_prevalence"
+   ],
+   "cost": {
+    "usd_per_1k_infer": null,
+    "train": "CPU-seconds/sub",
+    "vram_gb": 0.0,
+    "note": "no matched L40S price point computed"
+   }
+  }
+ },
+ "provenance": {
+  "scoring": "single BOS at inference for the LLM and SLM-Mod arms; cert uses held-out nested-CV thresholds.",
+  "paper_numbers": "quote bal_auc / pr_auc and frac_subs_certify_*_heldout; the in-sample frac_subs_certify_* fields are a feasibility upper bound, diagnostic only.",
+  "validity_requires": "llm_gemma/llm_llama parquets from run_llm and slm_mod_test.parquet from run_slm_mod."
+ },
+ "scoring_protocol": {
+  "graded_score": "UNIFORM parity rule, identical for every LLM (no by-name branching): graded score = the 1..5 rating where present-in-[1,5], else a scale-matched binary fallback (keep -> 0 below the range, remove -> 6 above it). encoder/SLM/TF-IDF use their native continuous score.",
+  "row_set": "all methods on the same fixed 80/20 test fold, joined on (subreddit, idx); LLM rows with an unparsed would_moderate dropped (<1%); see row_set_audit.",
+  "thresholding": "THRESHOLD-FREE metrics (bal_auc, pr_auc, cert@0.90/0.95) are the comparable headline and the basis for ranking methods; THRESHOLD-DEPENDENT metrics (balanced_acc, mcc, prec@nat-prev) are at each method's NATIVE operating point -- deployment-realistic per-method but NOT cross-method comparable, so do not rank by them.",
+  "audit_columns": "rating_coverage + bal_auc_binary_score expose the gemma MNAR rating-omission and show the graded score's added value (or lack of it) over the binary."
+ },
+ "row_set_audit": {
+  "n_common_rows": 1487,
+  "by_method": {
+   "llm_zeroshot_gemma": {
+    "n_rows": 17502,
+    "n_subs": 95,
+    "n_rows_outside_common": 16015
+   },
+   "llm_fewshot_gemma": {
+    "n_rows": 17407,
+    "n_subs": 94,
+    "n_rows_outside_common": 15920
+   },
+   "llm_zeroshot_llama": {
+    "n_rows": 17506,
+    "n_subs": 95,
+    "n_rows_outside_common": 16019
+   },
+   "llm_fewshot_llama": {
+    "n_rows": 17408,
+    "n_subs": 94,
+    "n_rows_outside_common": 15921
+   },
+   "llm_zeroshot_qwen": {
+    "n_rows": 17383,
+    "n_subs": 95,
+    "n_rows_outside_common": 15896
+   },
+   "llm_fewshot_qwen": {
+    "n_rows": 17403,
+    "n_subs": 94,
+    "n_rows_outside_common": 15916
+   },
+   "llm_zeroshot_gemma4_12b": {
+    "n_rows": 1505,
+    "n_subs": 95,
+    "n_rows_outside_common": 18
+   },
+   "llm_zeroshot_qwen36_27b": {
+    "n_rows": 17508,
+    "n_subs": 95,
+    "n_rows_outside_common": 16021
+   },
+   "slm_mod": {
+    "n_rows": 17508,
+    "n_subs": 95,
+    "n_rows_outside_common": 16021
+   },
+   "encoder_e5": {
+    "n_rows": 17408,
+    "n_subs": 94,
+    "n_rows_outside_common": 15921
+   },
+   "tfidf": {
+    "n_rows": 17408,
+    "n_subs": 94,
+    "n_rows_outside_common": 15921
+   }
+  }
+ },
+ "encoder_minus_slmmod_balAUC": {
+  "n_shared_subs": 94,
+  "median_delta": 0.008752011678570537,
+  "ci95": [
+   0.0007260055176419034,
+   0.015645161290322562
+  ],
+  "encoder_wins_frac": 0.6382978723404256
+ },
+ "cost_model_derived": {
+  "lineage": "matched L40S timing run",
+  "reported_regime": "measured forward-pass cost only",
+  "measured_price_points": {
+   "e5_encoder": {
+    "ms_per_comment": 0.52,
+    "usd_per_1k": 0.000145075
+   },
+   "llama_3_1_8b_forward": {
+    "ms_per_comment": 63.8,
+    "usd_per_1k": 0.017729725
+   },
+   "gemma_3_12b_forward": {
+    "ms_per_comment": 132.3,
+    "usd_per_1k": 0.03676055
+   }
+  },
+  "note": "Rows without one of these measured forward passes retain null cost rather than copied estimates."
+ }
+}

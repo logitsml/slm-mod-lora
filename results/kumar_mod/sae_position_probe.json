@@ -1,0 +1,83 @@
+{
+  "analysis": "sae_necessity_position_disentangle",
+  "model": "google/gemma-3-12b-it",
+  "sae": "google/gemma-scope-2-12b-it",
+  "width": "16k",
+  "layers": [
+    24,
+    31,
+    41
+  ],
+  "n": 2000,
+  "n_subs": 95,
+  "pool": "model-removed (gap_rules>0)",
+  "n_segment_resolved": {
+    "rules": 2000,
+    "demo": 2000,
+    "comment": 2000,
+    "decision": 2000,
+    "comment_plus_decision": 2000
+  },
+  "flip_rate": {
+    "all": 1.0,
+    "rules": 0.0065,
+    "demo": 0.0025,
+    "comment": 0.0025,
+    "decision": 0.9635,
+    "comment_plus_decision": 0.965
+  },
+  "flip_ci95": {
+    "all": [
+      1.0,
+      1.0
+    ],
+    "rules": [
+      0.0031,
+      0.0105
+    ],
+    "demo": [
+      0.0005,
+      0.0047
+    ],
+    "comment": [
+      0.0005,
+      0.0049
+    ],
+    "decision": [
+      0.95,
+      0.9762
+    ],
+    "comment_plus_decision": [
+      0.9514,
+      0.9771
+    ]
+  },
+  "mean_seglen": {
+    "rules": 460.2,
+    "demo": 5.0,
+    "comment": 44.4,
+    "decision": 131.3,
+    "comment_plus_decision": 175.8
+  },
+  "interpretation": "flip(demo)~0 => few-shot demo not the driver (confound refuted); flip(comment_plus_decision)~flip(all) => target comment + its readout drives it; flip(comment)<<flip(decision) => toxicity read out downstream of the comment.",
+  "tox_activation_mean_by_segment": {
+    "rules": 393715.05,
+    "demo": 1970.643,
+    "comment": 36533.946,
+    "decision": 563895.814,
+    "comment_plus_decision": 600429.758
+  },
+  "tox_activation_share_by_segment": {
+    "rules": 0.2466,
+    "demo": 0.0012,
+    "comment": 0.0229,
+    "decision": 0.3532,
+    "comment_plus_decision": 0.3761
+  },
+  "comment_ablation_firing_check": {
+    "flip_comment_all": 0.0025,
+    "flip_comment_top_quartile_body_toxic": 0.006,
+    "mean_comment_tox_activation": 36533.946,
+    "note": "Manipulation check. If comment-ablation flips the body-toxic top quartile but not the rest, comment-inertness simply reflects low toxicity-feature firing on most comments, as expected. A flat top quartile would instead indicate the intervention is not reaching the comment span."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tag": "gemma4_26b_a4b",
+  "model": "google/gemma-4-26B-A4B-it",
+  "n": 17508,
+  "n_subs": 95,
+  "argmax_ok": 1.0,
+  "bal_auc_logitgap_median": 0.7687,
+  "pr_auc_logitgap_median": 0.7965,
+  "note": "FULL test fold (no subsample); yes/no logit gap; device_map=auto multi-card (logits identical to the single-card load used for gemma4 / the other 3 families)"
+}

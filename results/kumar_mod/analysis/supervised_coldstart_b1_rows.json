@@ -1,0 +1,1448 @@
+{
+  "analysis": "supervised_coldstart_B1_toxicity_dominance_rows",
+  "definition": "per-community AUC(Detoxify tox_toxicity -> committed model decision) minus AUC(Detoxify tox_toxicity -> recorded moderator removal), macro over eligible communities; 2000 community-bootstrap reps for CI",
+  "decision_thresholds": {
+    "SLM-Mod": "would_moderate field",
+    "e5 + head": "held-out per-community logistic probability >= 0.5",
+    "cross-community encoder": "global-head score >= 0.5"
+  },
+  "systems": {
+    "SLM-Mod": {
+      "n_rows": 17508,
+      "n_comm": 90,
+      "auc_tox_to_model_macro": 0.7451800731489446,
+      "auc_tox_to_moderator_macro": 0.6685765010844839,
+      "TC_behav_macro": 0.07660357206446083,
+      "TC_behav_macro_ci95": [
+        0.06211920890821943,
+        0.0911493655980654
+      ],
+      "frac_comm_gt0": 0.9111111111111111,
+      "per_community": [
+        {
+          "subreddit": "2007scape",
+          "auc_tox_to_model": 0.8671328671328672,
+          "auc_tox_to_moderator": 0.7830998153578798
+        },
+        {
+          "subreddit": "Android",
+          "auc_tox_to_model": 0.8361981799797775,
+          "auc_tox_to_moderator": 0.7855263157894737
+        },
+        {
+          "subreddit": "AskHistorians",
+          "auc_tox_to_model": 0.7488721804511278,
+          "auc_tox_to_moderator": 0.660188679245283
+        },
+        {
+          "subreddit": "AskReddit",
+          "auc_tox_to_model": 0.6666666666666666,
+          "auc_tox_to_moderator": 0.529873200085966
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "auc_tox_to_model": 0.6740672217082948,
+          "auc_tox_to_moderator": 0.6881176470588234
+        },
+        {
+          "subreddit": "AskWomen",
+          "auc_tox_to_model": 0.614705180233946,
+          "auc_tox_to_moderator": 0.586117963668984
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "auc_tox_to_model": 0.6536019536019536,
+          "auc_tox_to_moderator": 0.5423803249890207
+        },
+        {
+          "subreddit": "CFB",
+          "auc_tox_to_model": 0.840452847805789,
+          "auc_tox_to_moderator": 0.7206804891015417
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "auc_tox_to_model": 0.7079104865990112,
+          "auc_tox_to_moderator": 0.6753582334977684
+        },
+        {
+          "subreddit": "Christianity",
+          "auc_tox_to_model": 0.8363616581438365,
+          "auc_tox_to_moderator": 0.7156521739130435
+        },
+        {
+          "subreddit": "DIY",
+          "auc_tox_to_model": 0.7772967772967773,
+          "auc_tox_to_moderator": 0.732440685929058
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "auc_tox_to_model": 0.8129701390471848,
+          "auc_tox_to_moderator": 0.7164948453608246
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "auc_tox_to_model": 0.8108108108108107,
+          "auc_tox_to_moderator": 0.6616949936408832
+        },
+        {
+          "subreddit": "Futurology",
+          "auc_tox_to_model": 0.795927705330588,
+          "auc_tox_to_moderator": 0.7004597701149425
+        },
+        {
+          "subreddit": "Games",
+          "auc_tox_to_model": 0.7296143066862405,
+          "auc_tox_to_moderator": 0.6384883720930232
+        },
+        {
+          "subreddit": "GetMotivated",
+          "auc_tox_to_model": 0.8064516129032259,
+          "auc_tox_to_moderator": 0.7062921348314607
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "auc_tox_to_model": 0.6630130312994763,
+          "auc_tox_to_moderator": 0.657608695652174
+        },
+        {
+          "subreddit": "IAmA",
+          "auc_tox_to_model": 0.6839477726574501,
+          "auc_tox_to_moderator": 0.6983963344788088
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "auc_tox_to_model": 0.7270021645021645,
+          "auc_tox_to_moderator": 0.5803333333333334
+        },
+        {
+          "subreddit": "LifeProTips",
+          "auc_tox_to_model": 0.7884615384615384,
+          "auc_tox_to_moderator": 0.707290294246816
+        },
+        {
+          "subreddit": "MMA",
+          "auc_tox_to_model": 0.8336711711711711,
+          "auc_tox_to_moderator": 0.7476943346508563
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "auc_tox_to_model": 0.3217526942711288,
+          "auc_tox_to_moderator": 0.39639901263249594
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "auc_tox_to_model": 0.8361936193619361,
+          "auc_tox_to_moderator": 0.7516469038208169
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "auc_tox_to_model": 0.7261194029850746,
+          "auc_tox_to_moderator": 0.6163218390804598
+        },
+        {
+          "subreddit": "Overwatch",
+          "auc_tox_to_model": 0.8109634551495017,
+          "auc_tox_to_moderator": 0.7969949550339988
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "auc_tox_to_model": 0.6480046269519953,
+          "auc_tox_to_moderator": 0.6197608266573784
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "auc_tox_to_model": 0.7226666666666666,
+          "auc_tox_to_moderator": 0.6660015519343754
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "auc_tox_to_model": 0.5504352278545828,
+          "auc_tox_to_moderator": 0.5314942528735632
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "auc_tox_to_model": 0.8133333333333334,
+          "auc_tox_to_moderator": 0.664002664002664
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "auc_tox_to_model": 0.7899159663865545,
+          "auc_tox_to_moderator": 0.7148936170212766
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "auc_tox_to_model": 0.5562718531468531,
+          "auc_tox_to_moderator": 0.5656521739130436
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "auc_tox_to_model": 0.7828571428571429,
+          "auc_tox_to_moderator": 0.7346250000000001
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "auc_tox_to_model": 0.8439285714285715,
+          "auc_tox_to_moderator": 0.7077837195484254
+        },
+        {
+          "subreddit": "anime",
+          "auc_tox_to_model": 0.9054054054054054,
+          "auc_tox_to_moderator": 0.6242045205178844
+        },
+        {
+          "subreddit": "askscience",
+          "auc_tox_to_model": 0.7360261117911057,
+          "auc_tox_to_moderator": 0.6833333333333332
+        },
+        {
+          "subreddit": "asoiaf",
+          "auc_tox_to_model": 0.8186066270178419,
+          "auc_tox_to_moderator": 0.7113684210526315
+        },
+        {
+          "subreddit": "atheism",
+          "auc_tox_to_model": 0.7140423719791335,
+          "auc_tox_to_moderator": 0.6672340425531915
+        },
+        {
+          "subreddit": "aww",
+          "auc_tox_to_model": 0.9194544518785384,
+          "auc_tox_to_moderator": 0.6451612903225806
+        },
+        {
+          "subreddit": "books",
+          "auc_tox_to_model": 0.8503850385038505,
+          "auc_tox_to_moderator": 0.8047870004391743
+        },
+        {
+          "subreddit": "canada",
+          "auc_tox_to_model": 0.8550756174518551,
+          "auc_tox_to_moderator": 0.7387857065276422
+        },
+        {
+          "subreddit": "changemyview",
+          "auc_tox_to_model": 0.6756756756756757,
+          "auc_tox_to_moderator": 0.6197894736842106
+        },
+        {
+          "subreddit": "churning",
+          "auc_tox_to_model": 0.7463310002257846,
+          "auc_tox_to_moderator": 0.719753086419753
+        },
+        {
+          "subreddit": "conspiracy",
+          "auc_tox_to_model": 0.8299082781841403,
+          "auc_tox_to_moderator": 0.7843681350445139
+        },
+        {
+          "subreddit": "creepyPMs",
+          "auc_tox_to_model": 0.6739333540952974,
+          "auc_tox_to_moderator": 0.5571590909090909
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "auc_tox_to_model": 0.6694226077527785,
+          "auc_tox_to_moderator": 0.6661739344666174
+        },
+        {
+          "subreddit": "depression",
+          "auc_tox_to_model": 0.6316933638443936,
+          "auc_tox_to_moderator": 0.6189164370982553
+        },
+        {
+          "subreddit": "europe",
+          "auc_tox_to_model": 0.8171185539606592,
+          "auc_tox_to_moderator": 0.729438202247191
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "auc_tox_to_model": 0.6157526683842474,
+          "auc_tox_to_moderator": 0.702991452991453
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "auc_tox_to_model": 0.772020725388601,
+          "auc_tox_to_moderator": 0.6108452950558214
+        },
+        {
+          "subreddit": "food",
+          "auc_tox_to_model": 0.7230096858020316,
+          "auc_tox_to_moderator": 0.6861639652337326
+        },
+        {
+          "subreddit": "funny",
+          "auc_tox_to_model": 0.952247191011236,
+          "auc_tox_to_moderator": 0.6548211036992116
+        },
+        {
+          "subreddit": "gameofthrones",
+          "auc_tox_to_model": 0.6684050412863972,
+          "auc_tox_to_moderator": 0.6401111111111111
+        },
+        {
+          "subreddit": "gaming",
+          "auc_tox_to_model": 0.6896551724137931,
+          "auc_tox_to_moderator": 0.5897686542847833
+        },
+        {
+          "subreddit": "gifs",
+          "auc_tox_to_model": 0.6865384615384615,
+          "auc_tox_to_moderator": 0.5333034312626148
+        },
+        {
+          "subreddit": "hearthstone",
+          "auc_tox_to_model": 0.6706822657245454,
+          "auc_tox_to_moderator": 0.6616471678443183
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "auc_tox_to_model": 0.6269286403085824,
+          "auc_tox_to_moderator": 0.6126666666666666
+        },
+        {
+          "subreddit": "hiphopheads",
+          "auc_tox_to_model": 0.6474912112496004,
+          "auc_tox_to_moderator": 0.5198726394378568
+        },
+        {
+          "subreddit": "history",
+          "auc_tox_to_model": 0.7033333333333333,
+          "auc_tox_to_moderator": 0.7053164556962026
+        },
+        {
+          "subreddit": "jailbreak",
+          "auc_tox_to_model": 0.767072463768116,
+          "auc_tox_to_moderator": 0.7481161347517732
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "auc_tox_to_model": 0.8171933401291198,
+          "auc_tox_to_moderator": 0.7166167166167167
+        },
+        {
+          "subreddit": "legaladvice",
+          "auc_tox_to_model": 0.7958062345817448,
+          "auc_tox_to_moderator": 0.6508988764044943
+        },
+        {
+          "subreddit": "me_irl",
+          "auc_tox_to_model": 0.6948523957869751,
+          "auc_tox_to_moderator": 0.6233333333333334
+        },
+        {
+          "subreddit": "movies",
+          "auc_tox_to_model": 0.773264560498603,
+          "auc_tox_to_moderator": 0.7473672899204814
+        },
+        {
+          "subreddit": "nba",
+          "auc_tox_to_model": 0.8451800232288037,
+          "auc_tox_to_moderator": 0.7192266380236304
+        },
+        {
+          "subreddit": "news",
+          "auc_tox_to_model": 0.8056037689065212,
+          "auc_tox_to_moderator": 0.6909638554216866
+        },
+        {
+          "subreddit": "nfl",
+          "auc_tox_to_model": 0.9494190020505809,
+          "auc_tox_to_moderator": 0.7117473970122227
+        },
+        {
+          "subreddit": "nosleep",
+          "auc_tox_to_model": 0.37135423798439,
+          "auc_tox_to_moderator": 0.48871199269215715
+        },
+        {
+          "subreddit": "nottheonion",
+          "auc_tox_to_model": 0.7977455716586151,
+          "auc_tox_to_moderator": 0.6725090036014405
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "auc_tox_to_model": 0.7505740528128588,
+          "auc_tox_to_moderator": 0.6575326627355764
+        },
+        {
+          "subreddit": "personalfinance",
+          "auc_tox_to_model": 0.785362420830401,
+          "auc_tox_to_moderator": 0.714
+        },
+        {
+          "subreddit": "philosophy",
+          "auc_tox_to_model": 0.7872702932943897,
+          "auc_tox_to_moderator": 0.749390243902439
+        },
+        {
+          "subreddit": "pics",
+          "auc_tox_to_model": 0.7696732627703635,
+          "auc_tox_to_moderator": 0.6781465956723689
+        },
+        {
+          "subreddit": "pokemon",
+          "auc_tox_to_model": 0.61,
+          "auc_tox_to_moderator": 0.5629385964912281
+        },
+        {
+          "subreddit": "pokemongo",
+          "auc_tox_to_model": 0.7852469396369777,
+          "auc_tox_to_moderator": 0.743214811697875
+        },
+        {
+          "subreddit": "pokemontrades",
+          "auc_tox_to_model": 0.5911758313410128,
+          "auc_tox_to_moderator": 0.5864516129032258
+        },
+        {
+          "subreddit": "politics",
+          "auc_tox_to_model": 0.8612045577862181,
+          "auc_tox_to_moderator": 0.7279635258358663
+        },
+        {
+          "subreddit": "relationships",
+          "auc_tox_to_model": 0.7852265673494723,
+          "auc_tox_to_moderator": 0.6351136363636364
+        },
+        {
+          "subreddit": "science",
+          "auc_tox_to_model": 0.687953995157385,
+          "auc_tox_to_moderator": 0.6223913043478262
+        },
+        {
+          "subreddit": "sex",
+          "auc_tox_to_model": 0.6857142857142857,
+          "auc_tox_to_moderator": 0.6179518072289156
+        },
+        {
+          "subreddit": "socialism",
+          "auc_tox_to_model": 0.7474654377880185,
+          "auc_tox_to_moderator": 0.6788888888888889
+        },
+        {
+          "subreddit": "space",
+          "auc_tox_to_model": 0.7573178016726404,
+          "auc_tox_to_moderator": 0.598804950917627
+        },
+        {
+          "subreddit": "spacex",
+          "auc_tox_to_model": 0.7230519480519481,
+          "auc_tox_to_moderator": 0.7732258064516129
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "auc_tox_to_model": 0.7709770475354321,
+          "auc_tox_to_moderator": 0.6843023255813954
+        },
+        {
+          "subreddit": "technology",
+          "auc_tox_to_model": 0.8472400513478819,
+          "auc_tox_to_moderator": 0.6712137486573577
+        },
+        {
+          "subreddit": "television",
+          "auc_tox_to_model": 0.7442738791423001,
+          "auc_tox_to_moderator": 0.7160894243020967
+        },
+        {
+          "subreddit": "tifu",
+          "auc_tox_to_model": 0.7734669811320756,
+          "auc_tox_to_moderator": 0.6709139349009614
+        },
+        {
+          "subreddit": "videos",
+          "auc_tox_to_model": 0.7011303191489362,
+          "auc_tox_to_moderator": 0.6544728965746591
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "auc_tox_to_model": 0.7801992528019924,
+          "auc_tox_to_moderator": 0.7039240506329114
+        },
+        {
+          "subreddit": "worldnews",
+          "auc_tox_to_model": 0.8861843588009917,
+          "auc_tox_to_moderator": 0.7510662177328844
+        },
+        {
+          "subreddit": "wow",
+          "auc_tox_to_model": 0.7412840136054422,
+          "auc_tox_to_moderator": 0.7166510465479538
+        }
+      ]
+    },
+    "e5 + head": {
+      "n_rows": 17408,
+      "n_comm": 94,
+      "auc_tox_to_model_macro": 0.704242931578656,
+      "auc_tox_to_moderator_macro": 0.6649575414425598,
+      "TC_behav_macro": 0.039285390136096,
+      "TC_behav_macro_ci95": [
+        0.030673837076736418,
+        0.04808517498622549
+      ],
+      "frac_comm_gt0": 0.8191489361702128,
+      "per_community": [
+        {
+          "subreddit": "2007scape",
+          "auc_tox_to_model": 0.8227613970188227,
+          "auc_tox_to_moderator": 0.7830998153578798
+        },
+        {
+          "subreddit": "Android",
+          "auc_tox_to_model": 0.7940793754066363,
+          "auc_tox_to_moderator": 0.7855263157894737
+        },
+        {
+          "subreddit": "AskHistorians",
+          "auc_tox_to_model": 0.7199612403100776,
+          "auc_tox_to_moderator": 0.660188679245283
+        },
+        {
+          "subreddit": "AskReddit",
+          "auc_tox_to_model": 0.5667321974661426,
+          "auc_tox_to_moderator": 0.529873200085966
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "auc_tox_to_model": 0.6991495393338057,
+          "auc_tox_to_moderator": 0.6881176470588234
+        },
+        {
+          "subreddit": "AskWomen",
+          "auc_tox_to_model": 0.606942889137738,
+          "auc_tox_to_moderator": 0.586117963668984
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "auc_tox_to_model": 0.6816187760473787,
+          "auc_tox_to_moderator": 0.5423803249890207
+        },
+        {
+          "subreddit": "CFB",
+          "auc_tox_to_model": 0.7344040205397138,
+          "auc_tox_to_moderator": 0.7206804891015417
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "auc_tox_to_model": 0.646096306685367,
+          "auc_tox_to_moderator": 0.6753582334977684
+        },
+        {
+          "subreddit": "Christianity",
+          "auc_tox_to_model": 0.7820315928038614,
+          "auc_tox_to_moderator": 0.7156521739130435
+        },
+        {
+          "subreddit": "DIY",
+          "auc_tox_to_model": 0.7260241534454178,
+          "auc_tox_to_moderator": 0.732440685929058
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "auc_tox_to_model": 0.7581422018348624,
+          "auc_tox_to_moderator": 0.7164948453608246
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "auc_tox_to_model": 0.7447874199184624,
+          "auc_tox_to_moderator": 0.6616949936408832
+        },
+        {
+          "subreddit": "Futurology",
+          "auc_tox_to_model": 0.7259592034968432,
+          "auc_tox_to_moderator": 0.7004597701149425
+        },
+        {
+          "subreddit": "Games",
+          "auc_tox_to_model": 0.6933630393996247,
+          "auc_tox_to_moderator": 0.6384883720930232
+        },
+        {
+          "subreddit": "GetMotivated",
+          "auc_tox_to_model": 0.7024876736889286,
+          "auc_tox_to_moderator": 0.7062921348314607
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "auc_tox_to_model": 0.7366543948458353,
+          "auc_tox_to_moderator": 0.657608695652174
+        },
+        {
+          "subreddit": "IAmA",
+          "auc_tox_to_model": 0.6991954022988506,
+          "auc_tox_to_moderator": 0.6983963344788088
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "auc_tox_to_model": 0.5294117647058824,
+          "auc_tox_to_moderator": 0.5803333333333334
+        },
+        {
+          "subreddit": "LifeProTips",
+          "auc_tox_to_model": 0.7135164835164834,
+          "auc_tox_to_moderator": 0.707290294246816
+        },
+        {
+          "subreddit": "MMA",
+          "auc_tox_to_model": 0.8107692307692308,
+          "auc_tox_to_moderator": 0.7476943346508563
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "auc_tox_to_model": 0.35337492909812823,
+          "auc_tox_to_moderator": 0.39639901263249594
+        },
+        {
+          "subreddit": "NeutralPolitics",
+          "auc_tox_to_model": 0.6041408380857921,
+          "auc_tox_to_moderator": 0.5587951807228915
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "auc_tox_to_model": 0.7715393133997785,
+          "auc_tox_to_moderator": 0.7516469038208169
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "auc_tox_to_model": 0.7401459854014598,
+          "auc_tox_to_moderator": 0.6163218390804598
+        },
+        {
+          "subreddit": "Overwatch",
+          "auc_tox_to_model": 0.7953947368421053,
+          "auc_tox_to_moderator": 0.7969949550339988
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "auc_tox_to_model": 0.719187675070028,
+          "auc_tox_to_moderator": 0.6197608266573784
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "auc_tox_to_model": 0.6747967479674797,
+          "auc_tox_to_moderator": 0.6660015519343754
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "auc_tox_to_model": 0.581959706959707,
+          "auc_tox_to_moderator": 0.5314942528735632
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "auc_tox_to_model": 0.6722493345164152,
+          "auc_tox_to_moderator": 0.664002664002664
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "auc_tox_to_model": 0.7390238704177323,
+          "auc_tox_to_moderator": 0.7148936170212766
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "auc_tox_to_model": 0.553587962962963,
+          "auc_tox_to_moderator": 0.5656521739130436
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "auc_tox_to_model": 0.812718868188822,
+          "auc_tox_to_moderator": 0.7346250000000001
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "auc_tox_to_model": 0.7855769230769231,
+          "auc_tox_to_moderator": 0.7077837195484254
+        },
+        {
+          "subreddit": "anime",
+          "auc_tox_to_model": 0.6919225634178906,
+          "auc_tox_to_moderator": 0.6242045205178844
+        },
+        {
+          "subreddit": "askscience",
+          "auc_tox_to_model": 0.7726190476190475,
+          "auc_tox_to_moderator": 0.6833333333333332
+        },
+        {
+          "subreddit": "asoiaf",
+          "auc_tox_to_model": 0.7725833685099198,
+          "auc_tox_to_moderator": 0.7113684210526315
+        },
+        {
+          "subreddit": "atheism",
+          "auc_tox_to_model": 0.6928146258503403,
+          "auc_tox_to_moderator": 0.6672340425531915
+        },
+        {
+          "subreddit": "aww",
+          "auc_tox_to_model": 0.7282799473453268,
+          "auc_tox_to_moderator": 0.6451612903225806
+        },
+        {
+          "subreddit": "books",
+          "auc_tox_to_model": 0.8571428571428571,
+          "auc_tox_to_moderator": 0.8047870004391743
+        },
+        {
+          "subreddit": "canada",
+          "auc_tox_to_model": 0.8517151541467651,
+          "auc_tox_to_moderator": 0.7387857065276422
+        },
+        {
+          "subreddit": "changemyview",
+          "auc_tox_to_model": 0.6286315789473684,
+          "auc_tox_to_moderator": 0.6197894736842106
+        },
+        {
+          "subreddit": "churning",
+          "auc_tox_to_model": 0.727486559139785,
+          "auc_tox_to_moderator": 0.719753086419753
+        },
+        {
+          "subreddit": "conspiracy",
+          "auc_tox_to_model": 0.7976415094339624,
+          "auc_tox_to_moderator": 0.7843681350445139
+        },
+        {
+          "subreddit": "creepyPMs",
+          "auc_tox_to_model": 0.5549139492753623,
+          "auc_tox_to_moderator": 0.5571590909090909
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "auc_tox_to_model": 0.6996158770806659,
+          "auc_tox_to_moderator": 0.6661739344666174
+        },
+        {
+          "subreddit": "depression",
+          "auc_tox_to_model": 0.6378019323671498,
+          "auc_tox_to_moderator": 0.6189164370982553
+        },
+        {
+          "subreddit": "europe",
+          "auc_tox_to_model": 0.7945816186556927,
+          "auc_tox_to_moderator": 0.729438202247191
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "auc_tox_to_model": 0.7561384779624829,
+          "auc_tox_to_moderator": 0.702991452991453
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "auc_tox_to_model": 0.6347975882859603,
+          "auc_tox_to_moderator": 0.6108452950558214
+        },
+        {
+          "subreddit": "food",
+          "auc_tox_to_model": 0.750962000962001,
+          "auc_tox_to_moderator": 0.6861639652337326
+        },
+        {
+          "subreddit": "funny",
+          "auc_tox_to_model": 0.748171368861024,
+          "auc_tox_to_moderator": 0.6548211036992116
+        },
+        {
+          "subreddit": "gameofthrones",
+          "auc_tox_to_model": 0.7696205382276771,
+          "auc_tox_to_moderator": 0.6401111111111111
+        },
+        {
+          "subreddit": "gaming",
+          "auc_tox_to_model": 0.608486964110396,
+          "auc_tox_to_moderator": 0.5897686542847833
+        },
+        {
+          "subreddit": "gifs",
+          "auc_tox_to_model": 0.5046067415730336,
+          "auc_tox_to_moderator": 0.5333034312626148
+        },
+        {
+          "subreddit": "gonewild",
+          "auc_tox_to_model": 0.5047460844803037,
+          "auc_tox_to_moderator": 0.4742268041237114
+        },
+        {
+          "subreddit": "hearthstone",
+          "auc_tox_to_model": 0.7080393290919607,
+          "auc_tox_to_moderator": 0.6616471678443183
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "auc_tox_to_model": 0.5729813664596274,
+          "auc_tox_to_moderator": 0.6126666666666666
+        },
+        {
+          "subreddit": "hiphopheads",
+          "auc_tox_to_model": 0.6483552631578947,
+          "auc_tox_to_moderator": 0.5198726394378568
+        },
+        {
+          "subreddit": "history",
+          "auc_tox_to_model": 0.7479474548440066,
+          "auc_tox_to_moderator": 0.7053164556962026
+        },
+        {
+          "subreddit": "india",
+          "auc_tox_to_model": 0.6725421073247161,
+          "auc_tox_to_moderator": 0.6420320457086076
+        },
+        {
+          "subreddit": "jailbreak",
+          "auc_tox_to_model": 0.7411111111111112,
+          "auc_tox_to_moderator": 0.7481161347517732
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "auc_tox_to_model": 0.7285489667565139,
+          "auc_tox_to_moderator": 0.7166167166167167
+        },
+        {
+          "subreddit": "legaladvice",
+          "auc_tox_to_model": 0.7963917525773196,
+          "auc_tox_to_moderator": 0.6508988764044943
+        },
+        {
+          "subreddit": "me_irl",
+          "auc_tox_to_model": 0.6647157190635452,
+          "auc_tox_to_moderator": 0.6233333333333334
+        },
+        {
+          "subreddit": "movies",
+          "auc_tox_to_model": 0.8070383125269048,
+          "auc_tox_to_moderator": 0.7473672899204814
+        },
+        {
+          "subreddit": "nba",
+          "auc_tox_to_model": 0.7976574253169998,
+          "auc_tox_to_moderator": 0.7192266380236304
+        },
+        {
+          "subreddit": "news",
+          "auc_tox_to_model": 0.7063313313313313,
+          "auc_tox_to_moderator": 0.6909638554216866
+        },
+        {
+          "subreddit": "nfl",
+          "auc_tox_to_model": 0.7992246240601504,
+          "auc_tox_to_moderator": 0.7117473970122227
+        },
+        {
+          "subreddit": "nosleep",
+          "auc_tox_to_model": 0.43378817413905135,
+          "auc_tox_to_moderator": 0.48871199269215715
+        },
+        {
+          "subreddit": "nottheonion",
+          "auc_tox_to_model": 0.7464788732394366,
+          "auc_tox_to_moderator": 0.6725090036014405
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "auc_tox_to_model": 0.6791381906637323,
+          "auc_tox_to_moderator": 0.6575326627355764
+        },
+        {
+          "subreddit": "personalfinance",
+          "auc_tox_to_model": 0.7167487684729064,
+          "auc_tox_to_moderator": 0.714
+        },
+        {
+          "subreddit": "philosophy",
+          "auc_tox_to_model": 0.7360814377277869,
+          "auc_tox_to_moderator": 0.749390243902439
+        },
+        {
+          "subreddit": "photoshopbattles",
+          "auc_tox_to_model": 0.7358126721763085,
+          "auc_tox_to_moderator": 0.6590697674418605
+        },
+        {
+          "subreddit": "pics",
+          "auc_tox_to_model": 0.7129341179185416,
+          "auc_tox_to_moderator": 0.6781465956723689
+        },
+        {
+          "subreddit": "pokemon",
+          "auc_tox_to_model": 0.5461538461538461,
+          "auc_tox_to_moderator": 0.5629385964912281
+        },
+        {
+          "subreddit": "pokemongo",
+          "auc_tox_to_model": 0.8055614072045503,
+          "auc_tox_to_moderator": 0.743214811697875
+        },
+        {
+          "subreddit": "pokemontrades",
+          "auc_tox_to_model": 0.6467151675485009,
+          "auc_tox_to_moderator": 0.5864516129032258
+        },
+        {
+          "subreddit": "politics",
+          "auc_tox_to_model": 0.7736916548797736,
+          "auc_tox_to_moderator": 0.7279635258358663
+        },
+        {
+          "subreddit": "relationships",
+          "auc_tox_to_model": 0.6636513157894737,
+          "auc_tox_to_moderator": 0.6351136363636364
+        },
+        {
+          "subreddit": "science",
+          "auc_tox_to_model": 0.752209261223047,
+          "auc_tox_to_moderator": 0.6223913043478262
+        },
+        {
+          "subreddit": "sex",
+          "auc_tox_to_model": 0.6577409931840311,
+          "auc_tox_to_moderator": 0.6179518072289156
+        },
+        {
+          "subreddit": "socialism",
+          "auc_tox_to_model": 0.7955681818181819,
+          "auc_tox_to_moderator": 0.6788888888888889
+        },
+        {
+          "subreddit": "space",
+          "auc_tox_to_model": 0.6991150442477876,
+          "auc_tox_to_moderator": 0.598804950917627
+        },
+        {
+          "subreddit": "spacex",
+          "auc_tox_to_model": 0.763095238095238,
+          "auc_tox_to_moderator": 0.7732258064516129
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "auc_tox_to_model": 0.7065098799854528,
+          "auc_tox_to_moderator": 0.6843023255813954
+        },
+        {
+          "subreddit": "technology",
+          "auc_tox_to_model": 0.6528738115816767,
+          "auc_tox_to_moderator": 0.6712137486573577
+        },
+        {
+          "subreddit": "television",
+          "auc_tox_to_model": 0.7128232758620691,
+          "auc_tox_to_moderator": 0.7160894243020967
+        },
+        {
+          "subreddit": "tifu",
+          "auc_tox_to_model": 0.7053788316946211,
+          "auc_tox_to_moderator": 0.6709139349009614
+        },
+        {
+          "subreddit": "videos",
+          "auc_tox_to_model": 0.6928191489361702,
+          "auc_tox_to_moderator": 0.6544728965746591
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "auc_tox_to_model": 0.7431107578166402,
+          "auc_tox_to_moderator": 0.7039240506329114
+        },
+        {
+          "subreddit": "worldnews",
+          "auc_tox_to_model": 0.8188552188552188,
+          "auc_tox_to_moderator": 0.7510662177328844
+        },
+        {
+          "subreddit": "wow",
+          "auc_tox_to_model": 0.7280299875052061,
+          "auc_tox_to_moderator": 0.7166510465479538
+        }
+      ]
+    },
+    "cross-community encoder": {
+      "n_rows": 17508,
+      "n_comm": 95,
+      "auc_tox_to_model_macro": 0.7411197591221211,
+      "auc_tox_to_moderator_macro": 0.6680589984757535,
+      "TC_behav_macro": 0.07306076064636782,
+      "TC_behav_macro_ci95": [
+        0.05795616672480281,
+        0.08911245004088014
+      ],
+      "frac_comm_gt0": 0.8736842105263158,
+      "per_community": [
+        {
+          "subreddit": "2007scape",
+          "auc_tox_to_model": 0.8244949494949494,
+          "auc_tox_to_moderator": 0.7830998153578798
+        },
+        {
+          "subreddit": "Android",
+          "auc_tox_to_model": 0.8108685334598956,
+          "auc_tox_to_moderator": 0.7855263157894737
+        },
+        {
+          "subreddit": "AskHistorians",
+          "auc_tox_to_model": 0.7001817080557238,
+          "auc_tox_to_moderator": 0.660188679245283
+        },
+        {
+          "subreddit": "AskReddit",
+          "auc_tox_to_model": 0.6962697896334852,
+          "auc_tox_to_moderator": 0.529873200085966
+        },
+        {
+          "subreddit": "AskTrumpSupporters",
+          "auc_tox_to_model": 0.6834782608695653,
+          "auc_tox_to_moderator": 0.6881176470588234
+        },
+        {
+          "subreddit": "AskWomen",
+          "auc_tox_to_model": 0.6687426556991775,
+          "auc_tox_to_moderator": 0.586117963668984
+        },
+        {
+          "subreddit": "BlackPeopleTwitter",
+          "auc_tox_to_model": 0.7668665667166417,
+          "auc_tox_to_moderator": 0.5423803249890207
+        },
+        {
+          "subreddit": "CFB",
+          "auc_tox_to_model": 0.8031300593631948,
+          "auc_tox_to_moderator": 0.7206804891015417
+        },
+        {
+          "subreddit": "CanadaPolitics",
+          "auc_tox_to_model": 0.6956777073056143,
+          "auc_tox_to_moderator": 0.6753582334977684
+        },
+        {
+          "subreddit": "Christianity",
+          "auc_tox_to_model": 0.7569240795047247,
+          "auc_tox_to_moderator": 0.7156521739130435
+        },
+        {
+          "subreddit": "DIY",
+          "auc_tox_to_model": 0.7350131358968236,
+          "auc_tox_to_moderator": 0.732440685929058
+        },
+        {
+          "subreddit": "DestinyTheGame",
+          "auc_tox_to_model": 0.7974539668106387,
+          "auc_tox_to_moderator": 0.7164948453608246
+        },
+        {
+          "subreddit": "EnoughTrumpSpam",
+          "auc_tox_to_model": 0.8272058823529412,
+          "auc_tox_to_moderator": 0.6616949936408832
+        },
+        {
+          "subreddit": "Futurology",
+          "auc_tox_to_model": 0.8119786839666359,
+          "auc_tox_to_moderator": 0.7004597701149425
+        },
+        {
+          "subreddit": "Games",
+          "auc_tox_to_model": 0.7530137772675085,
+          "auc_tox_to_moderator": 0.6384883720930232
+        },
+        {
+          "subreddit": "GetMotivated",
+          "auc_tox_to_model": 0.7000457247370827,
+          "auc_tox_to_moderator": 0.7062921348314607
+        },
+        {
+          "subreddit": "GlobalOffensive",
+          "auc_tox_to_model": 0.7317994505494505,
+          "auc_tox_to_moderator": 0.657608695652174
+        },
+        {
+          "subreddit": "IAmA",
+          "auc_tox_to_model": 0.7884882108183079,
+          "auc_tox_to_moderator": 0.6983963344788088
+        },
+        {
+          "subreddit": "LateStageCapitalism",
+          "auc_tox_to_model": 0.6960816960816961,
+          "auc_tox_to_moderator": 0.5803333333333334
+        },
+        {
+          "subreddit": "LifeProTips",
+          "auc_tox_to_model": 0.7743674367436744,
+          "auc_tox_to_moderator": 0.707290294246816
+        },
+        {
+          "subreddit": "MMA",
+          "auc_tox_to_model": 0.8336711711711712,
+          "auc_tox_to_moderator": 0.7476943346508563
+        },
+        {
+          "subreddit": "NSFW_GIF",
+          "auc_tox_to_model": 0.6818931010124794,
+          "auc_tox_to_moderator": 0.39639901263249594
+        },
+        {
+          "subreddit": "NeutralPolitics",
+          "auc_tox_to_model": 0.5438356164383561,
+          "auc_tox_to_moderator": 0.5587951807228915
+        },
+        {
+          "subreddit": "OldSchoolCool",
+          "auc_tox_to_model": 0.7718159033948507,
+          "auc_tox_to_moderator": 0.7516469038208169
+        },
+        {
+          "subreddit": "OutOfTheLoop",
+          "auc_tox_to_model": 0.7445677300046233,
+          "auc_tox_to_moderator": 0.6163218390804598
+        },
+        {
+          "subreddit": "Overwatch",
+          "auc_tox_to_model": 0.7239583333333334,
+          "auc_tox_to_moderator": 0.7969949550339988
+        },
+        {
+          "subreddit": "PoliticalDiscussion",
+          "auc_tox_to_model": 0.7498843663274747,
+          "auc_tox_to_moderator": 0.6197608266573784
+        },
+        {
+          "subreddit": "PurplePillDebate",
+          "auc_tox_to_model": 0.6818181818181819,
+          "auc_tox_to_moderator": 0.6660015519343754
+        },
+        {
+          "subreddit": "SandersForPresident",
+          "auc_tox_to_model": 0.780314561136479,
+          "auc_tox_to_moderator": 0.9595959595959596
+        },
+        {
+          "subreddit": "ShitRedditSays",
+          "auc_tox_to_model": 0.808340727595386,
+          "auc_tox_to_moderator": 0.5314942528735632
+        },
+        {
+          "subreddit": "Showerthoughts",
+          "auc_tox_to_model": 0.7257098491570542,
+          "auc_tox_to_moderator": 0.664002664002664
+        },
+        {
+          "subreddit": "SubredditDrama",
+          "auc_tox_to_model": 0.7530594935175089,
+          "auc_tox_to_moderator": 0.7148936170212766
+        },
+        {
+          "subreddit": "TheSilphRoad",
+          "auc_tox_to_model": 0.6249464820893392,
+          "auc_tox_to_moderator": 0.5656521739130436
+        },
+        {
+          "subreddit": "TwoXChromosomes",
+          "auc_tox_to_model": 0.7800537703239021,
+          "auc_tox_to_moderator": 0.7346250000000001
+        },
+        {
+          "subreddit": "UpliftingNews",
+          "auc_tox_to_model": 0.7711413364872856,
+          "auc_tox_to_moderator": 0.7077837195484254
+        },
+        {
+          "subreddit": "anime",
+          "auc_tox_to_model": 0.6658464566929134,
+          "auc_tox_to_moderator": 0.6242045205178844
+        },
+        {
+          "subreddit": "askscience",
+          "auc_tox_to_model": 0.6555779569892473,
+          "auc_tox_to_moderator": 0.6833333333333332
+        },
+        {
+          "subreddit": "asoiaf",
+          "auc_tox_to_model": 0.7797180727961287,
+          "auc_tox_to_moderator": 0.7113684210526315
+        },
+        {
+          "subreddit": "atheism",
+          "auc_tox_to_model": 0.7736111111111111,
+          "auc_tox_to_moderator": 0.6672340425531915
+        },
+        {
+          "subreddit": "aww",
+          "auc_tox_to_model": 0.6937106223057368,
+          "auc_tox_to_moderator": 0.6451612903225806
+        },
+        {
+          "subreddit": "books",
+          "auc_tox_to_model": 0.7848184818481848,
+          "auc_tox_to_moderator": 0.8047870004391743
+        },
+        {
+          "subreddit": "canada",
+          "auc_tox_to_model": 0.8053731343283583,
+          "auc_tox_to_moderator": 0.7387857065276422
+        },
+        {
+          "subreddit": "changemyview",
+          "auc_tox_to_model": 0.7343782873974333,
+          "auc_tox_to_moderator": 0.6197894736842106
+        },
+        {
+          "subreddit": "churning",
+          "auc_tox_to_model": 0.759630727148393,
+          "auc_tox_to_moderator": 0.719753086419753
+        },
+        {
+          "subreddit": "conspiracy",
+          "auc_tox_to_model": 0.8339947089947091,
+          "auc_tox_to_moderator": 0.7843681350445139
+        },
+        {
+          "subreddit": "creepyPMs",
+          "auc_tox_to_model": 0.7402981677478092,
+          "auc_tox_to_moderator": 0.5571590909090909
+        },
+        {
+          "subreddit": "dataisbeautiful",
+          "auc_tox_to_model": 0.7759522031366692,
+          "auc_tox_to_moderator": 0.6661739344666174
+        },
+        {
+          "subreddit": "depression",
+          "auc_tox_to_model": 0.6663596592217362,
+          "auc_tox_to_moderator": 0.6189164370982553
+        },
+        {
+          "subreddit": "europe",
+          "auc_tox_to_model": 0.8183268748575336,
+          "auc_tox_to_moderator": 0.729438202247191
+        },
+        {
+          "subreddit": "explainlikeimfive",
+          "auc_tox_to_model": 0.7037037037037037,
+          "auc_tox_to_moderator": 0.702991452991453
+        },
+        {
+          "subreddit": "fantasyfootball",
+          "auc_tox_to_model": 0.6837238960624901,
+          "auc_tox_to_moderator": 0.6108452950558214
+        },
+        {
+          "subreddit": "food",
+          "auc_tox_to_model": 0.7400891391039175,
+          "auc_tox_to_moderator": 0.6861639652337326
+        },
+        {
+          "subreddit": "funny",
+          "auc_tox_to_model": 0.7366936001026035,
+          "auc_tox_to_moderator": 0.6548211036992116
+        },
+        {
+          "subreddit": "gameofthrones",
+          "auc_tox_to_model": 0.740802304964539,
+          "auc_tox_to_moderator": 0.6401111111111111
+        },
+        {
+          "subreddit": "gaming",
+          "auc_tox_to_model": 0.6651071700576651,
+          "auc_tox_to_moderator": 0.5897686542847833
+        },
+        {
+          "subreddit": "gifs",
+          "auc_tox_to_model": 0.6927211646136618,
+          "auc_tox_to_moderator": 0.5333034312626148
+        },
+        {
+          "subreddit": "gonewild",
+          "auc_tox_to_model": 0.7609864882592156,
+          "auc_tox_to_moderator": 0.4742268041237114
+        },
+        {
+          "subreddit": "hearthstone",
+          "auc_tox_to_model": 0.6264264264264264,
+          "auc_tox_to_moderator": 0.6616471678443183
+        },
+        {
+          "subreddit": "hillaryclinton",
+          "auc_tox_to_model": 0.6629289840299015,
+          "auc_tox_to_moderator": 0.6126666666666666
+        },
+        {
+          "subreddit": "hiphopheads",
+          "auc_tox_to_model": 0.7093763724198507,
+          "auc_tox_to_moderator": 0.5198726394378568
+        },
+        {
+          "subreddit": "history",
+          "auc_tox_to_model": 0.7861003861003861,
+          "auc_tox_to_moderator": 0.7053164556962026
+        },
+        {
+          "subreddit": "india",
+          "auc_tox_to_model": 0.7883112980769231,
+          "auc_tox_to_moderator": 0.6420320457086076
+        },
+        {
+          "subreddit": "jailbreak",
+          "auc_tox_to_model": 0.7752683363148478,
+          "auc_tox_to_moderator": 0.7481161347517732
+        },
+        {
+          "subreddit": "leagueoflegends",
+          "auc_tox_to_model": 0.7502246181491464,
+          "auc_tox_to_moderator": 0.7166167166167167
+        },
+        {
+          "subreddit": "legaladvice",
+          "auc_tox_to_model": 0.8,
+          "auc_tox_to_moderator": 0.6508988764044943
+        },
+        {
+          "subreddit": "me_irl",
+          "auc_tox_to_model": 0.6296888888888889,
+          "auc_tox_to_moderator": 0.6233333333333334
+        },
+        {
+          "subreddit": "movies",
+          "auc_tox_to_model": 0.7953178694158075,
+          "auc_tox_to_moderator": 0.7473672899204814
+        },
+        {
+          "subreddit": "nba",
+          "auc_tox_to_model": 0.8416829321188463,
+          "auc_tox_to_moderator": 0.7192266380236304
+        },
+        {
+          "subreddit": "news",
+          "auc_tox_to_model": 0.8507034165948895,
+          "auc_tox_to_moderator": 0.6909638554216866
+        },
+        {
+          "subreddit": "nfl",
+          "auc_tox_to_model": 0.8280117753623188,
+          "auc_tox_to_moderator": 0.7117473970122227
+        },
+        {
+          "subreddit": "nosleep",
+          "auc_tox_to_model": 0.6941753842180034,
+          "auc_tox_to_moderator": 0.48871199269215715
+        },
+        {
+          "subreddit": "nottheonion",
+          "auc_tox_to_model": 0.7892413793103449,
+          "auc_tox_to_moderator": 0.6725090036014405
+        },
+        {
+          "subreddit": "pcmasterrace",
+          "auc_tox_to_model": 0.7176277927242952,
+          "auc_tox_to_moderator": 0.6575326627355764
+        },
+        {
+          "subreddit": "personalfinance",
+          "auc_tox_to_model": 0.6960358403475427,
+          "auc_tox_to_moderator": 0.714
+        },
+        {
+          "subreddit": "philosophy",
+          "auc_tox_to_model": 0.7859746135478195,
+          "auc_tox_to_moderator": 0.749390243902439
+        },
+        {
+          "subreddit": "photoshopbattles",
+          "auc_tox_to_model": 0.5221450282240555,
+          "auc_tox_to_moderator": 0.6590697674418605
+        },
+        {
+          "subreddit": "pics",
+          "auc_tox_to_model": 0.7733316122369951,
+          "auc_tox_to_moderator": 0.6781465956723689
+        },
+        {
+          "subreddit": "pokemon",
+          "auc_tox_to_model": 0.6297760210803689,
+          "auc_tox_to_moderator": 0.5629385964912281
+        },
+        {
+          "subreddit": "pokemongo",
+          "auc_tox_to_model": 0.7675485385107745,
+          "auc_tox_to_moderator": 0.743214811697875
+        },
+        {
+          "subreddit": "pokemontrades",
+          "auc_tox_to_model": 0.6775240384615385,
+          "auc_tox_to_moderator": 0.5864516129032258
+        },
+        {
+          "subreddit": "politics",
+          "auc_tox_to_model": 0.8317341120845501,
+          "auc_tox_to_moderator": 0.7279635258358663
+        },
+        {
+          "subreddit": "relationships",
+          "auc_tox_to_model": 0.7481557144478492,
+          "auc_tox_to_moderator": 0.6351136363636364
+        },
+        {
+          "subreddit": "science",
+          "auc_tox_to_model": 0.7033410138248848,
+          "auc_tox_to_moderator": 0.6223913043478262
+        },
+        {
+          "subreddit": "sex",
+          "auc_tox_to_model": 0.7744107744107744,
+          "auc_tox_to_moderator": 0.6179518072289156
+        },
+        {
+          "subreddit": "socialism",
+          "auc_tox_to_model": 0.8060125458634158,
+          "auc_tox_to_moderator": 0.6788888888888889
+        },
+        {
+          "subreddit": "space",
+          "auc_tox_to_model": 0.7511838140335773,
+          "auc_tox_to_moderator": 0.598804950917627
+        },
+        {
+          "subreddit": "spacex",
+          "auc_tox_to_model": 0.7581027667984189,
+          "auc_tox_to_moderator": 0.7732258064516129
+        },
+        {
+          "subreddit": "syriancivilwar",
+          "auc_tox_to_model": 0.701329534662868,
+          "auc_tox_to_moderator": 0.6843023255813954
+        },
+        {
+          "subreddit": "technology",
+          "auc_tox_to_model": 0.7469879518072289,
+          "auc_tox_to_moderator": 0.6712137486573577
+        },
+        {
+          "subreddit": "television",
+          "auc_tox_to_model": 0.7787184009406232,
+          "auc_tox_to_moderator": 0.7160894243020967
+        },
+        {
+          "subreddit": "tifu",
+          "auc_tox_to_model": 0.7674641148325358,
+          "auc_tox_to_moderator": 0.6709139349009614
+        },
+        {
+          "subreddit": "videos",
+          "auc_tox_to_model": 0.6863839285714286,
+          "auc_tox_to_moderator": 0.6544728965746591
+        },
+        {
+          "subreddit": "whatisthisthing",
+          "auc_tox_to_model": 0.6528616623526028,
+          "auc_tox_to_moderator": 0.7039240506329114
+        },
+        {
+          "subreddit": "worldnews",
+          "auc_tox_to_model": 0.8085,
+          "auc_tox_to_moderator": 0.7510662177328844
+        },
+        {
+          "subreddit": "wow",
+          "auc_tox_to_model": 0.7852523988318731,
+          "auc_tox_to_moderator": 0.7166510465479538
+        }
+      ]
+    }
+  }
+}

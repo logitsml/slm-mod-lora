@@ -1,0 +1,92 @@
+{
+  "analysis": "antitox_schema_probe",
+  "found": {
+    "gemma": {
+      "path": "results/kumar_mod/antitox_gemma.parquet",
+      "cols": [
+        "subreddit",
+        "idx",
+        "label",
+        "cond",
+        "would_moderate",
+        "rating"
+      ],
+      "head": [
+        {
+          "subreddit": "2007scape",
+          "idx": 499,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 0,
+          "rating": null
+        },
+        {
+          "subreddit": "2007scape",
+          "idx": 502,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 0,
+          "rating": 1
+        }
+      ]
+    },
+    "llama": {
+      "path": "results/kumar_mod/antitox_llama.parquet",
+      "cols": [
+        "subreddit",
+        "idx",
+        "label",
+        "cond",
+        "would_moderate",
+        "rating"
+      ],
+      "head": [
+        {
+          "subreddit": "2007scape",
+          "idx": 499,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 0,
+          "rating": 2
+        },
+        {
+          "subreddit": "2007scape",
+          "idx": 502,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 0,
+          "rating": 1
+        }
+      ]
+    },
+    "qwen": {
+      "path": "results/kumar_mod/antitox_qwen.parquet",
+      "cols": [
+        "subreddit",
+        "idx",
+        "label",
+        "cond",
+        "would_moderate",
+        "rating"
+      ],
+      "head": [
+        {
+          "subreddit": "2007scape",
+          "idx": 499,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 1,
+          "rating": 3
+        },
+        {
+          "subreddit": "2007scape",
+          "idx": 502,
+          "label": 0,
+          "cond": "baseline",
+          "would_moderate": 0,
+          "rating": null
+        }
+      ]
+    }
+  }
+}

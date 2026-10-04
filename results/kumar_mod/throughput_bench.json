@@ -1,0 +1,67 @@
+{
+  "gpu": "NVIDIA L40S",
+  "gpu_usd_per_hour": 1.0,
+  "stack": "HF transformers (causal LMs, batched prefill, bf16) + sentence-transformers (e5, fp16)",
+  "note": "DEFENSIBLE DELIVERABLE = the RATIO (per-comment GPU-time ratio on ONE L40S, identical stack, length-bucketed; price and hardware cancel) and mean_prompt_tokens (stack-independent; lets a reader check the assumed 320 -- the measured prompts run ~590-915 tokens, so the assumption-based cost model UNDERSTATES the LLM cost, i.e. is conservative for the ratio). The ABSOLUTE prompt_eval_tok_per_s / comments_per_s are stack-specific and do not transfer to other configurations (a 4090 + 12B int8 + vLLM stack would differ): this run is an L40S + bf16 HF transformers. Caveats that all push the ratio in the encoder-favourable (UPPER-bound) direction: bf16 HF transformers understates LLM tok/s vs int8/vLLM; LLM batch=16 vs e5 batch=128 (the 12B is GPU-memory-bound to a small batch by its weights + KV cache + full-vocab logits over the long prompt, while the 335M encoder fits 128). Matched at batch 16, e5 measures 1.07 ms/comment and stays about 124x/60x cheaper than the 12B/8B (see derived.matched_batch16); a faster LLM serving stack would shrink the ratio further.",
+  "measured": {
+    "e5_large_v2": {
+      "model_id": "intfloat/e5-large-v2",
+      "precision": "fp16",
+      "n_comments_timed": 4000,
+      "batch": 128,
+      "comments_per_s": 1914.6,
+      "mean_tokens_per_comment": 66.8,
+      "ms_per_comment_batched": 0.5223
+    },
+    "gemma3_12b": {
+      "model_id": "google/gemma-3-12b-it",
+      "precision": "bfloat16",
+      "attn": "hf-default",
+      "n_comments_timed": 128,
+      "batch": 16,
+      "prompt_eval_tok_per_s": 4502.1,
+      "mean_prompt_tokens": 588.4,
+      "ms_per_comment_batched": 132.338
+    },
+    "llama31_8b": {
+      "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "precision": "bfloat16",
+      "attn": "hf-default",
+      "n_comments_timed": 128,
+      "batch": 16,
+      "prompt_eval_tok_per_s": 9570.6,
+      "mean_prompt_tokens": 604.1,
+      "ms_per_comment_batched": 63.827
+    }
+  },
+  "assumed_baseline": {
+    "llm_prompt_eval_tok_per_s": 2500.0,
+    "llm_prompt_tokens_per_comment": 320,
+    "e5_comments_per_s": 1200.0,
+    "assumed_ratio_encoder_vs_llm": 153.6
+  },
+  "derived": {
+    "gpu_usd_per_hour": 1.0,
+    "llm_gemma3_12b_per_1k": 0.03676055,
+    "e5_per_1k": 0.000145075,
+    "ratio_encoder_vs_llm_MEASURED": 253.4,
+    "slm_llama8b_per_1k": 0.017729725,
+    "ratio_encoder_vs_slm8b_MEASURED": 122.2,
+    "matched_batch16": {
+      "note": "robustness check, encoder held to the generative arm memory-feasible batch of 16 (vs 128 at deployment); both arms timed at batch 16 on one L40S",
+      "e5_ms_per_comment_batched": 1.0695,
+      "e5_comments_per_s": 935.0,
+      "ratio_encoder_vs_llm12b": 123.7,
+      "ratio_encoder_vs_slm8b": 59.7,
+      "ratio_encoder_vs_qwen7b": 84.8
+    },
+    "e5_batch_sweep_ms_per_comment": {
+      "note": "e5 per-comment time on one L40S vs batch (n=8000, same protocol). Throughput peaks at batch 128; larger batches are slower per comment, so the cost rows use 128. (batch 16 = 1.0695 from the matched-batch run.)",
+      "128": 0.5348,
+      "256": 0.5774,
+      "512": 0.6552,
+      "1024": 0.8424,
+      "2048": 1.0932
+    }
+  }
+}

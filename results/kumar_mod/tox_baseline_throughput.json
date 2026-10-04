@@ -1,0 +1,12 @@
+{
+  "gpu": "NVIDIA L40S",
+  "gpu_usd_per_hour": 1.0,
+  "protocol": "matched to throughput_bench.py e5 bench: real test-fold comments via _sample_comments, fp16, batch 128, 2 warmup batches excluded, cuda-synchronized per-batch timing",
+  "model_id": "unitary/toxic-bert",
+  "precision": "fp16",
+  "n_comments_timed": 3744,
+  "batch": 128,
+  "mean_tokens_per_comment": 56.7,
+  "ms_per_comment_batched": 0.6211,
+  "usd_per_1M_comments": 0.173
+}
